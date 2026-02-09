@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initHeroBubbles();
   initSmoothScroll();
   loadMenu();
+  loadEvents();
   initScrollReveal();
 });
 
@@ -29,6 +30,27 @@ async function loadMenu() {
         Our menu is temporarily unavailable.<br>
         Please call <a href="tel:7018183664" style="color: var(--teal-light);">(701) 818-3664</a> for current items and pricing.
       </p>`;
+  }
+}
+
+/* ---------- Load Events from JSON ---------- */
+async function loadEvents() {
+  const container = document.getElementById('events-content');
+  if (!container) return;
+
+  try {
+    const resp = await fetch('data/events.json');
+    if (!resp.ok) throw new Error('Failed to load events');
+    const data = await resp.json();
+    EventsRenderer.renderEvents(data, container);
+    initScrollReveal();
+  } catch (err) {
+    container.innerHTML = `
+      <div class="no-events">
+        <div class="no-events-icon"><i class="fas fa-calendar-xmark"></i></div>
+        <h3>Events Coming Soon</h3>
+        <p>Follow us on social media for the latest schedule and events!</p>
+      </div>`;
   }
 }
 
@@ -98,7 +120,8 @@ function initScrollReveal() {
     '.teaser-card',
     '.teaser-menu-item',
     '.owner-detail',
-    '.order-cta-box'
+    '.order-cta-box',
+    '.event-card'
   ];
 
   const observer = new IntersectionObserver((entries) => {

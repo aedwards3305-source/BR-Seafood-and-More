@@ -6,8 +6,10 @@
 const Admin = (() => {
   /* ---------- Constants ---------- */
   const STORAGE_KEY = 'br-seafood-menu-draft';
+  const EVENTS_STORAGE_KEY = 'br-seafood-events-draft';
   const AUTH_KEY = 'br-seafood-admin-auth';
   const PUBLISHED_URL = 'data/menu.json';
+  const EVENTS_URL = 'data/events.json';
 
   // SHA-256 hash of "BRseafood2026" (default password)
   // To change: run in console: Admin.hashPassword('YourNewPassword').then(h => console.log(h))
@@ -35,9 +37,32 @@ const Admin = (() => {
     { value: 'fas fa-carrot',        label: 'Carrot' },
   ];
 
+  const EVENT_ICON_OPTIONS = [
+    { value: 'fas fa-calendar-days', label: 'Calendar' },
+    { value: 'fas fa-store',         label: 'Market' },
+    { value: 'fas fa-people-group',  label: 'Community' },
+    { value: 'fas fa-truck',         label: 'Food Truck' },
+    { value: 'fas fa-heart',         label: 'Heart' },
+    { value: 'fas fa-music',         label: 'Music' },
+    { value: 'fas fa-flag',          label: 'Flag' },
+    { value: 'fas fa-cake-candles',  label: 'Celebration' },
+    { value: 'fas fa-utensils',      label: 'Dining' },
+    { value: 'fas fa-star',          label: 'Star' },
+    { value: 'fas fa-gift',          label: 'Gift' },
+    { value: 'fas fa-tree',          label: 'Outdoors' },
+    { value: 'fas fa-church',        label: 'Church' },
+    { value: 'fas fa-building',      label: 'Venue' },
+    { value: 'fas fa-baseball',      label: 'Sports' },
+    { value: 'fas fa-graduation-cap',label: 'School' },
+  ];
+
   let menuData = null;
   let publishedData = null;
   let hasDraft = false;
+
+  let eventsData = null;
+  let publishedEventsData = null;
+  let hasEventsDraft = false;
 
   /* ---------- Initialization ---------- */
   function init() {
@@ -45,6 +70,7 @@ const Admin = (() => {
       showDashboard();
     }
     bindLoginEvents();
+    bindTabEvents();
   }
 
   /* ========== AUTHENTICATION ========== */
@@ -103,18 +129,42 @@ const Admin = (() => {
     }
   }
 
+  /* ========== ADMIN TABS ========== */
+
+  function bindTabEvents() {
+    document.querySelectorAll('.admin-tab').forEach(tab => {
+      tab.addEventListener('click', () => {
+        const target = tab.dataset.tab;
+
+        document.querySelectorAll('.admin-tab').forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+
+        document.querySelectorAll('.admin-tab-content').forEach(c => {
+          c.classList.remove('active');
+          c.style.display = 'none';
+        });
+
+        const targetEl = document.getElementById(target + 'Tab');
+        if (targetEl) {
+          targetEl.classList.add('active');
+          targetEl.style.display = 'block';
+        }
+      });
+    });
+  }
+
   function showDashboard() {
     const login = document.getElementById('loginScreen');
     const dash = document.getElementById('adminDashboard');
     if (login) login.style.display = 'none';
     if (dash) dash.style.display = 'block';
     loadData();
+    loadEventsData();
   }
 
-  /* ========== DATA MANAGEMENT ========== */
+  /* ========== MENU DATA MANAGEMENT ========== */
 
   async function loadData() {
-    // Fetch published data
     try {
       const resp = await fetch(PUBLISHED_URL);
       if (resp.ok) {
@@ -124,7 +174,6 @@ const Admin = (() => {
       publishedData = null;
     }
 
-    // Check for draft
     const draft = localStorage.getItem(STORAGE_KEY);
     if (draft) {
       try {
@@ -164,7 +213,7 @@ const Admin = (() => {
   }
 
   function discardDraft() {
-    if (!confirm('Discard all unpublished changes? This cannot be undone.')) return;
+    if (!confirm('Discard all unpublished menu changes? This cannot be undone.')) return;
     localStorage.removeItem(STORAGE_KEY);
     menuData = publishedData ? JSON.parse(JSON.stringify(publishedData)) : null;
     hasDraft = false;
@@ -188,7 +237,7 @@ const Admin = (() => {
     }
   }
 
-  /* ========== EDITOR RENDERING ========== */
+  /* ========== MENU EDITOR RENDERING ========== */
 
   function getCategory(id) {
     return menuData.categories.find(c => c.id === id);
@@ -235,12 +284,10 @@ const Admin = (() => {
         </div>`;
     }).join('');
 
-    // Bind drag-and-drop
     initDragDrop(container, categoryId);
 
-    // Bind action buttons
     container.querySelectorAll('.item-btn').forEach(btn => {
-      btn.addEventListener('click', (e) => {
+      btn.addEventListener('click', () => {
         const action = btn.dataset.action;
         const idx = parseInt(btn.dataset.index);
         const cat = btn.dataset.category;
@@ -304,7 +351,6 @@ const Admin = (() => {
     const isNew = index === -1;
     const item = isNew ? null : category.items[index];
 
-    // Configure modal visibility for category type
     const descGroup = document.getElementById('descGroup');
     const priceRow = document.getElementById('priceRow');
     const featuredRow = document.getElementById('featuredRow');
@@ -317,21 +363,17 @@ const Admin = (() => {
       descGroup.style.display = 'none';
       priceRow.style.display = 'flex';
       featuredRow.style.display = 'none';
-      // For sides, hide the price field but show icon
       document.getElementById('itemPrice').closest('.form-group').style.display = 'none';
     }
 
-    // Set modal title
     document.getElementById('modalTitle').textContent =
       isNew ? (isDinners ? 'Add Dinner Item' : 'Add Side') : 'Edit Item';
 
-    // Populate icon select
     const iconSelect = document.getElementById('itemIcon');
     iconSelect.innerHTML = ICON_OPTIONS.map(opt =>
       `<option value="${opt.value}">${opt.label}</option>`
     ).join('');
 
-    // Fill form
     document.getElementById('itemId').value = isNew ? '' : item.id;
     document.getElementById('itemCategory').value = categoryId;
     document.getElementById('itemName').value = isNew ? '' : item.name;
@@ -342,14 +384,11 @@ const Admin = (() => {
     document.getElementById('itemBadge').value = isNew ? '' : (item.badgeText || '');
     document.getElementById('itemActive').checked = isNew ? true : item.active;
 
-    // Toggle badge visibility
     updateBadgeVisibility();
     updateIconPreview();
 
-    // Store the index for save
     document.getElementById('itemForm').dataset.editIndex = index;
 
-    // Show modal
     document.getElementById('itemModal').style.display = 'flex';
     document.getElementById('itemName').focus();
   }
@@ -418,7 +457,7 @@ const Admin = (() => {
     document.getElementById('iconPreview').innerHTML = `<i class="${escapeAttr(val)}"></i>`;
   }
 
-  /* ========== PREVIEW ========== */
+  /* ========== MENU PREVIEW ========== */
 
   function refreshPreview() {
     const container = document.getElementById('previewContainer');
@@ -427,7 +466,7 @@ const Admin = (() => {
     }
   }
 
-  /* ========== EXPORT / PUBLISH ========== */
+  /* ========== MENU EXPORT / PUBLISH ========== */
 
   function downloadMenuJson() {
     const json = JSON.stringify(menuData, null, 2);
@@ -448,7 +487,6 @@ const Admin = (() => {
     navigator.clipboard.writeText(json).then(() => {
       showToast('JSON copied to clipboard!', 'success');
     }).catch(() => {
-      // Fallback
       const ta = document.createElement('textarea');
       ta.value = json;
       document.body.appendChild(ta);
@@ -456,6 +494,296 @@ const Admin = (() => {
       document.execCommand('copy');
       document.body.removeChild(ta);
       showToast('JSON copied to clipboard!', 'success');
+    });
+  }
+
+  /* ================================================================
+     EVENTS MANAGEMENT
+     ================================================================ */
+
+  async function loadEventsData() {
+    try {
+      const resp = await fetch(EVENTS_URL);
+      if (resp.ok) {
+        publishedEventsData = await resp.json();
+      }
+    } catch (e) {
+      publishedEventsData = null;
+    }
+
+    const draft = localStorage.getItem(EVENTS_STORAGE_KEY);
+    if (draft) {
+      try {
+        eventsData = JSON.parse(draft);
+        hasEventsDraft = true;
+      } catch (e) {
+        localStorage.removeItem(EVENTS_STORAGE_KEY);
+        eventsData = publishedEventsData ? JSON.parse(JSON.stringify(publishedEventsData)) : null;
+        hasEventsDraft = false;
+      }
+    } else {
+      eventsData = publishedEventsData ? JSON.parse(JSON.stringify(publishedEventsData)) : null;
+      hasEventsDraft = false;
+    }
+
+    if (!eventsData) {
+      eventsData = { lastUpdated: new Date().toISOString(), events: [] };
+    }
+
+    renderEventsEditor();
+    refreshEventsPreview();
+    updateEventsDraftBanner();
+    updateEventsLastUpdated();
+    bindEventsEditorEvents();
+  }
+
+  function saveEventsDraft() {
+    eventsData.lastUpdated = new Date().toISOString();
+    localStorage.setItem(EVENTS_STORAGE_KEY, JSON.stringify(eventsData));
+    hasEventsDraft = true;
+    renderEventsEditor();
+    refreshEventsPreview();
+    updateEventsDraftBanner();
+    updateEventsLastUpdated();
+    showToast('Event changes saved', 'success');
+  }
+
+  function discardEventsDraft() {
+    if (!confirm('Discard all unpublished event changes? This cannot be undone.')) return;
+    localStorage.removeItem(EVENTS_STORAGE_KEY);
+    eventsData = publishedEventsData ? JSON.parse(JSON.stringify(publishedEventsData)) : null;
+    if (!eventsData) eventsData = { lastUpdated: new Date().toISOString(), events: [] };
+    hasEventsDraft = false;
+    renderEventsEditor();
+    refreshEventsPreview();
+    updateEventsDraftBanner();
+    updateEventsLastUpdated();
+    showToast('Events draft discarded', 'success');
+  }
+
+  function updateEventsDraftBanner() {
+    const banner = document.getElementById('eventsDraftBanner');
+    if (banner) banner.style.display = hasEventsDraft ? 'block' : 'none';
+  }
+
+  function updateEventsLastUpdated() {
+    const el = document.getElementById('eventsLastUpdated');
+    if (el && eventsData) {
+      const d = new Date(eventsData.lastUpdated);
+      el.textContent = `Last updated: ${d.toLocaleDateString()} at ${d.toLocaleTimeString()}`;
+    }
+  }
+
+  /* ========== EVENTS EDITOR RENDERING ========== */
+
+  function renderEventsEditor() {
+    const container = document.getElementById('eventsList');
+    if (!container || !eventsData) return;
+
+    if (eventsData.events.length === 0) {
+      container.innerHTML = '<p style="text-align:center; color: var(--text-secondary); padding: 20px;">No events yet. Click "Add Event" to create one.</p>';
+      return;
+    }
+
+    container.innerHTML = eventsData.events.map((event, index) => {
+      const inactiveClass = event.active ? '' : ' inactive';
+      const featuredStar = event.featured ? '<i class="fas fa-star featured-star"></i>' : '';
+      const dateStr = event.date ? new Date(event.date + 'T00:00:00').toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' }) : '';
+
+      return `
+        <div class="item-card${inactiveClass}" draggable="true" data-index="${index}" data-type="event">
+          <span class="item-drag"><i class="fas fa-grip-vertical"></i></span>
+          <div class="item-icon"><i class="${escapeAttr(event.icon)}"></i></div>
+          <div class="item-info">
+            <span class="item-name">${EventsRenderer.escapeHtml(event.title)} ${featuredStar}</span>
+            <span class="event-admin-date">${dateStr}</span>
+          </div>
+          <div class="item-actions">
+            <button class="item-btn edit" title="Edit" data-action="edit-event" data-index="${index}">
+              <i class="fas fa-pen"></i>
+            </button>
+            <button class="item-btn delete" title="Delete" data-action="delete-event" data-index="${index}">
+              <i class="fas fa-trash"></i>
+            </button>
+          </div>
+        </div>`;
+    }).join('');
+
+    // Drag-and-drop for events
+    initEventsDragDrop(container);
+
+    // Bind action buttons
+    container.querySelectorAll('.item-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const action = btn.dataset.action;
+        const idx = parseInt(btn.dataset.index);
+        if (action === 'edit-event') openEventModal(idx);
+        if (action === 'delete-event') deleteEvent(idx);
+      });
+    });
+  }
+
+  function initEventsDragDrop(container) {
+    let dragIndex = null;
+
+    container.querySelectorAll('.item-card').forEach(card => {
+      card.addEventListener('dragstart', (e) => {
+        dragIndex = parseInt(card.dataset.index);
+        card.classList.add('dragging');
+        e.dataTransfer.effectAllowed = 'move';
+      });
+
+      card.addEventListener('dragend', () => {
+        card.classList.remove('dragging');
+        dragIndex = null;
+      });
+
+      card.addEventListener('dragover', (e) => {
+        e.preventDefault();
+        e.dataTransfer.dropEffect = 'move';
+      });
+
+      card.addEventListener('drop', (e) => {
+        e.preventDefault();
+        const dropIndex = parseInt(card.dataset.index);
+        if (dragIndex === null || dragIndex === dropIndex) return;
+
+        const [moved] = eventsData.events.splice(dragIndex, 1);
+        eventsData.events.splice(dropIndex, 0, moved);
+        saveEventsDraft();
+      });
+    });
+  }
+
+  /* ========== EVENT MODAL (ADD/EDIT) ========== */
+
+  function openEventModal(index) {
+    const isNew = index === -1;
+    const event = isNew ? null : eventsData.events[index];
+
+    document.getElementById('eventModalTitle').textContent = isNew ? 'Add Event' : 'Edit Event';
+
+    // Populate icon select
+    const iconSelect = document.getElementById('eventIcon');
+    iconSelect.innerHTML = EVENT_ICON_OPTIONS.map(opt =>
+      `<option value="${opt.value}">${opt.label}</option>`
+    ).join('');
+
+    // Fill form
+    document.getElementById('eventId').value = isNew ? '' : event.id;
+    document.getElementById('eventTitle').value = isNew ? '' : event.title;
+    document.getElementById('eventDate').value = isNew ? '' : event.date;
+    document.getElementById('eventTime').value = isNew ? '' : event.time;
+    document.getElementById('eventLocation').value = isNew ? '' : event.location;
+    document.getElementById('eventDesc').value = isNew ? '' : (event.description || '');
+    document.getElementById('eventIcon').value = isNew ? 'fas fa-calendar-days' : event.icon;
+    document.getElementById('eventFeatured').checked = isNew ? false : !!event.featured;
+    document.getElementById('eventActive').checked = isNew ? true : event.active;
+
+    updateEventIconPreview();
+
+    document.getElementById('eventForm').dataset.editIndex = index;
+
+    document.getElementById('eventModal').style.display = 'flex';
+    document.getElementById('eventTitle').focus();
+  }
+
+  function closeEventModal() {
+    document.getElementById('eventModal').style.display = 'none';
+  }
+
+  function saveEventFromModal() {
+    const form = document.getElementById('eventForm');
+    const editIndex = parseInt(form.dataset.editIndex);
+    const isNew = editIndex === -1;
+
+    const title = document.getElementById('eventTitle').value.trim();
+    if (!title) {
+      showToast('Event title is required', 'error');
+      return;
+    }
+
+    const date = document.getElementById('eventDate').value;
+    if (!date) {
+      showToast('Event date is required', 'error');
+      return;
+    }
+
+    const id = isNew
+      ? title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '')
+      : document.getElementById('eventId').value;
+
+    const eventItem = {
+      id,
+      title,
+      date,
+      time: document.getElementById('eventTime').value.trim(),
+      location: document.getElementById('eventLocation').value.trim(),
+      description: document.getElementById('eventDesc').value.trim(),
+      icon: document.getElementById('eventIcon').value,
+      featured: document.getElementById('eventFeatured').checked,
+      active: document.getElementById('eventActive').checked,
+    };
+
+    if (isNew) {
+      eventsData.events.push(eventItem);
+    } else {
+      eventsData.events[editIndex] = eventItem;
+    }
+
+    closeEventModal();
+    saveEventsDraft();
+  }
+
+  function deleteEvent(index) {
+    const event = eventsData.events[index];
+    if (!confirm(`Remove "${event.title}" from events?`)) return;
+    eventsData.events.splice(index, 1);
+    saveEventsDraft();
+  }
+
+  function updateEventIconPreview() {
+    const val = document.getElementById('eventIcon').value;
+    document.getElementById('eventIconPreview').innerHTML = `<i class="${escapeAttr(val)}"></i>`;
+  }
+
+  /* ========== EVENTS PREVIEW ========== */
+
+  function refreshEventsPreview() {
+    const container = document.getElementById('eventsPreviewContainer');
+    if (container && eventsData) {
+      EventsRenderer.renderEvents(eventsData, container);
+    }
+  }
+
+  /* ========== EVENTS EXPORT ========== */
+
+  function downloadEventsJson() {
+    const json = JSON.stringify(eventsData, null, 2);
+    const blob = new Blob([json], { type: 'application/json' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'events.json';
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+    showToast('events.json downloaded!', 'success');
+  }
+
+  function copyEventsJsonToClipboard() {
+    const json = JSON.stringify(eventsData, null, 2);
+    navigator.clipboard.writeText(json).then(() => {
+      showToast('Events JSON copied to clipboard!', 'success');
+    }).catch(() => {
+      const ta = document.createElement('textarea');
+      ta.value = json;
+      document.body.appendChild(ta);
+      ta.select();
+      document.execCommand('copy');
+      document.body.removeChild(ta);
+      showToast('Events JSON copied to clipboard!', 'success');
     });
   }
 
@@ -498,10 +826,34 @@ const Admin = (() => {
     // Icon preview
     document.getElementById('itemIcon')?.addEventListener('change', updateIconPreview);
 
-    // Escape key closes modal
+    // Escape key closes modals
     document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape') closeItemModal();
+      if (e.key === 'Escape') {
+        closeItemModal();
+        closeEventModal();
+      }
     });
+  }
+
+  function bindEventsEditorEvents() {
+    document.getElementById('addEventBtn')?.addEventListener('click', () => openEventModal(-1));
+    document.getElementById('discardEventsDraftBtn')?.addEventListener('click', discardEventsDraft);
+    document.getElementById('downloadEventsBtn')?.addEventListener('click', downloadEventsJson);
+    document.getElementById('copyEventsBtn')?.addEventListener('click', copyEventsJsonToClipboard);
+
+    // Event modal events
+    document.getElementById('eventForm')?.addEventListener('submit', (e) => {
+      e.preventDefault();
+      saveEventFromModal();
+    });
+    document.getElementById('eventModalClose')?.addEventListener('click', closeEventModal);
+    document.getElementById('eventModalCancel')?.addEventListener('click', closeEventModal);
+    document.getElementById('eventModal')?.addEventListener('click', (e) => {
+      if (e.target.id === 'eventModal') closeEventModal();
+    });
+
+    // Event icon preview
+    document.getElementById('eventIcon')?.addEventListener('change', updateEventIconPreview);
   }
 
   /* ========== UTILITIES ========== */

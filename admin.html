@@ -53,7 +53,7 @@
           <span class="logo-icon"><i class="fas fa-fish"></i></span>
           <div>
             <h1>B&R Seafood Admin</h1>
-            <span class="admin-subtitle">Menu Manager</span>
+            <span class="admin-subtitle">Site Manager</span>
           </div>
         </div>
         <div class="admin-actions-header">
@@ -84,6 +84,19 @@
 
     <main class="admin-main">
       <div class="admin-container">
+
+        <!-- Admin Tabs -->
+        <div class="admin-tabs">
+          <button class="admin-tab active" data-tab="menu">
+            <i class="fas fa-utensils"></i> Menu
+          </button>
+          <button class="admin-tab" data-tab="events">
+            <i class="fas fa-calendar-days"></i> Events
+          </button>
+        </div>
+
+        <!-- MENU TAB -->
+        <div class="admin-tab-content active" id="menuTab">
         <div class="admin-layout">
 
           <!-- Editor Panel -->
@@ -173,6 +186,74 @@
           </div>
 
         </div>
+        </div><!-- end menuTab -->
+
+        <!-- EVENTS TAB -->
+        <div class="admin-tab-content" id="eventsTab" style="display:none;">
+
+          <!-- Events Draft Banner -->
+          <div class="draft-banner" id="eventsDraftBanner" style="display:none;">
+            <div class="draft-banner-inner">
+              <div class="draft-info">
+                <i class="fas fa-exclamation-triangle"></i>
+                <span>You have <strong>unpublished event changes</strong>. Download the updated events file to publish.</span>
+              </div>
+              <div class="draft-actions">
+                <button class="btn btn-sm btn-warning" id="discardEventsDraftBtn">
+                  <i class="fas fa-undo"></i> Discard
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="admin-layout">
+            <!-- Events Editor Panel -->
+            <div class="editor-panel">
+              <div class="editor-section" id="eventsSection">
+                <div class="editor-section-header">
+                  <h2><i class="fas fa-calendar-days"></i> Events</h2>
+                  <button class="btn btn-sm btn-accent" id="addEventBtn">
+                    <i class="fas fa-plus"></i> Add Event
+                  </button>
+                </div>
+                <div class="items-list" id="eventsList">
+                  <!-- Rendered by admin.js -->
+                </div>
+              </div>
+
+              <!-- Events Publish Section -->
+              <div class="editor-section publish-section">
+                <div class="editor-section-header">
+                  <h2><i class="fas fa-cloud-arrow-up"></i> Publish Event Changes</h2>
+                </div>
+                <p class="publish-info">To update your live website, download the updated events file and replace <code>data/events.json</code> in your website files.</p>
+                <div class="publish-buttons">
+                  <button class="btn btn-primary" id="downloadEventsBtn">
+                    <i class="fas fa-download"></i> Download events.json
+                  </button>
+                  <button class="btn btn-secondary-solid" id="copyEventsBtn">
+                    <i class="fas fa-copy"></i> Copy JSON
+                  </button>
+                </div>
+                <p class="last-updated" id="eventsLastUpdated"></p>
+              </div>
+            </div>
+
+            <!-- Events Preview Panel -->
+            <div class="preview-panel">
+              <div class="preview-header">
+                <h2><i class="fas fa-eye"></i> Events Preview</h2>
+                <span class="preview-badge">What visitors see</span>
+              </div>
+              <div class="preview-frame">
+                <div class="events-section preview-events" id="eventsPreviewContainer" style="padding: 30px 24px;">
+                  <!-- Rendered by events-renderer.js -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div><!-- end eventsTab -->
+
       </div>
     </main>
 
@@ -239,12 +320,79 @@
       </div>
     </div>
 
+    <!-- Event Edit Modal -->
+    <div class="modal-overlay" id="eventModal" style="display:none;">
+      <div class="modal">
+        <div class="modal-header">
+          <h3 id="eventModalTitle">Edit Event</h3>
+          <button class="modal-close" id="eventModalClose"><i class="fas fa-times"></i></button>
+        </div>
+        <form id="eventForm" class="modal-body">
+          <input type="hidden" id="eventId">
+
+          <div class="form-group">
+            <label for="eventTitle">Event Title</label>
+            <input type="text" id="eventTitle" class="form-input" required placeholder="e.g. Downtown Farmers Market">
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="eventDate">Date</label>
+              <input type="date" id="eventDate" class="form-input" required>
+            </div>
+            <div class="form-group">
+              <label for="eventTime">Time</label>
+              <input type="text" id="eventTime" class="form-input" required placeholder="e.g. 11:00 AM - 7:00 PM">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="eventLocation">Location</label>
+            <input type="text" id="eventLocation" class="form-input" required placeholder="e.g. Island Park, Fargo">
+          </div>
+
+          <div class="form-group">
+            <label for="eventDesc">Description</label>
+            <textarea id="eventDesc" rows="3" class="form-input" placeholder="Tell people what to expect..."></textarea>
+          </div>
+
+          <div class="form-group">
+            <label for="eventIcon">Icon</label>
+            <div class="icon-select-wrap">
+              <select id="eventIcon" class="form-input icon-select"></select>
+              <span class="icon-preview" id="eventIconPreview"><i class="fas fa-calendar"></i></span>
+            </div>
+          </div>
+
+          <label class="toggle-label">
+            <input type="checkbox" id="eventFeatured">
+            <span class="toggle-switch"></span>
+            <span>Featured Event</span>
+          </label>
+
+          <label class="toggle-label">
+            <input type="checkbox" id="eventActive" checked>
+            <span class="toggle-switch"></span>
+            <span>Active (visible on events page)</span>
+          </label>
+
+          <div class="modal-footer">
+            <button type="button" class="btn btn-ghost" id="eventModalCancel">Cancel</button>
+            <button type="submit" class="btn btn-primary">
+              <i class="fas fa-check"></i> Save Event
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+
     <!-- Toast notification -->
     <div class="toast" id="toast"></div>
 
   </div>
 
   <script src="js/menu-renderer.js"></script>
+  <script src="js/events-renderer.js"></script>
   <script src="js/admin.js"></script>
 </body>
 </html>
