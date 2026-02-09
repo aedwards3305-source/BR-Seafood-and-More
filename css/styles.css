@@ -1216,3 +1216,405 @@ ul { list-style: none; }
     align-items: flex-start;
   }
 }
+
+/* ============================================
+   Inner Page Styles
+   ============================================ */
+
+/* ---------- Page Hero (inner pages) ---------- */
+.page-hero {
+  position: relative;
+  padding: 160px 20px 100px;
+  text-align: center;
+  background: linear-gradient(135deg, #0a1628 0%, #1a365d 40%, #0d4a6b 70%, #0a1628 100%);
+  overflow: hidden;
+}
+
+.page-hero .hero-overlay {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 20% 80%, rgba(13,148,136,.15) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(6,182,212,.1) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.page-hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+.page-hero .hero-tagline {
+  font-family: var(--font-script);
+  font-size: clamp(1.1rem, 3vw, 1.5rem);
+  color: var(--gold-light);
+  margin-bottom: 12px;
+}
+
+.page-hero-title {
+  font-family: var(--font-display);
+  font-size: clamp(2.4rem, 7vw, 4rem);
+  font-weight: 900;
+  color: var(--white);
+  line-height: 1.1;
+  margin-bottom: 16px;
+}
+
+.page-hero-subtitle {
+  font-size: clamp(.95rem, 2vw, 1.15rem);
+  color: rgba(255,255,255,.65);
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.page-hero .hero-wave {
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  right: 0;
+  z-index: 3;
+}
+
+/* Active nav link on inner pages */
+.nav-link.active {
+  color: var(--white);
+  background: rgba(255,255,255,.1);
+}
+
+/* ---------- About Teaser (homepage) ---------- */
+.about-teaser {
+  padding: var(--section-pad) 0;
+  background: var(--bg-primary);
+}
+
+.teaser-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  align-items: center;
+}
+
+.teaser-text p {
+  color: var(--text-secondary);
+  line-height: 1.8;
+  margin-top: 16px;
+  font-size: 1.05rem;
+}
+
+.teaser-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.teaser-card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: var(--white);
+  border-radius: 16px;
+  padding: 20px 24px;
+  box-shadow: var(--shadow-sm);
+  transition: all .3s var(--ease-out);
+}
+
+.teaser-card:hover {
+  transform: translateX(6px);
+  box-shadow: var(--shadow-md);
+}
+
+.teaser-card .about-icon {
+  min-width: 50px;
+  height: 50px;
+  margin-bottom: 0;
+}
+
+.teaser-card h3 {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 2px;
+}
+
+.teaser-card p {
+  color: var(--text-secondary);
+  font-size: .9rem;
+  line-height: 1.4;
+}
+
+/* ---------- Menu Teaser (homepage) ---------- */
+.menu-teaser {
+  padding: var(--section-pad) 0;
+  background: var(--navy);
+  position: relative;
+  overflow: hidden;
+}
+
+.teaser-menu-highlights {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.teaser-menu-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  padding: 28px 16px;
+  background: rgba(255,255,255,.06);
+  border: 1px solid rgba(255,255,255,.1);
+  border-radius: 16px;
+  text-align: center;
+  transition: all .3s var(--ease-out);
+}
+
+.teaser-menu-item:hover {
+  background: rgba(255,255,255,.12);
+  border-color: rgba(13,148,136,.3);
+  transform: translateY(-4px);
+}
+
+.teaser-menu-item i {
+  font-size: 1.8rem;
+  color: var(--teal-light);
+}
+
+.teaser-menu-item span {
+  color: var(--white);
+  font-weight: 600;
+  font-size: .95rem;
+}
+
+.teaser-menu-note {
+  text-align: center;
+  color: rgba(255,255,255,.5);
+  margin-top: 24px;
+  font-size: .95rem;
+}
+
+/* ---------- About Page - Extra Sections ---------- */
+.about-story-text {
+  max-width: 750px;
+  margin: 0 auto 50px;
+  text-align: center;
+}
+
+.about-story-text p {
+  color: var(--text-secondary);
+  font-size: 1.05rem;
+  line-height: 1.9;
+  margin-bottom: 16px;
+}
+
+.owners-section {
+  margin-top: 80px;
+}
+
+.owners-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.owner-detail {
+  display: flex;
+  gap: 20px;
+  background: var(--white);
+  border-radius: 20px;
+  padding: 32px;
+  box-shadow: var(--shadow-md);
+  transition: all .3s var(--ease-out);
+}
+
+.owner-detail:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+.owner-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 56px;
+  height: 56px;
+  border-radius: 16px;
+  background: linear-gradient(135deg, var(--teal), var(--teal-light));
+  color: var(--white);
+  font-size: 1.3rem;
+}
+
+.owner-detail h3 {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.owner-role {
+  color: var(--teal);
+  font-weight: 600;
+  font-size: .9rem;
+  margin-bottom: 10px !important;
+}
+
+.owner-detail p {
+  color: var(--text-secondary);
+  line-height: 1.7;
+  font-size: .95rem;
+}
+
+/* About CTA */
+.about-cta {
+  text-align: center;
+  margin-top: 80px;
+  padding: 50px 30px;
+  background: var(--gray-100);
+  border-radius: 24px;
+}
+
+.about-cta h3 {
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+  font-weight: 800;
+  margin-bottom: 24px;
+}
+
+.about-cta .hero-buttons {
+  opacity: 1;
+  transform: none;
+  animation: none;
+}
+
+.btn-secondary-dark {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 32px;
+  border-radius: 12px;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  border: 2px solid var(--gray-200);
+  background: var(--white);
+  color: var(--gray-700);
+  transition: all .3s var(--ease-out);
+}
+
+.btn-secondary-dark:hover {
+  border-color: var(--teal);
+  color: var(--teal);
+  transform: translateY(-3px);
+}
+
+/* ---------- Menu Page - Order CTA Banner ---------- */
+.order-cta-section {
+  padding: 60px 0;
+  background: var(--bg-primary);
+}
+
+.order-cta-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  background: var(--white);
+  border-radius: 20px;
+  padding: 40px;
+  box-shadow: var(--shadow-lg);
+}
+
+.order-cta-text h2 {
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+  font-weight: 800;
+  margin-bottom: 6px;
+}
+
+.order-cta-text p {
+  color: var(--text-secondary);
+}
+
+.order-cta-buttons {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+/* ---------- Inner Page Responsive ---------- */
+@media (max-width: 1024px) {
+  .teaser-layout {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .teaser-cards {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .teaser-card {
+    flex: 1;
+    min-width: 200px;
+  }
+
+  .owners-content {
+    grid-template-columns: 1fr;
+  }
+
+  .teaser-menu-highlights {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .page-hero {
+    padding: 130px 16px 70px;
+  }
+
+  .teaser-card {
+    min-width: 100%;
+  }
+
+  .order-cta-box {
+    flex-direction: column;
+    text-align: center;
+    padding: 30px 24px;
+  }
+
+  .order-cta-buttons {
+    justify-content: center;
+    width: 100%;
+  }
+
+  .order-cta-buttons .btn {
+    flex: 1;
+    justify-content: center;
+    min-width: 140px;
+  }
+
+  .owner-detail {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+
+  .teaser-menu-highlights {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .order-cta-buttons {
+    flex-direction: column;
+  }
+
+  .teaser-menu-highlights {
+    grid-template-columns: 1fr;
+  }
+}

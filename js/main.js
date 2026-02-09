@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initHeroBubbles();
   initSmoothScroll();
   loadMenu();
+  initScrollReveal();
 });
 
 /* ---------- Load Menu from JSON ---------- */
@@ -20,6 +21,8 @@ async function loadMenu() {
     if (!resp.ok) throw new Error('Failed to load menu');
     const data = await resp.json();
     MenuRenderer.renderMenu(data, container);
+    // Re-apply scroll reveal for dynamically inserted menu elements
+    initScrollReveal();
   } catch (err) {
     container.innerHTML = `
       <p style="text-align:center; color: rgba(255,255,255,.5); padding: 40px 0;">
@@ -27,9 +30,6 @@ async function loadMenu() {
         Please call <a href="tel:7018183664" style="color: var(--teal-light);">(701) 818-3664</a> for current items and pricing.
       </p>`;
   }
-
-  // Apply scroll reveal to the newly rendered menu elements
-  initScrollReveal();
 }
 
 /* ---------- Sticky Navbar ---------- */
@@ -94,7 +94,11 @@ function initScrollReveal() {
     '.order-card',
     '.order-phone',
     '.contact-card',
-    '.menu-note'
+    '.menu-note',
+    '.teaser-card',
+    '.teaser-menu-item',
+    '.owner-detail',
+    '.order-cta-box'
   ];
 
   const observer = new IntersectionObserver((entries) => {

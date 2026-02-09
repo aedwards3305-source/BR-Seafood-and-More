@@ -22,7 +22,7 @@
   <!-- Navigation -->
   <nav class="navbar" id="navbar">
     <div class="nav-container">
-      <a href="#hero" class="nav-logo">
+      <a href="index.html" class="nav-logo">
         <span class="logo-icon"><i class="fas fa-fish"></i></span>
         B&R Seafood
       </a>
@@ -30,9 +30,9 @@
         <span class="hamburger"></span>
       </button>
       <ul class="nav-menu" id="navMenu">
-        <li><a href="#hero" class="nav-link">Home</a></li>
-        <li><a href="#about" class="nav-link">About</a></li>
-        <li><a href="#menu" class="nav-link">Menu</a></li>
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="about.html" class="nav-link">About</a></li>
+        <li><a href="menu.html" class="nav-link">Menu</a></li>
         <li><a href="#order" class="nav-link nav-cta">Order Now</a></li>
         <li><a href="#contact" class="nav-link">Contact</a></li>
       </ul>
@@ -48,7 +48,7 @@
       <h1 class="hero-title">B&R Seafood<br><span class="hero-highlight">and More</span></h1>
       <p class="hero-subtitle">Golden fried shrimp, crispy catfish & Southern sides<br>served fresh from our kitchen to your table</p>
       <div class="hero-buttons">
-        <a href="#menu" class="btn btn-primary">
+        <a href="menu.html" class="btn btn-primary">
           <i class="fas fa-utensils"></i> View Menu
         </a>
         <a href="#order" class="btn btn-secondary">
@@ -67,58 +67,73 @@
     </div>
   </section>
 
-  <!-- About Section -->
-  <section class="about" id="about">
+  <!-- About Teaser -->
+  <section class="about-teaser" id="about">
     <div class="container">
-      <div class="section-header">
-        <span class="section-label">Our Story</span>
-        <h2 class="section-title">A Passion for <span class="text-accent">Great Seafood</span></h2>
-        <div class="section-divider">
-          <span class="divider-icon"><i class="fas fa-shrimp"></i></span>
-        </div>
-      </div>
-      <div class="about-grid">
-        <div class="about-card about-story">
-          <div class="about-icon">
-            <i class="fas fa-heart"></i>
-          </div>
-          <h3>Family Tradition</h3>
+      <div class="teaser-layout">
+        <div class="teaser-text">
+          <span class="section-label">Our Story</span>
+          <h2 class="section-title">A Passion for <span class="text-accent">Great Seafood</span></h2>
           <p>Bernard and Rene Edwards started B&R Seafood and More with a simple mission: bring the best golden fried seafood and authentic Southern sides to the community. Every recipe is crafted with love and seasoned with tradition.</p>
+          <a href="about.html" class="btn btn-primary" style="margin-top: 24px;">
+            <i class="fas fa-arrow-right"></i> Read Our Story
+          </a>
         </div>
-        <div class="about-card about-quality">
-          <div class="about-icon">
-            <i class="fas fa-fire"></i>
+        <div class="teaser-cards">
+          <div class="teaser-card">
+            <div class="about-icon"><i class="fas fa-heart"></i></div>
+            <h3>Family Tradition</h3>
+            <p>Recipes passed down through generations</p>
           </div>
-          <h3>Cooked Fresh Daily</h3>
-          <p>We believe great food starts with quality ingredients and careful preparation. Our shrimp and catfish are golden fried to perfection, and our sides are made from scratch with recipes passed down through generations.</p>
-        </div>
-        <div class="about-card about-community">
-          <div class="about-icon">
-            <i class="fas fa-users"></i>
+          <div class="teaser-card">
+            <div class="about-icon"><i class="fas fa-fire"></i></div>
+            <h3>Cooked Fresh</h3>
+            <p>Made from scratch every single day</p>
           </div>
-          <h3>Serving Our Community</h3>
-          <p>From local events to your front door, we're proud to serve our neighbors. Whether you're grabbing a quick bite or feeding the whole family, B&R Seafood and More has you covered.</p>
+          <div class="teaser-card">
+            <div class="about-icon"><i class="fas fa-users"></i></div>
+            <h3>Community First</h3>
+            <p>Proudly serving our neighbors</p>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Menu Section -->
-  <section class="menu" id="menu">
+  <!-- Menu Teaser -->
+  <section class="menu-teaser" id="menu">
     <div class="menu-bg-pattern"></div>
     <div class="container">
       <div class="section-header">
         <span class="section-label">What We Serve</span>
-        <h2 class="section-title">Our <span class="text-accent">Menu</span></h2>
+        <h2 class="section-title" style="color: var(--white);">Our <span class="text-accent">Menu</span></h2>
         <div class="section-divider">
           <span class="divider-icon"><i class="fas fa-fish"></i></span>
         </div>
-        <p class="section-subtitle">All dinners come with your choice of 2 sides</p>
       </div>
-
-      <!-- Dynamic menu content rendered by menu-renderer.js -->
-      <div id="menu-content">
-        <p style="text-align:center; color: rgba(255,255,255,.5); padding: 40px 0;">Loading menu...</p>
+      <div class="teaser-menu-highlights">
+        <div class="teaser-menu-item">
+          <i class="fas fa-star"></i>
+          <span>Shrimp & Catfish Combo</span>
+        </div>
+        <div class="teaser-menu-item">
+          <i class="fas fa-shrimp"></i>
+          <span>Golden Fried Shrimp</span>
+        </div>
+        <div class="teaser-menu-item">
+          <i class="fas fa-fish"></i>
+          <span>Golden Fried Catfish</span>
+        </div>
+        <div class="teaser-menu-item">
+          <i class="fas fa-bowl-food"></i>
+          <span>Southern Sides</span>
+        </div>
+      </div>
+      <p class="teaser-menu-note">All dinners include your choice of 2 sides</p>
+      <div style="text-align: center; margin-top: 32px;">
+        <a href="menu.html" class="btn btn-primary">
+          <i class="fas fa-utensils"></i> View Full Menu & Prices
+        </a>
       </div>
     </div>
   </section>
@@ -226,9 +241,9 @@
         <div class="footer-links">
           <h4>Quick Links</h4>
           <ul>
-            <li><a href="#hero">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#menu">Menu</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="menu.html">Menu</a></li>
             <li><a href="#order">Order Online</a></li>
             <li><a href="#contact">Contact</a></li>
           </ul>
@@ -251,7 +266,6 @@
     </div>
   </footer>
 
-  <script src="js/menu-renderer.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>
