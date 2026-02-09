@@ -310,6 +310,17 @@ ul { list-style: none; }
   padding: 120px 20px 80px;
 }
 
+.hero-logo {
+  width: clamp(120px, 20vw, 180px);
+  height: auto;
+  border-radius: 50%;
+  margin-bottom: 24px;
+  opacity: 0;
+  transform: translateY(30px) scale(.9);
+  animation: fadeUp .8s var(--ease-out) .1s forwards;
+  filter: drop-shadow(0 4px 20px rgba(0,0,0,.3));
+}
+
 .hero-tagline {
   font-family: var(--font-script);
   font-size: clamp(1.2rem, 3vw, 1.8rem);
