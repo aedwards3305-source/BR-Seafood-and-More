@@ -846,12 +846,15 @@ ul { list-style: none; }
 }
 
 .contact-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 30px;
 }
 
 .contact-card {
+  flex: 0 1 calc(33.333% - 20px);
+  min-width: 260px;
   background: var(--white);
   border-radius: 20px;
   padding: 40px 30px;
@@ -1182,8 +1185,12 @@ ul { list-style: none; }
 
   /* Contact grid */
   .contact-grid {
-    grid-template-columns: 1fr;
     gap: 20px;
+  }
+
+  .contact-card {
+    flex: 1 1 100%;
+    min-width: 0;
   }
 
   /* Sides */
