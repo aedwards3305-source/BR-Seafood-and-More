@@ -1,0 +1,122 @@
+{
+  "lastUpdated": "2026-02-09T12:00:00Z",
+  "settings": {
+    "sidesIncluded": 2,
+    "extraSidePrice": 3,
+    "menuNote": "Extra sides available for $3 each. Prices subject to change. Ask about our daily specials!"
+  },
+  "categories": [
+    {
+      "id": "dinners",
+      "name": "Dinner Plates",
+      "icon": "fas fa-plate-wheat",
+      "badge": "Includes 2 Sides",
+      "items": [
+        {
+          "id": "shrimp-catfish-combo",
+          "name": "Shrimp & Catfish Combo",
+          "description": "10 pc golden fried shrimp and catfish \u2014 the best of both worlds",
+          "price": 26,
+          "icon": "fas fa-star",
+          "featured": true,
+          "badgeText": "Best Seller",
+          "active": true
+        },
+        {
+          "id": "golden-fried-shrimp-10",
+          "name": "Golden Fried Shrimp (10 pc)",
+          "description": "10 pieces of plump, golden fried shrimp",
+          "price": 18,
+          "icon": "fas fa-shrimp",
+          "featured": false,
+          "badgeText": "",
+          "active": true
+        },
+        {
+          "id": "golden-fried-shrimp-8",
+          "name": "Golden Fried Shrimp (8 pc)",
+          "description": "8 pieces of perfectly crispy fried shrimp",
+          "price": 15,
+          "icon": "fas fa-shrimp",
+          "featured": false,
+          "badgeText": "",
+          "active": true
+        },
+        {
+          "id": "golden-fried-catfish",
+          "name": "Golden Fried Catfish",
+          "description": "Tender catfish fillets fried golden and crispy",
+          "price": 18,
+          "icon": "fas fa-fish",
+          "featured": false,
+          "badgeText": "",
+          "active": true
+        },
+        {
+          "id": "catfish-2pc",
+          "name": "Catfish (2 pc)",
+          "description": "2 pieces of golden fried catfish fillet",
+          "price": 12,
+          "icon": "fas fa-fish",
+          "featured": false,
+          "badgeText": "",
+          "active": true
+        },
+        {
+          "id": "catfish-nuggets",
+          "name": "Catfish Nuggets",
+          "description": "Bite-sized catfish nuggets, golden fried",
+          "price": 15,
+          "icon": "fas fa-fish",
+          "featured": false,
+          "badgeText": "",
+          "active": true
+        }
+      ]
+    },
+    {
+      "id": "sides",
+      "name": "Southern Sides",
+      "icon": "fas fa-bowl-food",
+      "badge": "Choose 2 with any dinner",
+      "items": [
+        {
+          "id": "baked-beans",
+          "name": "Baked Beans",
+          "icon": "fas fa-seedling",
+          "active": true
+        },
+        {
+          "id": "collard-greens",
+          "name": "Collard Greens",
+          "icon": "fas fa-pepper-hot",
+          "active": true
+        },
+        {
+          "id": "corn-on-the-cob",
+          "name": "Corn on the Cob",
+          "icon": "fas fa-wheat-awn",
+          "active": true
+        },
+        {
+          "id": "hush-puppies",
+          "name": "Hush Puppies",
+          "icon": "fas fa-bread-slice",
+          "active": true
+        },
+        {
+          "id": "rice",
+          "name": "Rice",
+          "icon": "fas fa-bowl-rice",
+          "active": true
+        },
+        {
+          "id": "seasoned-fries",
+          "name": "Seasoned Fries",
+          "icon": "fas fa-french-fries",
+          "active": true
+        }
+      ]
+    }
+  ]
+}

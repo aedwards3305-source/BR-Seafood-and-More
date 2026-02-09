@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="B&R Seafood and More - Golden fried shrimp, catfish, and Southern sides served fresh from our food truck. Order on DoorDash or Uber Eats!">
+  <meta name="keywords" content="seafood, food truck, fried shrimp, catfish, Southern food, DoorDash, Uber Eats">
+  <title>B&R Seafood and More | Fresh Fried Seafood</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Poppins:wght@300;400;500;600;700&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="nav-logo">
+        <span class="logo-icon"><i class="fas fa-fish"></i></span>
+        B&R Seafood
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+        <span class="hamburger"></span>
+      </button>
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="#hero" class="nav-link">Home</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#menu" class="nav-link">Menu</a></li>
+        <li><a href="#order" class="nav-link nav-cta">Order Now</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero" id="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-particles" id="particles"></div>
+    <div class="hero-content">
+      <p class="hero-tagline">Fresh From the Fryer</p>
+      <h1 class="hero-title">B&R Seafood<br><span class="hero-highlight">and More</span></h1>
+      <p class="hero-subtitle">Golden fried shrimp, crispy catfish & Southern sides<br>served fresh from our kitchen to your table</p>
+      <div class="hero-buttons">
+        <a href="#menu" class="btn btn-primary">
+          <i class="fas fa-utensils"></i> View Menu
+        </a>
+        <a href="#order" class="btn btn-secondary">
+          <i class="fas fa-shopping-bag"></i> Order Now
+        </a>
+      </div>
+      <div class="hero-badge">
+        <i class="fas fa-award"></i>
+        <span>Family Owned & Operated</span>
+      </div>
+    </div>
+    <div class="hero-wave">
+      <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
+        <path d="M0,64 C360,120 720,0 1080,64 C1260,96 1380,80 1440,64 L1440,120 L0,120 Z" fill="var(--bg-primary)"/>
+      </svg>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="about" id="about">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Our Story</span>
+        <h2 class="section-title">A Passion for <span class="text-accent">Great Seafood</span></h2>
+        <div class="section-divider">
+          <span class="divider-icon"><i class="fas fa-shrimp"></i></span>
+        </div>
+      </div>
+      <div class="about-grid">
+        <div class="about-card about-story">
+          <div class="about-icon">
+            <i class="fas fa-heart"></i>
+          </div>
+          <h3>Family Tradition</h3>
+          <p>Bernard and Rene Edwards started B&R Seafood and More with a simple mission: bring the best golden fried seafood and authentic Southern sides to the community. Every recipe is crafted with love and seasoned with tradition.</p>
+        </div>
+        <div class="about-card about-quality">
+          <div class="about-icon">
+            <i class="fas fa-fire"></i>
+          </div>
+          <h3>Cooked Fresh Daily</h3>
+          <p>We believe great food starts with quality ingredients and careful preparation. Our shrimp and catfish are golden fried to perfection, and our sides are made from scratch with recipes passed down through generations.</p>
+        </div>
+        <div class="about-card about-community">
+          <div class="about-icon">
+            <i class="fas fa-users"></i>
+          </div>
+          <h3>Serving Our Community</h3>
+          <p>From local events to your front door, we're proud to serve our neighbors. Whether you're grabbing a quick bite or feeding the whole family, B&R Seafood and More has you covered.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Menu Section -->
+  <section class="menu" id="menu">
+    <div class="menu-bg-pattern"></div>
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">What We Serve</span>
+        <h2 class="section-title">Our <span class="text-accent">Menu</span></h2>
+        <div class="section-divider">
+          <span class="divider-icon"><i class="fas fa-fish"></i></span>
+        </div>
+        <p class="section-subtitle">All dinners come with your choice of 2 sides</p>
+      </div>
+
+      <!-- Dynamic menu content rendered by menu-renderer.js -->
+      <div id="menu-content">
+        <p style="text-align:center; color: rgba(255,255,255,.5); padding: 40px 0;">Loading menu...</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Order Section -->
+  <section class="order" id="order">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Hungry?</span>
+        <h2 class="section-title">Order <span class="text-accent">Online</span></h2>
+        <div class="section-divider">
+          <span class="divider-icon"><i class="fas fa-bag-shopping"></i></span>
+        </div>
+        <p class="section-subtitle">Skip the line and get your favorites delivered right to your door</p>
+      </div>
+      <div class="order-grid">
+        <a href="https://www.doordash.com" target="_blank" rel="noopener noreferrer" class="order-card doordash">
+          <div class="order-card-bg"></div>
+          <div class="order-card-content">
+            <div class="order-icon">
+              <i class="fas fa-truck-fast"></i>
+            </div>
+            <h3>DoorDash</h3>
+            <p>Get it delivered fast with DoorDash</p>
+            <span class="order-btn">
+              Order on DoorDash <i class="fas fa-arrow-right"></i>
+            </span>
+          </div>
+        </a>
+        <a href="https://www.ubereats.com" target="_blank" rel="noopener noreferrer" class="order-card ubereats">
+          <div class="order-card-bg"></div>
+          <div class="order-card-content">
+            <div class="order-icon">
+              <i class="fas fa-car"></i>
+            </div>
+            <h3>Uber Eats</h3>
+            <p>Order through Uber Eats for delivery</p>
+            <span class="order-btn">
+              Order on Uber Eats <i class="fas fa-arrow-right"></i>
+            </span>
+          </div>
+        </a>
+      </div>
+      <div class="order-phone">
+        <p>Or call us directly to place your order:</p>
+        <a href="tel:7018183664" class="phone-link">
+          <i class="fas fa-phone"></i>
+          <span>(701) 818-3664</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="contact" id="contact">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Get In Touch</span>
+        <h2 class="section-title">Contact <span class="text-accent">Us</span></h2>
+        <div class="section-divider">
+          <span class="divider-icon"><i class="fas fa-envelope"></i></span>
+        </div>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-card">
+          <div class="contact-icon">
+            <i class="fas fa-phone"></i>
+          </div>
+          <h3>Call Us</h3>
+          <a href="tel:7018183664">(701) 818-3664</a>
+          <p>Give us a ring to place an order or ask about catering</p>
+        </div>
+        <div class="contact-card">
+          <div class="contact-icon">
+            <i class="fas fa-clock"></i>
+          </div>
+          <h3>Hours</h3>
+          <p class="hours-text">Follow us on social media for our latest schedule and locations!</p>
+        </div>
+        <div class="contact-card">
+          <div class="contact-icon">
+            <i class="fas fa-people-carry-box"></i>
+          </div>
+          <h3>Catering</h3>
+          <p>Have an event? We cater! Call us to discuss your next party, gathering, or celebration.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-wave">
+      <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
+        <path d="M0,56 C360,0 720,120 1080,56 C1260,24 1380,40 1440,56 L1440,0 L0,0 Z" fill="var(--bg-primary)"/>
+      </svg>
+    </div>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <h3><i class="fas fa-fish"></i> B&R Seafood and More</h3>
+          <p>Golden fried seafood & Southern sides, served with love by Bernard and Rene Edwards.</p>
+        </div>
+        <div class="footer-links">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#menu">Menu</a></li>
+            <li><a href="#order">Order Online</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-contact">
+          <h4>Contact</h4>
+          <p><i class="fas fa-phone"></i> <a href="tel:7018183664">(701) 818-3664</a></p>
+          <div class="social-links">
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 B&R Seafood and More. All rights reserved.</p>
+        <a href="admin.html" class="admin-link">Admin</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/menu-renderer.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

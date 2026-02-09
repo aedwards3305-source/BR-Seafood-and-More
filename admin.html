@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Admin - B&R Seafood and More</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Poppins:wght@300;400;500;600;700&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/admin.css">
+</head>
+<body class="admin-body">
+
+  <!-- Password Gate -->
+  <div class="login-screen" id="loginScreen">
+    <div class="login-card">
+      <div class="login-logo">
+        <span class="logo-icon"><i class="fas fa-fish"></i></span>
+        <h1>B&R Seafood</h1>
+        <p>Admin Panel</p>
+      </div>
+      <form id="loginForm" class="login-form">
+        <div class="form-group">
+          <label for="password">Password</label>
+          <div class="password-input-wrap">
+            <input type="password" id="password" placeholder="Enter admin password" autocomplete="current-password" required>
+            <button type="button" class="toggle-password" id="togglePassword">
+              <i class="fas fa-eye"></i>
+            </button>
+          </div>
+          <p class="login-error" id="loginError"></p>
+        </div>
+        <button type="submit" class="btn btn-primary btn-full">
+          <i class="fas fa-lock-open"></i> Sign In
+        </button>
+      </form>
+      <a href="index.html" class="back-link"><i class="fas fa-arrow-left"></i> Back to Website</a>
+    </div>
+  </div>
+
+  <!-- Admin Dashboard (hidden until authenticated) -->
+  <div class="admin-dashboard" id="adminDashboard" style="display:none;">
+
+    <!-- Admin Header -->
+    <header class="admin-header">
+      <div class="admin-header-inner">
+        <div class="admin-brand">
+          <span class="logo-icon"><i class="fas fa-fish"></i></span>
+          <div>
+            <h1>B&R Seafood Admin</h1>
+            <span class="admin-subtitle">Menu Manager</span>
+          </div>
+        </div>
+        <div class="admin-actions-header">
+          <a href="index.html" class="btn btn-ghost" target="_blank">
+            <i class="fas fa-external-link-alt"></i> View Site
+          </a>
+          <button class="btn btn-ghost" id="logoutBtn">
+            <i class="fas fa-sign-out-alt"></i> Logout
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Draft Banner -->
+    <div class="draft-banner" id="draftBanner" style="display:none;">
+      <div class="draft-banner-inner">
+        <div class="draft-info">
+          <i class="fas fa-exclamation-triangle"></i>
+          <span>You have <strong>unpublished changes</strong>. Download the updated menu file to publish.</span>
+        </div>
+        <div class="draft-actions">
+          <button class="btn btn-sm btn-warning" id="discardDraftBtn">
+            <i class="fas fa-undo"></i> Discard
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <main class="admin-main">
+      <div class="admin-container">
+        <div class="admin-layout">
+
+          <!-- Editor Panel -->
+          <div class="editor-panel">
+
+            <!-- Dinners Section -->
+            <div class="editor-section" id="dinnersSection">
+              <div class="editor-section-header">
+                <h2><i class="fas fa-plate-wheat"></i> Dinner Plates</h2>
+                <button class="btn btn-sm btn-accent" id="addDinnerBtn">
+                  <i class="fas fa-plus"></i> Add Item
+                </button>
+              </div>
+              <div class="items-list" id="dinnersList">
+                <!-- Rendered by admin.js -->
+              </div>
+            </div>
+
+            <!-- Sides Section -->
+            <div class="editor-section" id="sidesSection">
+              <div class="editor-section-header">
+                <h2><i class="fas fa-bowl-food"></i> Southern Sides</h2>
+                <button class="btn btn-sm btn-accent" id="addSideBtn">
+                  <i class="fas fa-plus"></i> Add Side
+                </button>
+              </div>
+              <div class="items-list" id="sidesList">
+                <!-- Rendered by admin.js -->
+              </div>
+            </div>
+
+            <!-- Settings Section -->
+            <div class="editor-section" id="settingsSection">
+              <div class="editor-section-header">
+                <h2><i class="fas fa-cog"></i> Menu Settings</h2>
+              </div>
+              <div class="settings-form">
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="sidesIncluded">Sides Included with Dinner</label>
+                    <input type="number" id="sidesIncluded" min="0" max="10" class="form-input">
+                  </div>
+                  <div class="form-group">
+                    <label for="extraSidePrice">Extra Side Price ($)</label>
+                    <input type="number" id="extraSidePrice" min="0" step="0.5" class="form-input">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="menuNote">Menu Note</label>
+                  <textarea id="menuNote" rows="2" class="form-input"></textarea>
+                </div>
+                <button class="btn btn-sm btn-accent" id="saveSettingsBtn">
+                  <i class="fas fa-check"></i> Save Settings
+                </button>
+              </div>
+            </div>
+
+            <!-- Publish Section -->
+            <div class="editor-section publish-section">
+              <div class="editor-section-header">
+                <h2><i class="fas fa-cloud-arrow-up"></i> Publish Changes</h2>
+              </div>
+              <p class="publish-info">To update your live website, download the updated menu file and replace <code>data/menu.json</code> in your website files.</p>
+              <div class="publish-buttons">
+                <button class="btn btn-primary" id="downloadBtn">
+                  <i class="fas fa-download"></i> Download menu.json
+                </button>
+                <button class="btn btn-secondary-solid" id="copyBtn">
+                  <i class="fas fa-copy"></i> Copy JSON
+                </button>
+              </div>
+              <p class="last-updated" id="lastUpdated"></p>
+            </div>
+          </div>
+
+          <!-- Preview Panel -->
+          <div class="preview-panel">
+            <div class="preview-header">
+              <h2><i class="fas fa-eye"></i> Live Preview</h2>
+              <span class="preview-badge">What customers see</span>
+            </div>
+            <div class="preview-frame">
+              <div class="menu preview-menu" id="previewContainer">
+                <!-- Rendered by menu-renderer.js -->
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </main>
+
+    <!-- Item Edit Modal -->
+    <div class="modal-overlay" id="itemModal" style="display:none;">
+      <div class="modal">
+        <div class="modal-header">
+          <h3 id="modalTitle">Edit Item</h3>
+          <button class="modal-close" id="modalClose"><i class="fas fa-times"></i></button>
+        </div>
+        <form id="itemForm" class="modal-body">
+          <input type="hidden" id="itemId">
+          <input type="hidden" id="itemCategory">
+
+          <div class="form-group">
+            <label for="itemName">Name</label>
+            <input type="text" id="itemName" class="form-input" required placeholder="e.g. Golden Fried Shrimp (10 pc)">
+          </div>
+
+          <div class="form-group" id="descGroup">
+            <label for="itemDesc">Description</label>
+            <input type="text" id="itemDesc" class="form-input" placeholder="e.g. 10 pieces of plump, golden fried shrimp">
+          </div>
+
+          <div class="form-row" id="priceRow">
+            <div class="form-group">
+              <label for="itemPrice">Price ($)</label>
+              <input type="number" id="itemPrice" class="form-input" min="0" step="0.5" required>
+            </div>
+            <div class="form-group">
+              <label for="itemIcon">Icon</label>
+              <div class="icon-select-wrap">
+                <select id="itemIcon" class="form-input icon-select"></select>
+                <span class="icon-preview" id="iconPreview"><i class="fas fa-fish"></i></span>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-row" id="featuredRow">
+            <label class="toggle-label">
+              <input type="checkbox" id="itemFeatured">
+              <span class="toggle-switch"></span>
+              <span>Featured Item</span>
+            </label>
+            <div class="form-group badge-group" id="badgeGroup" style="display:none;">
+              <label for="itemBadge">Badge Text</label>
+              <input type="text" id="itemBadge" class="form-input" placeholder="e.g. Best Seller">
+            </div>
+          </div>
+
+          <label class="toggle-label">
+            <input type="checkbox" id="itemActive" checked>
+            <span class="toggle-switch"></span>
+            <span>Active (visible on menu)</span>
+          </label>
+
+          <div class="modal-footer">
+            <button type="button" class="btn btn-ghost" id="modalCancel">Cancel</button>
+            <button type="submit" class="btn btn-primary">
+              <i class="fas fa-check"></i> Save Item
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- Toast notification -->
+    <div class="toast" id="toast"></div>
+
+  </div>
+
+  <script src="js/menu-renderer.js"></script>
+  <script src="js/admin.js"></script>
+</body>
+</html>
