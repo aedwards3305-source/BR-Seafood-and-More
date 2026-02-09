@@ -64,6 +64,28 @@ const Admin = (() => {
   let publishedEventsData = null;
   let hasEventsDraft = false;
 
+  const SETTINGS_STORAGE_KEY = 'br-seafood-settings-draft';
+  const SETTINGS_URL = 'data/site-settings.json';
+
+  const ABOUT_ICON_OPTIONS = [
+    { value: 'fas fa-heart',              label: 'Heart' },
+    { value: 'fas fa-fire',               label: 'Fire' },
+    { value: 'fas fa-users',              label: 'Community' },
+    { value: 'fas fa-star',               label: 'Star' },
+    { value: 'fas fa-utensils',           label: 'Utensils' },
+    { value: 'fas fa-fish',               label: 'Fish' },
+    { value: 'fas fa-hand-holding-heart', label: 'Giving' },
+    { value: 'fas fa-seedling',           label: 'Growth' },
+    { value: 'fas fa-award',              label: 'Award' },
+    { value: 'fas fa-truck',              label: 'Truck' },
+    { value: 'fas fa-shrimp',             label: 'Shrimp' },
+    { value: 'fas fa-plate-wheat',        label: 'Plate' },
+  ];
+
+  let settingsData = null;
+  let publishedSettingsData = null;
+  let hasSettingsDraft = false;
+
   /* ---------- Initialization ---------- */
   function init() {
     if (checkAuth()) {
@@ -160,6 +182,7 @@ const Admin = (() => {
     if (dash) dash.style.display = 'block';
     loadData();
     loadEventsData();
+    loadSettingsData();
   }
 
   /* ========== MENU DATA MANAGEMENT ========== */
@@ -854,6 +877,331 @@ const Admin = (() => {
 
     // Event icon preview
     document.getElementById('eventIcon')?.addEventListener('change', updateEventIconPreview);
+  }
+
+  /* ================================================================
+     SITE SETTINGS MANAGEMENT
+     ================================================================ */
+
+  async function loadSettingsData() {
+    try {
+      const resp = await fetch(SETTINGS_URL);
+      if (resp.ok) {
+        publishedSettingsData = await resp.json();
+      }
+    } catch (e) {
+      publishedSettingsData = null;
+    }
+
+    const draft = localStorage.getItem(SETTINGS_STORAGE_KEY);
+    if (draft) {
+      try {
+        settingsData = JSON.parse(draft);
+        hasSettingsDraft = true;
+      } catch (e) {
+        localStorage.removeItem(SETTINGS_STORAGE_KEY);
+        settingsData = publishedSettingsData ? JSON.parse(JSON.stringify(publishedSettingsData)) : null;
+        hasSettingsDraft = false;
+      }
+    } else {
+      settingsData = publishedSettingsData ? JSON.parse(JSON.stringify(publishedSettingsData)) : null;
+      hasSettingsDraft = false;
+    }
+
+    if (!settingsData) {
+      // Create default settings if none exist
+      settingsData = {
+        lastUpdated: new Date().toISOString(),
+        contact: { phone: '', phoneRaw: '', email: '', emailSubject: 'Catering Inquiry' },
+        location: { address: '', note: '', googleMapsUrl: '' },
+        hours: [],
+        social: { facebook: '', instagram: '', tiktok: '' },
+        hero: { tagline: '', titleLine1: '', titleLine2: '', subtitle: '', badgeText: '' },
+        about: {
+          teaserParagraph: '',
+          storyParagraphs: ['', ''],
+          cards: [
+            { icon: 'fas fa-heart', title: '', teaserTitle: '', description: '', teaserDescription: '' },
+            { icon: 'fas fa-fire', title: '', teaserTitle: '', description: '', teaserDescription: '' },
+            { icon: 'fas fa-users', title: '', teaserTitle: '', description: '', teaserDescription: '' }
+          ]
+        },
+        announcement: { enabled: false, message: '', type: 'info', dismissible: true }
+      };
+    }
+
+    renderSettingsEditor();
+    updateSettingsDraftBanner();
+    updateSettingsLastUpdated();
+    bindSettingsEvents();
+  }
+
+  function renderSettingsEditor() {
+    if (!settingsData) return;
+
+    // Contact
+    document.getElementById('settingsPhone').value = settingsData.contact.phone || '';
+    document.getElementById('settingsPhoneRaw').value = settingsData.contact.phoneRaw || '';
+    document.getElementById('settingsEmail').value = settingsData.contact.email || '';
+    document.getElementById('settingsEmailSubject').value = settingsData.contact.emailSubject || '';
+
+    // Location
+    document.getElementById('settingsAddress').value = settingsData.location.address || '';
+    document.getElementById('settingsLocationNote').value = settingsData.location.note || '';
+    document.getElementById('settingsGoogleMapsUrl').value = settingsData.location.googleMapsUrl || '';
+
+    // Hours
+    renderHoursList();
+
+    // Social
+    document.getElementById('settingsFacebook').value = settingsData.social.facebook || '';
+    document.getElementById('settingsInstagram').value = settingsData.social.instagram || '';
+    document.getElementById('settingsTiktok').value = settingsData.social.tiktok || '';
+
+    // Hero
+    document.getElementById('settingsHeroTagline').value = settingsData.hero.tagline || '';
+    document.getElementById('settingsHeroTitle1').value = settingsData.hero.titleLine1 || '';
+    document.getElementById('settingsHeroTitle2').value = settingsData.hero.titleLine2 || '';
+    document.getElementById('settingsHeroSubtitle').value = settingsData.hero.subtitle || '';
+    document.getElementById('settingsHeroBadge').value = settingsData.hero.badgeText || '';
+
+    // About
+    document.getElementById('settingsAboutTeaser').value = settingsData.about.teaserParagraph || '';
+    const paragraphs = settingsData.about.storyParagraphs || ['', ''];
+    document.getElementById('settingsAboutStory1').value = paragraphs[0] || '';
+    document.getElementById('settingsAboutStory2').value = paragraphs[1] || '';
+
+    // About cards
+    const cards = settingsData.about.cards || [];
+    for (let i = 0; i < 3; i++) {
+      const idx = i + 1;
+      const card = cards[i] || {};
+      populateAboutIconSelect(`aboutCard${idx}Icon`, card.icon || ABOUT_ICON_OPTIONS[0].value);
+      document.getElementById(`aboutCard${idx}Title`).value = card.title || '';
+      document.getElementById(`aboutCard${idx}TeaserTitle`).value = card.teaserTitle || '';
+      document.getElementById(`aboutCard${idx}Desc`).value = card.description || '';
+      document.getElementById(`aboutCard${idx}TeaserDesc`).value = card.teaserDescription || '';
+    }
+
+    // Announcement
+    document.getElementById('announcementEnabled').checked = settingsData.announcement.enabled || false;
+    document.getElementById('announcementMessage').value = settingsData.announcement.message || '';
+    document.getElementById('announcementType').value = settingsData.announcement.type || 'info';
+    document.getElementById('announcementDismissible').checked = settingsData.announcement.dismissible !== false;
+    updateAnnouncementPreview();
+  }
+
+  function populateAboutIconSelect(selectId, selectedValue) {
+    const select = document.getElementById(selectId);
+    if (!select) return;
+    select.innerHTML = ABOUT_ICON_OPTIONS.map(opt =>
+      `<option value="${escapeAttr(opt.value)}" ${opt.value === selectedValue ? 'selected' : ''}>${opt.label}</option>`
+    ).join('');
+  }
+
+  function renderHoursList() {
+    const container = document.getElementById('hoursList');
+    if (!container) return;
+
+    const hours = settingsData.hours || [];
+    if (hours.length === 0) {
+      container.innerHTML = '<p style="color:var(--text-secondary);font-size:.9rem;padding:12px;">No hours set. Click "Add Hours" to add your schedule.</p>';
+      return;
+    }
+
+    container.innerHTML = hours.map((h, i) => `
+      <div class="hours-row" data-index="${i}">
+        <input type="text" class="form-input hours-days" value="${escapeAttr(h.days || '')}" placeholder="e.g. Wed & Thu">
+        <input type="text" class="form-input hours-time" value="${escapeAttr(h.time || '')}" placeholder="e.g. 5 PM – 9 PM">
+        <button class="btn-icon-delete" data-action="remove-hours" data-index="${i}" title="Remove">
+          <i class="fas fa-trash"></i>
+        </button>
+      </div>
+    `).join('');
+  }
+
+  function addHoursRow() {
+    if (!settingsData.hours) settingsData.hours = [];
+    settingsData.hours.push({ days: '', time: '' });
+    renderHoursList();
+  }
+
+  function removeHoursRow(index) {
+    settingsData.hours.splice(index, 1);
+    renderHoursList();
+  }
+
+  function collectSettingsFromForm() {
+    // Contact
+    settingsData.contact.phone = document.getElementById('settingsPhone').value.trim();
+    settingsData.contact.phoneRaw = document.getElementById('settingsPhoneRaw').value.trim()
+      || settingsData.contact.phone.replace(/\D/g, '');
+    settingsData.contact.email = document.getElementById('settingsEmail').value.trim();
+    settingsData.contact.emailSubject = document.getElementById('settingsEmailSubject').value.trim();
+
+    // Location
+    settingsData.location.address = document.getElementById('settingsAddress').value.trim();
+    settingsData.location.note = document.getElementById('settingsLocationNote').value.trim();
+    settingsData.location.googleMapsUrl = document.getElementById('settingsGoogleMapsUrl').value.trim();
+
+    // Hours (read from DOM rows)
+    settingsData.hours = [];
+    document.querySelectorAll('#hoursList .hours-row').forEach(row => {
+      const days = row.querySelector('.hours-days').value.trim();
+      const time = row.querySelector('.hours-time').value.trim();
+      if (days || time) {
+        settingsData.hours.push({ days, time });
+      }
+    });
+
+    // Social
+    settingsData.social.facebook = document.getElementById('settingsFacebook').value.trim();
+    settingsData.social.instagram = document.getElementById('settingsInstagram').value.trim();
+    settingsData.social.tiktok = document.getElementById('settingsTiktok').value.trim();
+
+    // Hero
+    settingsData.hero.tagline = document.getElementById('settingsHeroTagline').value.trim();
+    settingsData.hero.titleLine1 = document.getElementById('settingsHeroTitle1').value.trim();
+    settingsData.hero.titleLine2 = document.getElementById('settingsHeroTitle2').value.trim();
+    settingsData.hero.subtitle = document.getElementById('settingsHeroSubtitle').value.trim();
+    settingsData.hero.badgeText = document.getElementById('settingsHeroBadge').value.trim();
+
+    // About
+    settingsData.about.teaserParagraph = document.getElementById('settingsAboutTeaser').value.trim();
+    settingsData.about.storyParagraphs = [
+      document.getElementById('settingsAboutStory1').value.trim(),
+      document.getElementById('settingsAboutStory2').value.trim()
+    ].filter(p => p);
+
+    // About cards
+    settingsData.about.cards = [];
+    for (let i = 0; i < 3; i++) {
+      const idx = i + 1;
+      settingsData.about.cards.push({
+        icon: document.getElementById(`aboutCard${idx}Icon`).value,
+        title: document.getElementById(`aboutCard${idx}Title`).value.trim(),
+        teaserTitle: document.getElementById(`aboutCard${idx}TeaserTitle`).value.trim(),
+        description: document.getElementById(`aboutCard${idx}Desc`).value.trim(),
+        teaserDescription: document.getElementById(`aboutCard${idx}TeaserDesc`).value.trim()
+      });
+    }
+
+    // Announcement
+    settingsData.announcement.enabled = document.getElementById('announcementEnabled').checked;
+    settingsData.announcement.message = document.getElementById('announcementMessage').value.trim();
+    settingsData.announcement.type = document.getElementById('announcementType').value;
+    settingsData.announcement.dismissible = document.getElementById('announcementDismissible').checked;
+  }
+
+  function saveSettingsDraft() {
+    collectSettingsFromForm();
+    settingsData.lastUpdated = new Date().toISOString();
+    localStorage.setItem(SETTINGS_STORAGE_KEY, JSON.stringify(settingsData));
+    hasSettingsDraft = true;
+    updateSettingsDraftBanner();
+    updateSettingsLastUpdated();
+    showToast('Site settings saved', 'success');
+  }
+
+  function discardSettingsDraft() {
+    if (!confirm('Discard all unpublished site setting changes? This cannot be undone.')) return;
+    localStorage.removeItem(SETTINGS_STORAGE_KEY);
+    settingsData = publishedSettingsData ? JSON.parse(JSON.stringify(publishedSettingsData)) : null;
+    hasSettingsDraft = false;
+    if (settingsData) {
+      renderSettingsEditor();
+    }
+    updateSettingsDraftBanner();
+    updateSettingsLastUpdated();
+    showToast('Settings draft discarded', 'success');
+  }
+
+  function updateSettingsDraftBanner() {
+    const banner = document.getElementById('settingsDraftBanner');
+    if (banner) banner.style.display = hasSettingsDraft ? 'block' : 'none';
+  }
+
+  function updateSettingsLastUpdated() {
+    const el = document.getElementById('settingsLastUpdated');
+    if (el && settingsData) {
+      const d = new Date(settingsData.lastUpdated);
+      el.textContent = 'Last updated: ' + d.toLocaleDateString() + ' at ' + d.toLocaleTimeString();
+    }
+  }
+
+  function downloadSettingsJson() {
+    collectSettingsFromForm();
+    const json = JSON.stringify(settingsData, null, 2);
+    const blob = new Blob([json], { type: 'application/json' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'site-settings.json';
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+    showToast('site-settings.json downloaded!', 'success');
+  }
+
+  function copySettingsJson() {
+    collectSettingsFromForm();
+    const json = JSON.stringify(settingsData, null, 2);
+    navigator.clipboard.writeText(json).then(() => {
+      showToast('Settings JSON copied to clipboard!', 'success');
+    }).catch(() => {
+      const ta = document.createElement('textarea');
+      ta.value = json;
+      document.body.appendChild(ta);
+      ta.select();
+      document.execCommand('copy');
+      document.body.removeChild(ta);
+      showToast('Settings JSON copied to clipboard!', 'success');
+    });
+  }
+
+  function updateAnnouncementPreview() {
+    const preview = document.getElementById('announcementPreview');
+    if (!preview) return;
+    const enabled = document.getElementById('announcementEnabled').checked;
+    const message = document.getElementById('announcementMessage').value.trim();
+    const type = document.getElementById('announcementType').value;
+
+    if (enabled && message) {
+      preview.style.display = 'block';
+      preview.className = 'announcement-preview ' + type;
+      preview.textContent = message;
+    } else {
+      preview.style.display = 'none';
+    }
+  }
+
+  function bindSettingsEvents() {
+    // Save button
+    document.getElementById('saveSettingsBtn')?.addEventListener('click', saveSettingsDraft);
+
+    // Discard draft
+    document.getElementById('discardSettingsDraftBtn')?.addEventListener('click', discardSettingsDraft);
+
+    // Download / Copy
+    document.getElementById('downloadSettingsBtn')?.addEventListener('click', downloadSettingsJson);
+    document.getElementById('copySettingsBtn')?.addEventListener('click', copySettingsJson);
+
+    // Add hours
+    document.getElementById('addHoursBtn')?.addEventListener('click', addHoursRow);
+
+    // Remove hours (delegated)
+    document.getElementById('hoursList')?.addEventListener('click', (e) => {
+      const btn = e.target.closest('[data-action="remove-hours"]');
+      if (btn) {
+        removeHoursRow(parseInt(btn.dataset.index));
+      }
+    });
+
+    // Announcement preview updates
+    document.getElementById('announcementEnabled')?.addEventListener('change', updateAnnouncementPreview);
+    document.getElementById('announcementMessage')?.addEventListener('input', updateAnnouncementPreview);
+    document.getElementById('announcementType')?.addEventListener('change', updateAnnouncementPreview);
   }
 
   /* ========== UTILITIES ========== */

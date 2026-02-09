@@ -20,7 +20,7 @@
   <div class="login-screen" id="loginScreen">
     <div class="login-card">
       <div class="login-logo">
-        <span class="logo-icon"><i class="fas fa-fish"></i></span>
+        <img src="images/logo.svg" alt="B&R Seafood" class="logo-icon">
         <h1>B&R Seafood</h1>
         <p>Admin Panel</p>
       </div>
@@ -50,7 +50,7 @@
     <header class="admin-header">
       <div class="admin-header-inner">
         <div class="admin-brand">
-          <span class="logo-icon"><i class="fas fa-fish"></i></span>
+          <img src="images/logo.svg" alt="B&R Seafood" class="logo-icon">
           <div>
             <h1>B&R Seafood Admin</h1>
             <span class="admin-subtitle">Site Manager</span>
@@ -92,6 +92,9 @@
           </button>
           <button class="admin-tab" data-tab="events">
             <i class="fas fa-calendar-days"></i> Events
+          </button>
+          <button class="admin-tab" data-tab="settings">
+            <i class="fas fa-cog"></i> Site Settings
           </button>
         </div>
 
@@ -253,6 +256,316 @@
             </div>
           </div>
         </div><!-- end eventsTab -->
+
+        <!-- SITE SETTINGS TAB -->
+        <div class="admin-tab-content" id="settingsTab" style="display:none;">
+
+          <!-- Settings Draft Banner -->
+          <div class="draft-banner" id="settingsDraftBanner" style="display:none;">
+            <div class="draft-banner-inner">
+              <div class="draft-info">
+                <i class="fas fa-exclamation-triangle"></i>
+                <span>You have <strong>unpublished site setting changes</strong>. Download the updated file to publish.</span>
+              </div>
+              <div class="draft-actions">
+                <button class="btn btn-sm btn-warning" id="discardSettingsDraftBtn">
+                  <i class="fas fa-undo"></i> Discard
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="settings-layout">
+
+            <!-- Contact Information -->
+            <div class="editor-section">
+              <div class="editor-section-header">
+                <h2><i class="fas fa-address-book"></i> Contact Information</h2>
+              </div>
+              <div class="settings-form">
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="settingsPhone">Phone Number (display)</label>
+                    <input type="text" id="settingsPhone" class="form-input" placeholder="(701) 818-3664">
+                  </div>
+                  <div class="form-group">
+                    <label for="settingsPhoneRaw">Phone Number (digits only)</label>
+                    <input type="tel" id="settingsPhoneRaw" class="form-input" placeholder="7018183664">
+                    <small class="form-help">Used for click-to-call links. Auto-filled from display number if left blank.</small>
+                  </div>
+                </div>
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="settingsEmail">Catering Email</label>
+                    <input type="email" id="settingsEmail" class="form-input" placeholder="brseafood55@gmail.com">
+                  </div>
+                  <div class="form-group">
+                    <label for="settingsEmailSubject">Default Email Subject</label>
+                    <input type="text" id="settingsEmailSubject" class="form-input" placeholder="Catering Inquiry">
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Location -->
+            <div class="editor-section">
+              <div class="editor-section-header">
+                <h2><i class="fas fa-map-marker-alt"></i> Location</h2>
+              </div>
+              <div class="settings-form">
+                <div class="form-group">
+                  <label for="settingsAddress">Street Address</label>
+                  <input type="text" id="settingsAddress" class="form-input" placeholder="6 2nd St NE, Minot, ND 58703">
+                </div>
+                <div class="form-group">
+                  <label for="settingsLocationNote">Location Note</label>
+                  <input type="text" id="settingsLocationNote" class="form-input" placeholder="Located at The Spot parking area">
+                  <small class="form-help">Shown beneath the address on the homepage</small>
+                </div>
+                <div class="form-group">
+                  <label for="settingsGoogleMapsUrl">Google Maps Link (optional)</label>
+                  <input type="url" id="settingsGoogleMapsUrl" class="form-input" placeholder="https://maps.google.com/...">
+                </div>
+              </div>
+            </div>
+
+            <!-- Store Hours -->
+            <div class="editor-section">
+              <div class="editor-section-header">
+                <h2><i class="fas fa-clock"></i> Store Hours</h2>
+                <button class="btn btn-sm btn-accent" id="addHoursBtn">
+                  <i class="fas fa-plus"></i> Add Hours
+                </button>
+              </div>
+              <div class="hours-list" id="hoursList">
+                <!-- Rendered dynamically -->
+              </div>
+            </div>
+
+            <!-- Social Media -->
+            <div class="editor-section">
+              <div class="editor-section-header">
+                <h2><i class="fas fa-share-nodes"></i> Social Media</h2>
+              </div>
+              <div class="settings-form">
+                <div class="form-group">
+                  <label for="settingsFacebook"><i class="fab fa-facebook-f" style="color:#1877f2;margin-right:6px;"></i> Facebook URL</label>
+                  <input type="url" id="settingsFacebook" class="form-input" placeholder="https://facebook.com/yourpage">
+                </div>
+                <div class="form-group">
+                  <label for="settingsInstagram"><i class="fab fa-instagram" style="color:#e4405f;margin-right:6px;"></i> Instagram URL</label>
+                  <input type="url" id="settingsInstagram" class="form-input" placeholder="https://instagram.com/yourhandle">
+                </div>
+                <div class="form-group">
+                  <label for="settingsTiktok"><i class="fab fa-tiktok" style="margin-right:6px;"></i> TikTok URL</label>
+                  <input type="url" id="settingsTiktok" class="form-input" placeholder="https://tiktok.com/@yourhandle">
+                </div>
+              </div>
+            </div>
+
+            <!-- Homepage Hero -->
+            <div class="editor-section">
+              <div class="editor-section-header">
+                <h2><i class="fas fa-image"></i> Homepage Hero</h2>
+              </div>
+              <div class="settings-form">
+                <div class="form-group">
+                  <label for="settingsHeroTagline">Tagline</label>
+                  <input type="text" id="settingsHeroTagline" class="form-input" placeholder="Fresh From the Fryer">
+                </div>
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="settingsHeroTitle1">Title Line 1</label>
+                    <input type="text" id="settingsHeroTitle1" class="form-input" placeholder="B&R Seafood">
+                  </div>
+                  <div class="form-group">
+                    <label for="settingsHeroTitle2">Title Line 2 (highlighted)</label>
+                    <input type="text" id="settingsHeroTitle2" class="form-input" placeholder="and More">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="settingsHeroSubtitle">Subtitle</label>
+                  <textarea id="settingsHeroSubtitle" rows="2" class="form-input" placeholder="Golden fried shrimp, crispy catfish & Southern sides..."></textarea>
+                  <small class="form-help">Use a new line to create a line break on the website</small>
+                </div>
+                <div class="form-group">
+                  <label for="settingsHeroBadge">Badge Text</label>
+                  <input type="text" id="settingsHeroBadge" class="form-input" placeholder="Family Owned & Operated">
+                </div>
+              </div>
+            </div>
+
+            <!-- About Page Content -->
+            <div class="editor-section">
+              <div class="editor-section-header">
+                <h2><i class="fas fa-book-open"></i> About Page Content</h2>
+              </div>
+              <div class="settings-form">
+                <div class="form-group">
+                  <label for="settingsAboutTeaser">Homepage Teaser Paragraph</label>
+                  <textarea id="settingsAboutTeaser" rows="3" class="form-input" placeholder="Short paragraph shown on the homepage..."></textarea>
+                  <small class="form-help">The short version shown in the "Our Story" section on the homepage</small>
+                </div>
+                <div class="form-group">
+                  <label for="settingsAboutStory1">About Page - Paragraph 1</label>
+                  <textarea id="settingsAboutStory1" rows="3" class="form-input"></textarea>
+                </div>
+                <div class="form-group">
+                  <label for="settingsAboutStory2">About Page - Paragraph 2</label>
+                  <textarea id="settingsAboutStory2" rows="3" class="form-input"></textarea>
+                </div>
+
+                <h3 class="settings-sub-header">
+                  <i class="fas fa-id-card"></i> Feature Cards
+                </h3>
+                <small class="form-help" style="margin-bottom: 12px; display: block;">
+                  These appear as the 3 highlight cards on both the homepage and about page
+                </small>
+
+                <!-- Card 1 -->
+                <div class="settings-card-group">
+                  <div class="settings-card-label">Card 1</div>
+                  <div class="form-row">
+                    <div class="form-group">
+                      <label for="aboutCard1Icon">Icon</label>
+                      <select id="aboutCard1Icon" class="form-input about-icon-select"></select>
+                    </div>
+                    <div class="form-group">
+                      <label for="aboutCard1Title">Title (About page)</label>
+                      <input type="text" id="aboutCard1Title" class="form-input" placeholder="Family Tradition">
+                    </div>
+                    <div class="form-group">
+                      <label for="aboutCard1TeaserTitle">Short Title (Homepage)</label>
+                      <input type="text" id="aboutCard1TeaserTitle" class="form-input" placeholder="Leave blank to use full title">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="aboutCard1Desc">Full Description (About page)</label>
+                    <textarea id="aboutCard1Desc" rows="2" class="form-input"></textarea>
+                  </div>
+                  <div class="form-group">
+                    <label for="aboutCard1TeaserDesc">Short Description (Homepage)</label>
+                    <input type="text" id="aboutCard1TeaserDesc" class="form-input" placeholder="Recipes passed down through generations">
+                  </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="settings-card-group">
+                  <div class="settings-card-label">Card 2</div>
+                  <div class="form-row">
+                    <div class="form-group">
+                      <label for="aboutCard2Icon">Icon</label>
+                      <select id="aboutCard2Icon" class="form-input about-icon-select"></select>
+                    </div>
+                    <div class="form-group">
+                      <label for="aboutCard2Title">Title (About page)</label>
+                      <input type="text" id="aboutCard2Title" class="form-input" placeholder="Cooked Fresh Daily">
+                    </div>
+                    <div class="form-group">
+                      <label for="aboutCard2TeaserTitle">Short Title (Homepage)</label>
+                      <input type="text" id="aboutCard2TeaserTitle" class="form-input" placeholder="Leave blank to use full title">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="aboutCard2Desc">Full Description (About page)</label>
+                    <textarea id="aboutCard2Desc" rows="2" class="form-input"></textarea>
+                  </div>
+                  <div class="form-group">
+                    <label for="aboutCard2TeaserDesc">Short Description (Homepage)</label>
+                    <input type="text" id="aboutCard2TeaserDesc" class="form-input" placeholder="Made from scratch every single day">
+                  </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="settings-card-group">
+                  <div class="settings-card-label">Card 3</div>
+                  <div class="form-row">
+                    <div class="form-group">
+                      <label for="aboutCard3Icon">Icon</label>
+                      <select id="aboutCard3Icon" class="form-input about-icon-select"></select>
+                    </div>
+                    <div class="form-group">
+                      <label for="aboutCard3Title">Title (About page)</label>
+                      <input type="text" id="aboutCard3Title" class="form-input" placeholder="Serving Our Community">
+                    </div>
+                    <div class="form-group">
+                      <label for="aboutCard3TeaserTitle">Short Title (Homepage)</label>
+                      <input type="text" id="aboutCard3TeaserTitle" class="form-input" placeholder="Leave blank to use full title">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="aboutCard3Desc">Full Description (About page)</label>
+                    <textarea id="aboutCard3Desc" rows="2" class="form-input"></textarea>
+                  </div>
+                  <div class="form-group">
+                    <label for="aboutCard3TeaserDesc">Short Description (Homepage)</label>
+                    <input type="text" id="aboutCard3TeaserDesc" class="form-input" placeholder="Proudly serving our neighbors">
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Site Announcement -->
+            <div class="editor-section">
+              <div class="editor-section-header">
+                <h2><i class="fas fa-bullhorn"></i> Site Announcement</h2>
+              </div>
+              <div class="settings-form">
+                <label class="toggle-label">
+                  <input type="checkbox" id="announcementEnabled">
+                  <span class="toggle-switch"></span>
+                  <span>Show announcement banner on all pages</span>
+                </label>
+                <div class="form-group">
+                  <label for="announcementMessage">Announcement Message</label>
+                  <textarea id="announcementMessage" rows="2" class="form-input" placeholder="e.g. Closed Dec 24-26 for Christmas. Merry Christmas!"></textarea>
+                </div>
+                <div class="form-group">
+                  <label for="announcementType">Banner Style</label>
+                  <select id="announcementType" class="form-input">
+                    <option value="info">Info (Blue)</option>
+                    <option value="warning">Warning (Amber)</option>
+                    <option value="urgent">Urgent (Red)</option>
+                    <option value="success">Celebration (Green)</option>
+                  </select>
+                </div>
+                <div id="announcementPreview" class="announcement-preview" style="display:none;"></div>
+                <label class="toggle-label">
+                  <input type="checkbox" id="announcementDismissible" checked>
+                  <span class="toggle-switch"></span>
+                  <span>Allow visitors to dismiss the banner</span>
+                </label>
+              </div>
+            </div>
+
+            <!-- Save -->
+            <div class="settings-action-bar">
+              <button class="btn btn-accent" id="saveSettingsBtn" style="padding: 12px 28px;">
+                <i class="fas fa-save"></i> Save All Settings
+              </button>
+            </div>
+
+            <!-- Publish -->
+            <div class="editor-section">
+              <div class="editor-section-header">
+                <h2><i class="fas fa-cloud-arrow-up"></i> Publish Settings</h2>
+              </div>
+              <p style="color:var(--text-secondary);font-size:.9rem;margin-bottom:16px;">
+                To update your live website, download the updated settings file and replace <code>data/site-settings.json</code> in your website files.
+              </p>
+              <div class="publish-buttons">
+                <button class="btn btn-primary" id="downloadSettingsBtn">
+                  <i class="fas fa-download"></i> Download site-settings.json
+                </button>
+                <button class="btn btn-secondary-solid" id="copySettingsBtn">
+                  <i class="fas fa-copy"></i> Copy JSON
+                </button>
+              </div>
+              <p class="last-updated" id="settingsLastUpdated" style="margin-top:12px;"></p>
+            </div>
+
+          </div>
+        </div><!-- end settingsTab -->
 
       </div>
     </main>

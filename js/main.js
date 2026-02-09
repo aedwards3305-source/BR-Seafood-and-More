@@ -28,7 +28,7 @@ async function loadMenu() {
     container.innerHTML = `
       <p style="text-align:center; color: rgba(255,255,255,.5); padding: 40px 0;">
         Our menu is temporarily unavailable.<br>
-        Please call <a href="tel:7018183664" style="color: var(--teal-light);">(701) 818-3664</a> for current items and pricing.
+        Please call us for current items and pricing.
       </p>`;
   }
 }

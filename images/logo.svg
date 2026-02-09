@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400">
+  <defs>
+    <!-- Gold gradient for the outer ring -->
+    <linearGradient id="goldRing" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#d4ad5e"/>
+      <stop offset="50%" stop-color="#c49a4a"/>
+      <stop offset="100%" stop-color="#b8903f"/>
+    </linearGradient>
+    <!-- Navy gradient for depth -->
+    <linearGradient id="navyBg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1e3d5e"/>
+      <stop offset="100%" stop-color="#162d48"/>
+    </linearGradient>
+    <!-- Teal gradient for the fish -->
+    <linearGradient id="fishGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#8ecabb"/>
+      <stop offset="100%" stop-color="#6db3a2"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Outer gold ring -->
+  <circle cx="200" cy="200" r="194" fill="url(#goldRing)"/>
+
+  <!-- Navy circle background -->
+  <circle cx="200" cy="200" r="178" fill="url(#navyBg)"/>
+
+  <!-- Inner thin gold circle accent -->
+  <circle cx="200" cy="200" r="170" fill="none" stroke="#c49a4a" stroke-width="1.2" opacity=".4"/>
+
+  <!-- Fish icon -->
+  <g transform="translate(200, 125)" fill="url(#fishGrad)">
+    <!-- Fish body -->
+    <ellipse cx="0" cy="0" rx="28" ry="14" transform="rotate(-10)"/>
+    <!-- Fish tail -->
+    <path d="M-26,-4 L-40,-16 L-38,0 L-40,14 Z" transform="rotate(-10)"/>
+    <!-- Fish eye -->
+    <circle cx="14" cy="-4" r="3" fill="#162d48"/>
+    <!-- Fish fin (top) -->
+    <path d="M-2,-12 Q4,-24 10,-12" fill="url(#fishGrad)" stroke="url(#fishGrad)" stroke-width="1.5" fill-opacity=".6"/>
+  </g>
+
+  <!-- B&R text -->
+  <text x="200" y="218" text-anchor="middle" font-family="'Playfair Display', 'Georgia', serif" font-size="88" font-weight="800" fill="#ffffff" letter-spacing="4">B&amp;R</text>
+
+  <!-- Decorative line under B&R -->
+  <line x1="120" y1="236" x2="280" y2="236" stroke="#c49a4a" stroke-width="1" opacity=".5"/>
+
+  <!-- SEAFOOD & MORE text -->
+  <text x="200" y="264" text-anchor="middle" font-family="'Poppins', 'Arial', sans-serif" font-size="22" font-weight="500" fill="#c49a4a" letter-spacing="5">SEAFOOD &amp; MORE</text>
+</svg>
