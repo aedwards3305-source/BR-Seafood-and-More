@@ -6,3 +6,5 @@ node_modules/
 
 # Override global gitignore - data/ is needed for menu
 !data/
+
+.vercel
