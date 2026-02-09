@@ -201,8 +201,8 @@ ul { list-style: none; }
 }
 
 .footer-logo-icon {
-  width: 80px;
-  height: 80px;
+  width: 140px;
+  height: 140px;
   object-fit: contain;
   display: block;
   margin-bottom: 12px;
@@ -1969,3 +1969,319 @@ ul { list-style: none; }
 .announcement-warning { background: linear-gradient(90deg, #f59e0b, #d97706); color: #fff; }
 .announcement-urgent  { background: #ef4444; color: #fff; }
 .announcement-success { background: #10b981; color: #fff; }
+
+/* ============================================
+   Wholesale Page Styles
+   ============================================ */
+
+/* ---------- Wholesale CTA Card (homepage) ---------- */
+.wholesale-cta {
+  padding: 80px 0;
+  background: var(--navy);
+  position: relative;
+  overflow: hidden;
+}
+
+.wholesale-cta::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 10% 50%, rgba(13,148,136,.12) 0%, transparent 50%),
+    radial-gradient(circle at 90% 50%, rgba(245,158,11,.08) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.wholesale-cta-card {
+  position: relative;
+  background: rgba(255,255,255,.05);
+  border: 1px solid rgba(255,255,255,.1);
+  border-radius: 24px;
+  padding: 50px;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  transition: all .4s var(--ease-out);
+}
+
+.wholesale-cta-card:hover {
+  background: rgba(255,255,255,.08);
+  border-color: rgba(13,148,136,.3);
+}
+
+.wholesale-cta-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 90px;
+  height: 90px;
+  border-radius: 24px;
+  background: linear-gradient(135deg, var(--gold), var(--coral));
+  color: var(--white);
+  font-size: 2.2rem;
+  flex-shrink: 0;
+}
+
+.wholesale-cta-body {
+  flex: 1;
+}
+
+.wholesale-cta-label {
+  display: inline-block;
+  font-family: var(--font-script);
+  font-size: 1.15rem;
+  color: var(--gold-light);
+  margin-bottom: 8px;
+}
+
+.wholesale-cta-body h2 {
+  font-family: var(--font-display);
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-weight: 800;
+  color: var(--white);
+  line-height: 1.2;
+  margin-bottom: 12px;
+}
+
+.wholesale-cta-body p {
+  color: rgba(255,255,255,.6);
+  line-height: 1.7;
+  margin-bottom: 20px;
+  max-width: 500px;
+}
+
+.wholesale-cta-products {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+.wholesale-mini-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255,255,255,.08);
+  border: 1px solid rgba(255,255,255,.12);
+  border-radius: 50px;
+  padding: 8px 18px;
+  color: rgba(255,255,255,.75);
+  font-size: .85rem;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.wholesale-mini-tag i {
+  color: var(--teal-light);
+  font-size: .9rem;
+}
+
+/* ---------- Wholesale Page ---------- */
+.wholesale-intro {
+  padding: 60px 0 20px;
+  background: var(--bg-primary);
+}
+
+.wholesale-products {
+  padding: 20px 0 80px;
+  background: var(--bg-primary);
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.product-card {
+  background: var(--white);
+  border-radius: 20px;
+  padding: 36px 30px;
+  box-shadow: var(--shadow-md);
+  transition: all .4s var(--ease-out);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.product-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--teal), var(--aqua));
+  transform: scaleX(0);
+  transition: transform .4s var(--ease-out);
+}
+
+.product-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-xl);
+}
+
+.product-card:hover::before {
+  transform: scaleX(1);
+}
+
+.product-icon-wrap {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 64px;
+  border-radius: 18px;
+  background: linear-gradient(135deg, rgba(13,148,136,.1), rgba(6,182,212,.1));
+  color: var(--teal);
+  font-size: 1.6rem;
+  margin-bottom: 20px;
+}
+
+.product-info {
+  flex: 1;
+}
+
+.product-info h3 {
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--gray-900);
+  margin-bottom: 10px;
+}
+
+.product-desc {
+  color: var(--text-secondary);
+  line-height: 1.7;
+  font-size: .95rem;
+  margin-bottom: 16px;
+}
+
+.product-tags {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 24px;
+}
+
+.product-tag {
+  display: inline-block;
+  background: rgba(13,148,136,.08);
+  color: var(--teal);
+  font-size: .78rem;
+  font-weight: 600;
+  padding: 4px 12px;
+  border-radius: 50px;
+  letter-spacing: .02em;
+}
+
+.product-action {
+  margin-top: auto;
+}
+
+.product-buy-btn {
+  width: 100%;
+  justify-content: center;
+}
+
+/* Shopify buy button container */
+.shopify-buy-btn iframe {
+  width: 100% !important;
+}
+
+/* ---------- Bulk CTA ---------- */
+.wholesale-bulk-cta {
+  padding: 80px 0;
+  background: var(--gray-100);
+}
+
+.bulk-cta-card {
+  text-align: center;
+  background: var(--white);
+  border-radius: 24px;
+  padding: 60px 40px;
+  box-shadow: var(--shadow-lg);
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.bulk-cta-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 80px;
+  border-radius: 24px;
+  background: linear-gradient(135deg, var(--teal), var(--aqua));
+  color: var(--white);
+  font-size: 2rem;
+  margin-bottom: 24px;
+}
+
+.bulk-cta-card h2 {
+  font-family: var(--font-display);
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: var(--gray-900);
+  margin-bottom: 12px;
+}
+
+.bulk-cta-card p {
+  color: var(--text-secondary);
+  max-width: 480px;
+  margin: 0 auto 28px;
+  line-height: 1.7;
+}
+
+/* ---------- Wholesale Responsive ---------- */
+@media (max-width: 1024px) {
+  .wholesale-cta-card {
+    flex-direction: column;
+    text-align: center;
+    padding: 40px 30px;
+    gap: 24px;
+  }
+
+  .wholesale-cta-body p {
+    max-width: 100%;
+  }
+
+  .wholesale-cta-products {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .products-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .wholesale-cta {
+    padding: 60px 0;
+  }
+
+  .wholesale-cta-icon {
+    min-width: 70px;
+    height: 70px;
+    font-size: 1.6rem;
+  }
+
+  .products-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .bulk-cta-card {
+    padding: 40px 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .wholesale-cta-products {
+    flex-direction: column;
+    align-items: center;
+  }
+}
