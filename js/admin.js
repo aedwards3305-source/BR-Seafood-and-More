@@ -492,6 +492,7 @@ const Admin = (() => {
   /* ========== MENU EXPORT / PUBLISH ========== */
 
   function downloadMenuJson() {
+    if (!confirm('Download menu.json for publishing?')) return;
     const json = JSON.stringify(menuData, null, 2);
     const blob = new Blob([json], { type: 'application/json' });
     const url = URL.createObjectURL(blob);
@@ -506,6 +507,7 @@ const Admin = (() => {
   }
 
   function copyJsonToClipboard() {
+    if (!confirm('Copy menu JSON to clipboard?')) return;
     const json = JSON.stringify(menuData, null, 2);
     navigator.clipboard.writeText(json).then(() => {
       showToast('JSON copied to clipboard!', 'success');
@@ -782,6 +784,7 @@ const Admin = (() => {
   /* ========== EVENTS EXPORT ========== */
 
   function downloadEventsJson() {
+    if (!confirm('Download events.json for publishing?')) return;
     const json = JSON.stringify(eventsData, null, 2);
     const blob = new Blob([json], { type: 'application/json' });
     const url = URL.createObjectURL(blob);
@@ -796,6 +799,7 @@ const Admin = (() => {
   }
 
   function copyEventsJsonToClipboard() {
+    if (!confirm('Copy events JSON to clipboard?')) return;
     const json = JSON.stringify(eventsData, null, 2);
     navigator.clipboard.writeText(json).then(() => {
       showToast('Events JSON copied to clipboard!', 'success');
@@ -817,8 +821,9 @@ const Admin = (() => {
     document.getElementById('addDinnerBtn')?.addEventListener('click', () => openItemModal('dinners', -1));
     document.getElementById('addSideBtn')?.addEventListener('click', () => openItemModal('sides', -1));
 
-    // Settings save
+    // Menu settings save
     document.getElementById('saveSettingsBtn')?.addEventListener('click', () => {
+      if (!confirm('Save menu settings changes?')) return;
       menuData.settings.sidesIncluded = parseInt(document.getElementById('sidesIncluded').value) || 2;
       menuData.settings.extraSidePrice = parseFloat(document.getElementById('extraSidePrice').value) || 3;
       menuData.settings.menuNote = document.getElementById('menuNote').value.trim();
@@ -1130,6 +1135,7 @@ const Admin = (() => {
   }
 
   function downloadSettingsJson() {
+    if (!confirm('Download site-settings.json for publishing?')) return;
     collectSettingsFromForm();
     const json = JSON.stringify(settingsData, null, 2);
     const blob = new Blob([json], { type: 'application/json' });
@@ -1145,6 +1151,7 @@ const Admin = (() => {
   }
 
   function copySettingsJson() {
+    if (!confirm('Copy site settings JSON to clipboard?')) return;
     collectSettingsFromForm();
     const json = JSON.stringify(settingsData, null, 2);
     navigator.clipboard.writeText(json).then(() => {
@@ -1178,7 +1185,10 @@ const Admin = (() => {
 
   function bindSettingsEvents() {
     // Save button
-    document.getElementById('saveSettingsBtn')?.addEventListener('click', saveSettingsDraft);
+    document.getElementById('saveSiteSettingsBtn')?.addEventListener('click', () => {
+      if (!confirm('Save all site setting changes?')) return;
+      saveSettingsDraft();
+    });
 
     // Discard draft
     document.getElementById('discardSettingsDraftBtn')?.addEventListener('click', discardSettingsDraft);
