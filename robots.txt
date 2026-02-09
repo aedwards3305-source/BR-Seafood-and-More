@@ -3,4 +3,4 @@ Allow: /
 Disallow: /admin.html
 Disallow: /data/
 
-Sitemap: https://br-seafood-and-more.vercel.app/sitemap.xml
+Sitemap: https://brseafoodandmore.com/sitemap.xml
