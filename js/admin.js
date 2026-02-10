@@ -522,6 +522,140 @@ const Admin = (() => {
     });
   }
 
+  /* ========== MENU PDF EXPORT ========== */
+
+  function buildPrintableMenu() {
+    const el = document.createElement('div');
+    el.style.cssText = 'font-family: Poppins, Arial, sans-serif; color: #1a1a2e; padding: 40px 50px; background: #fff; width: 700px;';
+
+    let html = '';
+
+    // Header
+    html += '<div style="text-align:center; margin-bottom: 28px;">';
+    html += '<h1 style="font-family: Playfair Display, Georgia, serif; font-size: 32px; margin: 0; color: #0a1628; letter-spacing: 1px;">B&R Seafood and More</h1>';
+    html += '<p style="color: #6b7280; font-size: 14px; margin: 6px 0 0;">Golden Fried Seafood &amp; Southern Sides</p>';
+    html += '<div style="width: 60px; height: 3px; background: #d4a44c; margin: 16px auto 0;"></div>';
+    html += '</div>';
+
+    // Render each category
+    menuData.categories.forEach(category => {
+      const activeItems = category.items.filter(i => i.active);
+      if (activeItems.length === 0) return;
+
+      const isDinners = category.id === 'dinners';
+
+      // Category header
+      html += '<div style="margin-bottom: 24px;">';
+      html += '<div style="display: flex; align-items: center; justify-content: space-between; border-bottom: 2px solid #0d9488; padding-bottom: 8px; margin-bottom: 16px;">';
+      html += '<h2 style="font-family: Playfair Display, Georgia, serif; font-size: 22px; margin: 0; color: #0a1628;">' + MenuRenderer.escapeHtml(category.name) + '</h2>';
+      html += '<span style="background: #0d9488; color: #fff; padding: 4px 14px; border-radius: 20px; font-size: 12px; font-weight: 600;">' + MenuRenderer.escapeHtml(category.badge) + '</span>';
+      html += '</div>';
+
+      if (isDinners) {
+        // Dinner items with prices
+        activeItems.forEach(item => {
+          const star = item.featured ? '<span style="color: #d4a44c; margin-right: 6px;">&#9733;</span>' : '';
+          const badge = item.featured && item.badgeText
+            ? '<span style="background: #d4a44c; color: #fff; padding: 2px 10px; border-radius: 12px; font-size: 11px; font-weight: 600; margin-left: 8px;">' + MenuRenderer.escapeHtml(item.badgeText) + '</span>'
+            : '';
+          html += '<div style="margin-bottom: 14px; padding-bottom: 14px; border-bottom: 1px solid #e5e7eb;">';
+          html += '<div style="display: flex; justify-content: space-between; align-items: baseline;">';
+          html += '<div>' + star + '<span style="font-weight: 600; font-size: 15px;">' + MenuRenderer.escapeHtml(item.name) + '</span>' + badge + '</div>';
+          html += '<span style="font-weight: 700; color: #0d9488; font-size: 16px; white-space: nowrap; margin-left: 12px;">' + MenuRenderer.formatPrice(item.price) + '</span>';
+          html += '</div>';
+          if (item.description) {
+            html += '<p style="margin: 4px 0 0; color: #6b7280; font-size: 13px;">' + MenuRenderer.escapeHtml(item.description) + '</p>';
+          }
+          html += '</div>';
+        });
+      } else {
+        // Sides as compact grid
+        html += '<div style="display: flex; flex-wrap: wrap; gap: 10px;">';
+        activeItems.forEach(item => {
+          html += '<span style="background: #f3f4f6; padding: 8px 16px; border-radius: 8px; font-size: 14px; font-weight: 500;">' + MenuRenderer.escapeHtml(item.name) + '</span>';
+        });
+        html += '</div>';
+      }
+
+      html += '</div>';
+    });
+
+    // Menu note
+    if (menuData.settings && menuData.settings.menuNote) {
+      html += '<div style="margin-top: 20px; padding: 14px 18px; background: #f9fafb; border-left: 4px solid #d4a44c; border-radius: 4px; font-size: 13px; color: #6b7280;">';
+      html += MenuRenderer.escapeHtml(menuData.settings.menuNote);
+      html += '</div>';
+    }
+
+    // Footer
+    html += '<div style="text-align: center; margin-top: 28px; padding-top: 16px; border-top: 1px solid #e5e7eb;">';
+    html += '<p style="font-size: 12px; color: #9ca3af; margin: 0;">B&R Seafood and More &bull; 6 2nd St NE, Minot, ND 58703 &bull; (701) 818-3664</p>';
+    html += '</div>';
+
+    el.innerHTML = html;
+    return el;
+  }
+
+  async function downloadMenuPdf() {
+    if (!menuData) {
+      showToast('No menu data to export', 'error');
+      return;
+    }
+
+    showToast('Generating PDF...', '');
+
+    const printEl = buildPrintableMenu();
+    document.body.appendChild(printEl);
+
+    const opt = {
+      margin: [0.4, 0.5],
+      filename: 'BR-Seafood-Menu.pdf',
+      image: { type: 'jpeg', quality: 0.98 },
+      html2canvas: { scale: 2, useCORS: true },
+      jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' }
+    };
+
+    try {
+      const pdfBlob = await html2pdf().set(opt).from(printEl).outputPdf('blob');
+      document.body.removeChild(printEl);
+
+      // Try File System Access API for save-location picker
+      if (window.showSaveFilePicker) {
+        try {
+          const handle = await window.showSaveFilePicker({
+            suggestedName: 'BR-Seafood-Menu.pdf',
+            types: [{
+              description: 'PDF Document',
+              accept: { 'application/pdf': ['.pdf'] }
+            }]
+          });
+          const writable = await handle.createWritable();
+          await writable.write(pdfBlob);
+          await writable.close();
+          showToast('Menu PDF saved!', 'success');
+          return;
+        } catch (e) {
+          if (e.name === 'AbortError') return; // User cancelled
+          // Fall through to regular download
+        }
+      }
+
+      // Fallback: regular download
+      const url = URL.createObjectURL(pdfBlob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = 'BR-Seafood-Menu.pdf';
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      URL.revokeObjectURL(url);
+      showToast('Menu PDF downloaded!', 'success');
+    } catch (err) {
+      document.body.removeChild(printEl);
+      showToast('PDF generation failed', 'error');
+    }
+  }
+
   /* ================================================================
      EVENTS MANAGEMENT
      ================================================================ */
@@ -836,6 +970,7 @@ const Admin = (() => {
     // Publish buttons
     document.getElementById('downloadBtn')?.addEventListener('click', downloadMenuJson);
     document.getElementById('copyBtn')?.addEventListener('click', copyJsonToClipboard);
+    document.getElementById('downloadMenuPdfBtn')?.addEventListener('click', downloadMenuPdf);
 
     // Modal events
     document.getElementById('itemForm')?.addEventListener('submit', (e) => {
