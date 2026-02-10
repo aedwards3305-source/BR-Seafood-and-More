@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-02-10T16:34:32.314Z",
+  "lastUpdated": "2026-02-10T16:35:24.814Z",
   "settings": {
     "sidesIncluded": 2,
     "extraSidePrice": 3,
@@ -34,7 +34,7 @@
         },
         {
           "id": "golden-fried-shrimp-8",
-          "name": "Golden Fried Shrimp (8 pc)/ fries only",
+          "name": "Golden Fried Shrimp (8 pc) w/ fries only",
           "icon": "fas fa-shrimp",
           "active": true,
           "description": "8 pieces of perfectly crispy fried shrimp",
