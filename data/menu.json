@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-02-10T15:35:51.532Z",
+  "lastUpdated": "2026-02-10T15:54:05.714Z",
   "settings": {
     "sidesIncluded": 2,
     "extraSidePrice": 3,
@@ -83,19 +83,19 @@
         {
           "id": "baked-beans",
           "name": "Baked Beans",
-          "icon": "fas fa-seedling",
+          "icon": "fas fa-bowl-food",
           "active": true
         },
         {
           "id": "collard-greens",
           "name": "Collard Greens",
-          "icon": "fas fa-pepper-hot",
+          "icon": "fas fa-bowl-food",
           "active": true
         },
         {
           "id": "corn-on-the-cob",
           "name": "Corn on the Cob",
-          "icon": "fas fa-wheat-awn",
+          "icon": "fas fa-bowl-rice",
           "active": true
         },
         {
@@ -114,6 +114,12 @@
           "id": "seasoned-fries",
           "name": "Seasoned Fries",
           "icon": "fas fa-french-fries",
+          "active": true
+        },
+        {
+          "id": "coleslaw",
+          "name": "Coleslaw",
+          "icon": "fas fa-bowl-food",
           "active": true
         }
       ]
