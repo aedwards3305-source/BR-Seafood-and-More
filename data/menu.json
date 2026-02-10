@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-02-10T16:21:10.648Z",
+  "lastUpdated": "2026-02-10T16:22:38.284Z",
   "settings": {
     "sidesIncluded": 2,
     "extraSidePrice": 3,
@@ -114,9 +114,9 @@
         },
         {
           "id": "corn-on-the-cob",
-          "name": "Corn on the Cob",
+          "name": "1/2  Cajun Corn on the Cob",
           "icon": "fas fa-wheat-awn",
-          "active": true
+          "active": false
         },
         {
           "id": "hush-puppies",
@@ -126,7 +126,7 @@
         },
         {
           "id": "rice",
-          "name": "Rice",
+          "name": "Seasoned White Rice",
           "icon": "fas fa-bowl-rice",
           "active": true
         },
