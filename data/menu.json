@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-02-10T16:01:41.284Z",
+  "lastUpdated": "2026-02-10T16:03:15.518Z",
   "settings": {
     "sidesIncluded": 2,
     "extraSidePrice": 3,
@@ -54,13 +54,13 @@
         },
         {
           "id": "catfish-2pc",
-          "name": "Catfish (2 pc)",
-          "description": "2 pieces of golden fried catfish fillet",
-          "price": 12,
+          "name": "( 2 Pc ) Golden Fried Catfish Fillets",
           "icon": "fas fa-fish",
+          "active": true,
+          "description": "2 pieces of golden fried catfish fillet",
+          "price": 18,
           "featured": false,
-          "badgeText": "",
-          "active": true
+          "badgeText": ""
         },
         {
           "id": "catfish-nuggets",
