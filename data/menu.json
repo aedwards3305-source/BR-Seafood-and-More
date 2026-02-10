@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-02-10T16:32:26.960Z",
+  "lastUpdated": "2026-02-10T16:34:32.314Z",
   "settings": {
     "sidesIncluded": 2,
     "extraSidePrice": 3,
@@ -99,6 +99,16 @@
           "active": true,
           "description": "7 Shrimp, 7 Catfish Nuggets, 4 Gator Bites, and 2 Frog Legs",
           "price": 38,
+          "featured": false,
+          "badgeText": ""
+        },
+        {
+          "id": "12-pc-trio-platter",
+          "name": "(12 Pc ) Trio Platter",
+          "icon": "fas fa-fish",
+          "active": true,
+          "description": "4 Shrimp, 4 Gator Bites, 4 Catfish Nuggets",
+          "price": 32,
           "featured": false,
           "badgeText": ""
         }
