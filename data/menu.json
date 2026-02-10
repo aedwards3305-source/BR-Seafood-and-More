@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-02-10T15:35:04.145Z",
+  "lastUpdated": "2026-02-10T15:35:51.532Z",
   "settings": {
     "sidesIncluded": 2,
     "extraSidePrice": 3,
@@ -25,12 +25,12 @@
         {
           "id": "golden-fried-shrimp-10",
           "name": "Golden Fried Shrimp (10 pc)",
-          "description": "10 pieces of plump, golden fried shrimp",
-          "price": 18,
           "icon": "fas fa-shrimp",
+          "active": true,
+          "description": "10 pieces of plump, golden fried shrimp",
+          "price": 20,
           "featured": false,
-          "badgeText": "",
-          "active": true
+          "badgeText": ""
         },
         {
           "id": "golden-fried-shrimp-8",
