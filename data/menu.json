@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-02-10T16:03:15.518Z",
+  "lastUpdated": "2026-02-10T16:05:03.238Z",
   "settings": {
     "sidesIncluded": 2,
     "extraSidePrice": 3,
@@ -44,11 +44,11 @@
         },
         {
           "id": "golden-fried-catfish",
-          "name": "2 Pc Golden Fried Catfish Fillets",
+          "name": "8 Pc Golden Fried Catfish Nuggets w/Fries only",
           "icon": "fas fa-fish",
           "active": true,
-          "description": "Tender catfish fillets fried golden and crispy",
-          "price": 18,
+          "description": "Tender catfish nuggets fried golden and crispy",
+          "price": 16,
           "featured": false,
           "badgeText": ""
         },
