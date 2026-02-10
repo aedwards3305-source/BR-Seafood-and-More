@@ -269,6 +269,7 @@ const Admin = (() => {
   function renderEditor() {
     renderItemsList('dinners', 'dinnersList');
     renderItemsList('sides', 'sidesList');
+    renderItemsList('specialty-sides', 'specialtySidesList');
     renderSettings();
   }
 
@@ -278,9 +279,11 @@ const Admin = (() => {
     if (!container || !category) return;
 
     const isDinners = categoryId === 'dinners';
+    const isSpecialtySides = categoryId === 'specialty-sides';
+    const hasPrice = isDinners || isSpecialtySides;
 
     container.innerHTML = category.items.map((item, index) => {
-      const priceHtml = isDinners
+      const priceHtml = hasPrice
         ? `<span class="item-price">${MenuRenderer.formatPrice(item.price)}</span>`
         : '';
       const featuredStar = item.featured
@@ -371,41 +374,51 @@ const Admin = (() => {
   function openItemModal(categoryId, index) {
     const category = getCategory(categoryId);
     const isDinners = categoryId === 'dinners';
+    const isSpecialtySides = categoryId === 'specialty-sides';
     const isNew = index === -1;
     const item = isNew ? null : category.items[index];
 
     const descGroup = document.getElementById('descGroup');
     const priceRow = document.getElementById('priceRow');
     const featuredRow = document.getElementById('featuredRow');
+    const priceGroup = document.getElementById('itemPrice').closest('.form-group');
 
     if (isDinners) {
       descGroup.style.display = 'flex';
       priceRow.style.display = 'flex';
       featuredRow.style.display = 'flex';
-      document.getElementById('itemPrice').closest('.form-group').style.display = '';
+      priceGroup.style.display = '';
+      document.getElementById('itemPrice').required = true;
+    } else if (isSpecialtySides) {
+      descGroup.style.display = 'none';
+      priceRow.style.display = 'flex';
+      featuredRow.style.display = 'none';
+      priceGroup.style.display = '';
       document.getElementById('itemPrice').required = true;
     } else {
       descGroup.style.display = 'none';
       priceRow.style.display = 'flex';
       featuredRow.style.display = 'none';
-      document.getElementById('itemPrice').closest('.form-group').style.display = 'none';
+      priceGroup.style.display = 'none';
       document.getElementById('itemPrice').required = false;
     }
 
+    const modalLabels = { dinners: 'Add Dinner Item', sides: 'Add Side', 'specialty-sides': 'Add Specialty Side' };
     document.getElementById('modalTitle').textContent =
-      isNew ? (isDinners ? 'Add Dinner Item' : 'Add Side') : 'Edit Item';
+      isNew ? (modalLabels[categoryId] || 'Add Item') : 'Edit Item';
 
     const iconSelect = document.getElementById('itemIcon');
     iconSelect.innerHTML = ICON_OPTIONS.map(opt =>
       `<option value="${opt.value}">${opt.label}</option>`
     ).join('');
 
+    const defaultIcons = { dinners: 'fas fa-fish', sides: 'fas fa-seedling', 'specialty-sides': 'fas fa-bowl-food' };
     document.getElementById('itemId').value = isNew ? '' : item.id;
     document.getElementById('itemCategory').value = categoryId;
     document.getElementById('itemName').value = isNew ? '' : item.name;
     document.getElementById('itemDesc').value = isNew ? '' : (item.description || '');
     document.getElementById('itemPrice').value = isNew ? '' : (item.price || 0);
-    document.getElementById('itemIcon').value = isNew ? (isDinners ? 'fas fa-fish' : 'fas fa-seedling') : item.icon;
+    document.getElementById('itemIcon').value = isNew ? (defaultIcons[categoryId] || 'fas fa-star') : item.icon;
     document.getElementById('itemFeatured').checked = isNew ? false : !!item.featured;
     document.getElementById('itemBadge').value = isNew ? '' : (item.badgeText || '');
     document.getElementById('itemActive').checked = isNew ? true : item.active;
@@ -430,6 +443,7 @@ const Admin = (() => {
     const isNew = editIndex === -1;
     const category = getCategory(categoryId);
     const isDinners = categoryId === 'dinners';
+    const isSpecialtySides = categoryId === 'specialty-sides';
 
     const name = document.getElementById('itemName').value.trim();
     if (!name) {
@@ -453,6 +467,10 @@ const Admin = (() => {
       itemData.price = parseFloat(document.getElementById('itemPrice').value) || 0;
       itemData.featured = document.getElementById('itemFeatured').checked;
       itemData.badgeText = itemData.featured ? document.getElementById('itemBadge').value.trim() : '';
+    }
+
+    if (isSpecialtySides) {
+      itemData.price = parseFloat(document.getElementById('itemPrice').value) || 0;
     }
 
     if (isNew) {
@@ -571,6 +589,16 @@ const Admin = (() => {
           }
           html += '</div>';
         });
+      } else if (category.id === 'specialty-sides') {
+        // Specialty sides with prices
+        html += '<div style="display: flex; flex-wrap: wrap; gap: 10px;">';
+        activeItems.forEach(item => {
+          html += '<span style="background: #f3f4f6; padding: 8px 16px; border-radius: 8px; font-size: 14px; font-weight: 500;">'
+            + MenuRenderer.escapeHtml(item.name)
+            + ' <span style="color: #0d9488; font-weight: 700; margin-left: 6px;">' + MenuRenderer.formatPrice(item.price) + '</span>'
+            + '</span>';
+        });
+        html += '</div>';
       } else {
         // Sides as compact grid
         html += '<div style="display: flex; flex-wrap: wrap; gap: 10px;">';
@@ -973,6 +1001,7 @@ const Admin = (() => {
     // Add buttons
     document.getElementById('addDinnerBtn')?.addEventListener('click', () => openItemModal('dinners', -1));
     document.getElementById('addSideBtn')?.addEventListener('click', () => openItemModal('sides', -1));
+    document.getElementById('addSpecialtySideBtn')?.addEventListener('click', () => openItemModal('specialty-sides', -1));
 
     // Menu settings save
     document.getElementById('saveSettingsBtn')?.addEventListener('click', () => {

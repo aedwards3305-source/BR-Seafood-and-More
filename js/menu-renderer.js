@@ -45,13 +45,24 @@ const MenuRenderer = (() => {
       </div>`;
   }
 
+  function renderSpecialtySideItem(item) {
+    if (!item.active) return '';
+    return `
+      <div class="side-item specialty-side-item">
+        <i class="${escapeHtml(item.icon)}"></i>
+        <span>${escapeHtml(item.name)}</span>
+        <span class="specialty-side-price">${formatPrice(item.price)}</span>
+      </div>`;
+  }
+
   function renderCategory(category) {
     const activeItems = category.items.filter(i => i.active);
     if (activeItems.length === 0) return '';
 
+    const isSpecialtySides = category.id === 'specialty-sides';
     const isDinners = category.id === 'dinners';
     const gridClass = isDinners ? 'menu-grid' : 'sides-grid';
-    const renderFn = isDinners ? renderMenuItem : renderSideItem;
+    const renderFn = isDinners ? renderMenuItem : (isSpecialtySides ? renderSpecialtySideItem : renderSideItem);
 
     return `
       <div class="menu-category">

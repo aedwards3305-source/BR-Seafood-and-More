@@ -700,6 +700,23 @@ ul { list-style: none; }
   color: rgba(255,255,255,.85);
 }
 
+/* Specialty Side Items (sides with prices) */
+.specialty-side-item {
+  justify-content: flex-start;
+}
+
+.specialty-side-item span:first-of-type {
+  flex: 1;
+}
+
+.specialty-side-price {
+  font-family: var(--font-display);
+  font-weight: 800;
+  color: var(--teal-light) !important;
+  font-size: .95rem;
+  white-space: nowrap;
+}
+
 /* Menu Note */
 .menu-note {
   display: flex;

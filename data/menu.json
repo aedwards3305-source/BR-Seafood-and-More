@@ -117,6 +117,21 @@
           "active": true
         }
       ]
+    },
+    {
+      "id": "specialty-sides",
+      "name": "Specialty Sides",
+      "icon": "fas fa-star",
+      "badge": "Premium Add-Ons",
+      "items": [
+        {
+          "id": "macaroni-and-cheese",
+          "name": "Macaroni and Cheese",
+          "price": 5,
+          "icon": "fas fa-bowl-food",
+          "active": true
+        }
+      ]
     }
   ]
 }
