@@ -747,7 +747,15 @@ const Admin = (() => {
     container.innerHTML = eventsData.events.map((event, index) => {
       const inactiveClass = event.active ? '' : ' inactive';
       const featuredStar = event.featured ? '<i class="fas fa-star featured-star"></i>' : '';
-      const dateStr = event.date ? new Date(event.date + 'T00:00:00').toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' }) : '';
+      let dateStr = '';
+      if (event.date) {
+        const startD = new Date(event.date + 'T00:00:00');
+        dateStr = startD.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+        if (event.endDate) {
+          const endD = new Date(event.endDate + 'T00:00:00');
+          dateStr += ' – ' + endD.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+        }
+      }
 
       return `
         <div class="item-card${inactiveClass}" draggable="true" data-index="${index}" data-type="event">
@@ -832,6 +840,7 @@ const Admin = (() => {
     document.getElementById('eventId').value = isNew ? '' : event.id;
     document.getElementById('eventTitle').value = isNew ? '' : event.title;
     document.getElementById('eventDate').value = isNew ? '' : event.date;
+    document.getElementById('eventEndDate').value = isNew ? '' : (event.endDate || '');
     document.getElementById('eventTime').value = isNew ? '' : event.time;
     document.getElementById('eventLocation').value = isNew ? '' : event.location;
     document.getElementById('eventDesc').value = isNew ? '' : (event.description || '');
@@ -868,6 +877,12 @@ const Admin = (() => {
       return;
     }
 
+    const endDate = document.getElementById('eventEndDate').value;
+    if (endDate && endDate < date) {
+      showToast('End date must be on or after the start date', 'error');
+      return;
+    }
+
     const id = isNew
       ? title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '')
       : document.getElementById('eventId').value;
@@ -876,6 +891,7 @@ const Admin = (() => {
       id,
       title,
       date,
+      endDate: endDate || '',
       time: document.getElementById('eventTime').value.trim(),
       location: document.getElementById('eventLocation').value.trim(),
       description: document.getElementById('eventDesc').value.trim(),

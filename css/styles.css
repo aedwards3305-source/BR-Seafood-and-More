@@ -1768,6 +1768,24 @@ ul { list-style: none; }
   line-height: 1;
 }
 
+.event-date-badge.multi-month {
+  height: auto;
+  min-height: 72px;
+  padding: 8px 10px;
+  gap: 2px;
+}
+
+.event-date-badge.multi-month .event-month {
+  font-size: .65rem;
+}
+
+.event-day-divider {
+  font-size: .75rem;
+  font-weight: 700;
+  line-height: 1;
+  opacity: .7;
+}
+
 .event-card-content {
   flex: 1;
   min-width: 0;
@@ -1901,6 +1919,12 @@ ul { list-style: none; }
     height: auto;
     padding: 8px 16px;
     gap: 8px;
+  }
+
+  .event-date-badge.multi-month {
+    min-height: auto;
+    padding: 8px 14px;
+    gap: 4px;
   }
 
   .event-day {

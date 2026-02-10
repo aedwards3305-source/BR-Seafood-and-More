@@ -21,6 +21,22 @@ const EventsRenderer = (() => {
     });
   }
 
+  function formatDateRange(startStr, endStr) {
+    if (!endStr) return formatDate(startStr);
+    const s = new Date(startStr + 'T00:00:00');
+    const e = new Date(endStr + 'T00:00:00');
+    const sMonth = s.toLocaleDateString('en-US', { month: 'long' });
+    const eMonth = e.toLocaleDateString('en-US', { month: 'long' });
+    const sDay = s.getDate();
+    const eDay = e.getDate();
+    const year = s.getFullYear();
+
+    if (sMonth === eMonth && s.getFullYear() === e.getFullYear()) {
+      return sMonth + ' ' + sDay + ' \u2013 ' + eDay + ', ' + year;
+    }
+    return sMonth + ' ' + sDay + ' \u2013 ' + eMonth + ' ' + eDay + ', ' + e.getFullYear();
+  }
+
   function getMonthShort(dateStr) {
     const d = new Date(dateStr + 'T00:00:00');
     return d.toLocaleDateString('en-US', { month: 'short' }).toUpperCase();
@@ -31,28 +47,62 @@ const EventsRenderer = (() => {
     return d.getDate();
   }
 
-  function isUpcoming(dateStr) {
-    const eventDate = new Date(dateStr + 'T23:59:59');
+  function isUpcoming(dateStr, endDateStr) {
+    const checkDate = endDateStr || dateStr;
+    const eventDate = new Date(checkDate + 'T23:59:59');
     return eventDate >= new Date();
+  }
+
+  function renderDateBadge(event) {
+    const hasEnd = event.endDate && event.endDate !== event.date;
+    if (!hasEnd) {
+      return `
+        <div class="event-date-badge">
+          <span class="event-month">${getMonthShort(event.date)}</span>
+          <span class="event-day">${getDay(event.date)}</span>
+        </div>`;
+    }
+
+    const startMonth = getMonthShort(event.date);
+    const endMonth = getMonthShort(event.endDate);
+    const startDay = getDay(event.date);
+    const endDay = getDay(event.endDate);
+
+    if (startMonth === endMonth) {
+      return `
+        <div class="event-date-badge">
+          <span class="event-month">${startMonth}</span>
+          <span class="event-day">${startDay}\u2013${endDay}</span>
+        </div>`;
+    }
+
+    return `
+      <div class="event-date-badge multi-month">
+        <span class="event-month">${startMonth} ${startDay}</span>
+        <span class="event-day-divider">\u2013</span>
+        <span class="event-month">${endMonth} ${endDay}</span>
+      </div>`;
   }
 
   function renderEventCard(event) {
     if (!event.active) return '';
+    const upcoming = isUpcoming(event.date, event.endDate);
     const featuredClass = event.featured ? ' featured' : '';
-    const pastClass = !isUpcoming(event.date) ? ' past-event' : '';
-    const pastBadge = !isUpcoming(event.date)
+    const pastClass = !upcoming ? ' past-event' : '';
+    const pastBadge = !upcoming
       ? '<span class="event-past-badge">Past Event</span>'
       : '';
-    const featuredBadge = event.featured && isUpcoming(event.date)
+    const featuredBadge = event.featured && upcoming
       ? '<span class="event-featured-badge"><i class="fas fa-star"></i> Featured</span>'
       : '';
 
+    const dateDisplay = event.endDate
+      ? formatDateRange(event.date, event.endDate)
+      : formatDate(event.date);
+
     return `
       <div class="event-card${featuredClass}${pastClass}">
-        <div class="event-date-badge">
-          <span class="event-month">${getMonthShort(event.date)}</span>
-          <span class="event-day">${getDay(event.date)}</span>
-        </div>
+        ${renderDateBadge(event)}
         <div class="event-card-content">
           <div class="event-card-header">
             <h3 class="event-title">
@@ -64,7 +114,7 @@ const EventsRenderer = (() => {
           </div>
           <div class="event-details">
             <span class="event-detail">
-              <i class="fas fa-calendar"></i> ${formatDate(event.date)}
+              <i class="fas fa-calendar"></i> ${dateDisplay}
             </span>
             <span class="event-detail">
               <i class="fas fa-clock"></i> ${escapeHtml(event.time)}
@@ -101,10 +151,10 @@ const EventsRenderer = (() => {
       return;
     }
 
-    // Sort: upcoming first (by date asc), then past (by date desc)
-    const upcoming = activeEvents.filter(e => isUpcoming(e.date))
+    // Sort: upcoming first (by start date asc), then past (by start date desc)
+    const upcoming = activeEvents.filter(e => isUpcoming(e.date, e.endDate))
       .sort((a, b) => new Date(a.date) - new Date(b.date));
-    const past = activeEvents.filter(e => !isUpcoming(e.date))
+    const past = activeEvents.filter(e => !isUpcoming(e.date, e.endDate))
       .sort((a, b) => new Date(b.date) - new Date(a.date));
 
     let html = '';
@@ -126,5 +176,5 @@ const EventsRenderer = (() => {
     container.innerHTML = html;
   }
 
-  return { renderEvents, escapeHtml, formatDate, isUpcoming };
+  return { renderEvents, escapeHtml, formatDate, formatDateRange, isUpcoming };
 })();
