@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-02-10T16:23:41.076Z",
+  "lastUpdated": "2026-02-10T16:30:03.508Z",
   "settings": {
     "sidesIncluded": 2,
     "extraSidePrice": 3,
@@ -74,11 +74,11 @@
         },
         {
           "id": "macaroni-and-cheese",
-          "name": "Macaroni and Cheese",
-          "icon": "fas fa-bowl-food",
+          "name": "(26 Pc ) Captains Platter",
+          "icon": "fas fa-fish",
           "active": true,
-          "description": "Home made",
-          "price": 5,
+          "description": "8 shrimp 8 Gator Bites, 8 Catfish Nuggets, 2 pcs of Fillet Whittings 2 Frog Legs comes w/2 large sides          tting, 2 Frog Legs    itting, 2 Frog Legs",
+          "price": 44,
           "featured": false,
           "badgeText": ""
         },
