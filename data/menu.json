@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-02-10T15:35:51.532Z",
+  "lastUpdated": "2026-02-10T16:05:03.238Z",
   "settings": {
     "sidesIncluded": 2,
     "extraSidePrice": 3,
@@ -14,11 +14,11 @@
       "items": [
         {
           "id": "shrimp-catfish-combo",
-          "name": "Shrimp & Catfish Combo",
+          "name": "10 Shrimp & 10 Catfish Combo",
           "icon": "fas fa-star",
           "active": true,
-          "description": "10 pc golden fried shrimp and catfish — the best of both worlds",
-          "price": 29,
+          "description": "10 pc golden fried shrimp and 10 catfish — the best of both worlds",
+          "price": 36,
           "featured": true,
           "badgeText": "Best Seller"
         },
@@ -28,39 +28,39 @@
           "icon": "fas fa-shrimp",
           "active": true,
           "description": "10 pieces of plump, golden fried shrimp",
-          "price": 20,
+          "price": 26,
           "featured": false,
           "badgeText": ""
         },
         {
           "id": "golden-fried-shrimp-8",
-          "name": "Golden Fried Shrimp (8 pc)",
-          "description": "8 pieces of perfectly crispy fried shrimp",
-          "price": 15,
+          "name": "Golden Fried Shrimp (8 pc)/ fries only",
           "icon": "fas fa-shrimp",
+          "active": true,
+          "description": "8 pieces of perfectly crispy fried shrimp",
+          "price": 16,
           "featured": false,
-          "badgeText": "",
-          "active": true
+          "badgeText": ""
         },
         {
           "id": "golden-fried-catfish",
-          "name": "Golden Fried Catfish",
-          "description": "Tender catfish fillets fried golden and crispy",
-          "price": 18,
+          "name": "8 Pc Golden Fried Catfish Nuggets w/Fries only",
           "icon": "fas fa-fish",
+          "active": true,
+          "description": "Tender catfish nuggets fried golden and crispy",
+          "price": 16,
           "featured": false,
-          "badgeText": "",
-          "active": true
+          "badgeText": ""
         },
         {
           "id": "catfish-2pc",
-          "name": "Catfish (2 pc)",
-          "description": "2 pieces of golden fried catfish fillet",
-          "price": 12,
+          "name": "( 2 Pc ) Golden Fried Catfish Fillets",
           "icon": "fas fa-fish",
+          "active": true,
+          "description": "2 pieces of golden fried catfish fillet",
+          "price": 18,
           "featured": false,
-          "badgeText": "",
-          "active": true
+          "badgeText": ""
         },
         {
           "id": "catfish-nuggets",
@@ -71,6 +71,16 @@
           "featured": false,
           "badgeText": "",
           "active": true
+        },
+        {
+          "id": "macaroni-and-cheese",
+          "name": "Macaroni and Cheese",
+          "icon": "fas fa-bowl-food",
+          "active": true,
+          "description": "Home made",
+          "price": 5,
+          "featured": false,
+          "badgeText": ""
         }
       ]
     },
@@ -114,6 +124,12 @@
           "id": "seasoned-fries",
           "name": "Seasoned Fries",
           "icon": "fas fa-french-fries",
+          "active": true
+        },
+        {
+          "id": "coleslaw",
+          "name": "Coleslaw",
+          "icon": "fas fa-seedling",
           "active": true
         }
       ]
