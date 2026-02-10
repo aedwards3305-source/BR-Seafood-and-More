@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-02-10T16:35:24.814Z",
+  "lastUpdated": "2026-02-10T16:36:13.548Z",
   "settings": {
     "sidesIncluded": 2,
     "extraSidePrice": 3,
@@ -94,7 +94,7 @@
         },
         {
           "id": "20-pc-all-on-deck",
-          "name": "(20 Pc) All On Deck",
+          "name": "(20 Pc) All On Deck Platter",
           "icon": "fas fa-fish",
           "active": true,
           "description": "7 Shrimp, 7 Catfish Nuggets, 4 Gator Bites, and 2 Frog Legs",
