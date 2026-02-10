@@ -103,8 +103,11 @@ const MenuRenderer = (() => {
       return;
     }
 
-    const html = data.categories.map(renderCategory).join('')
-      + renderMenuNote(data.settings);
+    const html = data.categories.map(cat => {
+      let out = renderCategory(cat);
+      if (cat.id === 'sides') out += renderMenuNote(data.settings);
+      return out;
+    }).join('');
 
     container.innerHTML = html;
   }
