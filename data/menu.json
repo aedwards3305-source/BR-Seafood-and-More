@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-02-10T15:21:36.821Z",
+  "lastUpdated": "2026-02-10T15:22:37.277Z",
   "settings": {
     "sidesIncluded": 2,
     "extraSidePrice": 3,
@@ -38,7 +38,7 @@
           "icon": "fas fa-shrimp",
           "active": true,
           "description": "8 pieces of perfectly crispy fried shrimp",
-          "price": 18,
+          "price": 18.5,
           "featured": false,
           "badgeText": ""
         },
