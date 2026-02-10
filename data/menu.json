@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-02-10T16:05:03.238Z",
+  "lastUpdated": "2026-02-10T16:08:12.887Z",
   "settings": {
     "sidesIncluded": 2,
     "extraSidePrice": 3,
@@ -71,16 +71,6 @@
           "featured": false,
           "badgeText": "",
           "active": true
-        },
-        {
-          "id": "macaroni-and-cheese",
-          "name": "Macaroni and Cheese",
-          "icon": "fas fa-bowl-food",
-          "active": true,
-          "description": "Home made",
-          "price": 5,
-          "featured": false,
-          "badgeText": ""
         }
       ]
     },
