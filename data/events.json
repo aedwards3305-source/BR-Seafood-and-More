@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-02-10T15:37:32.704Z",
+  "lastUpdated": "2026-02-10T15:38:05.261Z",
   "events": [
     {
       "id": "farmers-market-march",
@@ -13,14 +13,14 @@
       "active": true
     },
     {
-      "id": "food-truck-friday",
-      "title": "Food Truck Friday",
-      "date": "2026-04-17",
-      "time": "11:00 AM - 8:00 PM",
-      "location": "Broadway Square, Fargo",
-      "description": "We're joining the weekly Food Truck Friday lineup. Come grab lunch or dinner with us!",
-      "icon": "fas fa-truck",
-      "featured": false,
+      "id": "mothers-day-special",
+      "title": "Mother's Day Special",
+      "date": "2026-05-10",
+      "time": "11:00 AM - 7:00 PM",
+      "location": "B&R Seafood Kitchen",
+      "description": "Treat Mom to a seafood feast! Special Mother's Day platters available. Pre-orders encouraged — call us to reserve yours.",
+      "icon": "fas fa-heart",
+      "featured": true,
       "active": true
     }
   ]
