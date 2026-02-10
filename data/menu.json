@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-02-10T16:08:12.887Z",
+  "lastUpdated": "2026-02-10T16:21:10.648Z",
   "settings": {
     "sidesIncluded": 2,
     "extraSidePrice": 3,
@@ -14,7 +14,7 @@
       "items": [
         {
           "id": "shrimp-catfish-combo",
-          "name": "10 Shrimp & 10 Catfish Combo",
+          "name": "(10) Shrimp & (10) Catfish Combo",
           "icon": "fas fa-star",
           "active": true,
           "description": "10 pc golden fried shrimp and 10 catfish — the best of both worlds",
@@ -64,13 +64,33 @@
         },
         {
           "id": "catfish-nuggets",
-          "name": "Catfish Nuggets",
-          "description": "Bite-sized catfish nuggets, golden fried",
-          "price": 15,
+          "name": "(3 Pc ) Golden Fried Whittings  Fillets",
           "icon": "fas fa-fish",
+          "active": true,
+          "description": "golden fried",
+          "price": 18,
           "featured": false,
-          "badgeText": "",
-          "active": true
+          "badgeText": ""
+        },
+        {
+          "id": "macaroni-and-cheese",
+          "name": "Macaroni and Cheese",
+          "icon": "fas fa-bowl-food",
+          "active": true,
+          "description": "Home made",
+          "price": 5,
+          "featured": false,
+          "badgeText": ""
+        },
+        {
+          "id": "2-pc-golden-fried-cajun-frog-legs",
+          "name": "(2 Pc) Golden Fried  Cajun Frog Legs",
+          "icon": "fas fa-fish",
+          "active": true,
+          "description": "",
+          "price": 14,
+          "featured": false,
+          "badgeText": ""
         }
       ]
     },
@@ -120,21 +140,6 @@
           "id": "coleslaw",
           "name": "Coleslaw",
           "icon": "fas fa-seedling",
-          "active": true
-        }
-      ]
-    },
-    {
-      "id": "specialty-sides",
-      "name": "Specialty Sides",
-      "icon": "fas fa-star",
-      "badge": "Premium Add-Ons",
-      "items": [
-        {
-          "id": "macaroni-and-cheese",
-          "name": "Macaroni and Cheese",
-          "price": 5,
-          "icon": "fas fa-bowl-food",
           "active": true
         }
       ]
