@@ -189,7 +189,7 @@ const Admin = (() => {
 
   async function loadData() {
     try {
-      const resp = await fetch(PUBLISHED_URL);
+      const resp = await fetch(PUBLISHED_URL + '?t=' + Date.now());
       if (resp.ok) {
         publishedData = await resp.json();
       }
@@ -528,7 +528,7 @@ const Admin = (() => {
 
   async function loadEventsData() {
     try {
-      const resp = await fetch(EVENTS_URL);
+      const resp = await fetch(EVENTS_URL + '?t=' + Date.now());
       if (resp.ok) {
         publishedEventsData = await resp.json();
       }
@@ -890,7 +890,7 @@ const Admin = (() => {
 
   async function loadSettingsData() {
     try {
-      const resp = await fetch(SETTINGS_URL);
+      const resp = await fetch(SETTINGS_URL + '?t=' + Date.now());
       if (resp.ok) {
         publishedSettingsData = await resp.json();
       }

@@ -15,7 +15,7 @@ const SiteSettings = (() => {
 
   async function load() {
     try {
-      const resp = await fetch('data/site-settings.json');
+      const resp = await fetch('data/site-settings.json?t=' + Date.now());
       if (!resp.ok) return null;
       return await resp.json();
     } catch (e) {

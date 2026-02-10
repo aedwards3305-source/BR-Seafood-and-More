@@ -18,7 +18,7 @@ async function loadMenu() {
   if (!container) return;
 
   try {
-    const resp = await fetch('data/menu.json');
+    const resp = await fetch('data/menu.json?t=' + Date.now());
     if (!resp.ok) throw new Error('Failed to load menu');
     const data = await resp.json();
     MenuRenderer.renderMenu(data, container);
@@ -39,7 +39,7 @@ async function loadEvents() {
   if (!container) return;
 
   try {
-    const resp = await fetch('data/events.json');
+    const resp = await fetch('data/events.json?t=' + Date.now());
     if (!resp.ok) throw new Error('Failed to load events');
     const data = await resp.json();
     EventsRenderer.renderEvents(data, container);
