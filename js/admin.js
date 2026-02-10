@@ -382,11 +382,14 @@ const Admin = (() => {
       descGroup.style.display = 'flex';
       priceRow.style.display = 'flex';
       featuredRow.style.display = 'flex';
+      document.getElementById('itemPrice').closest('.form-group').style.display = '';
+      document.getElementById('itemPrice').required = true;
     } else {
       descGroup.style.display = 'none';
       priceRow.style.display = 'flex';
       featuredRow.style.display = 'none';
       document.getElementById('itemPrice').closest('.form-group').style.display = 'none';
+      document.getElementById('itemPrice').required = false;
     }
 
     document.getElementById('modalTitle').textContent =
