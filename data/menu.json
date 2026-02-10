@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-02-10T15:58:40.802Z",
+  "lastUpdated": "2026-02-10T15:59:58.548Z",
   "settings": {
     "sidesIncluded": 2,
     "extraSidePrice": 3,
@@ -28,19 +28,19 @@
           "icon": "fas fa-shrimp",
           "active": true,
           "description": "10 pieces of plump, golden fried shrimp",
-          "price": 20,
+          "price": 26,
           "featured": false,
           "badgeText": ""
         },
         {
           "id": "golden-fried-shrimp-8",
-          "name": "Golden Fried Shrimp (8 pc)",
-          "description": "8 pieces of perfectly crispy fried shrimp",
-          "price": 15,
+          "name": "Golden Fried Shrimp (8 pc)/ fries only",
           "icon": "fas fa-shrimp",
+          "active": true,
+          "description": "8 pieces of perfectly crispy fried shrimp",
+          "price": 16,
           "featured": false,
-          "badgeText": "",
-          "active": true
+          "badgeText": ""
         },
         {
           "id": "golden-fried-catfish",
