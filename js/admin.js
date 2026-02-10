@@ -1403,10 +1403,8 @@ const Admin = (() => {
         updateEventsDraftBanner();
         updateEventsLastUpdated();
       } else if (type === 'settings') {
-        localStorage.setItem(SETTINGS_STORAGE_KEY, JSON.stringify(settingsData));
         publishedSettingsData = JSON.parse(JSON.stringify(settingsData));
         hasSettingsDraft = false;
-        localStorage.removeItem(storageMap[type]);
         updateSettingsDraftBanner();
         updateSettingsLastUpdated();
       }
