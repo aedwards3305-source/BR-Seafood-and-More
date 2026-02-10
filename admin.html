@@ -162,18 +162,25 @@
               <div class="editor-section-header">
                 <h2><i class="fas fa-cloud-arrow-up"></i> Publish Changes</h2>
               </div>
-              <p class="publish-info">To update your live website, download the updated menu file and replace <code>data/menu.json</code> in your website files.</p>
-              <div class="publish-buttons">
-                <button class="btn btn-primary" id="downloadBtn">
-                  <i class="fas fa-download"></i> Download menu.json
-                </button>
-                <button class="btn btn-secondary-solid" id="copyBtn">
-                  <i class="fas fa-copy"></i> Copy JSON
+              <div class="publish-buttons" style="margin-bottom: 12px;">
+                <button class="btn btn-primary" id="publishMenuBtn">
+                  <i class="fas fa-cloud-arrow-up"></i> Publish to Site
                 </button>
                 <button class="btn btn-secondary-solid" id="downloadMenuPdfBtn">
-                  <i class="fas fa-file-pdf"></i> Download as PDF
+                  <i class="fas fa-file-pdf"></i> Download PDF
                 </button>
               </div>
+              <details class="publish-fallback">
+                <summary>Manual export options</summary>
+                <div class="publish-buttons" style="margin-top: 10px;">
+                  <button class="btn btn-secondary-solid" id="downloadBtn">
+                    <i class="fas fa-download"></i> Download menu.json
+                  </button>
+                  <button class="btn btn-secondary-solid" id="copyBtn">
+                    <i class="fas fa-copy"></i> Copy JSON
+                  </button>
+                </div>
+              </details>
               <p class="last-updated" id="lastUpdated"></p>
             </div>
           </div>
@@ -232,15 +239,22 @@
                 <div class="editor-section-header">
                   <h2><i class="fas fa-cloud-arrow-up"></i> Publish Event Changes</h2>
                 </div>
-                <p class="publish-info">To update your live website, download the updated events file and replace <code>data/events.json</code> in your website files.</p>
-                <div class="publish-buttons">
-                  <button class="btn btn-primary" id="downloadEventsBtn">
-                    <i class="fas fa-download"></i> Download events.json
-                  </button>
-                  <button class="btn btn-secondary-solid" id="copyEventsBtn">
-                    <i class="fas fa-copy"></i> Copy JSON
+                <div class="publish-buttons" style="margin-bottom: 12px;">
+                  <button class="btn btn-primary" id="publishEventsBtn">
+                    <i class="fas fa-cloud-arrow-up"></i> Publish to Site
                   </button>
                 </div>
+                <details class="publish-fallback">
+                  <summary>Manual export options</summary>
+                  <div class="publish-buttons" style="margin-top: 10px;">
+                    <button class="btn btn-secondary-solid" id="downloadEventsBtn">
+                      <i class="fas fa-download"></i> Download events.json
+                    </button>
+                    <button class="btn btn-secondary-solid" id="copyEventsBtn">
+                      <i class="fas fa-copy"></i> Copy JSON
+                    </button>
+                  </div>
+                </details>
                 <p class="last-updated" id="eventsLastUpdated"></p>
               </div>
             </div>
@@ -553,17 +567,22 @@
               <div class="editor-section-header">
                 <h2><i class="fas fa-cloud-arrow-up"></i> Publish Settings</h2>
               </div>
-              <p style="color:var(--text-secondary);font-size:.9rem;margin-bottom:16px;">
-                To update your live website, download the updated settings file and replace <code>data/site-settings.json</code> in your website files.
-              </p>
-              <div class="publish-buttons">
-                <button class="btn btn-primary" id="downloadSettingsBtn">
-                  <i class="fas fa-download"></i> Download site-settings.json
-                </button>
-                <button class="btn btn-secondary-solid" id="copySettingsBtn">
-                  <i class="fas fa-copy"></i> Copy JSON
+              <div class="publish-buttons" style="margin-bottom: 12px;">
+                <button class="btn btn-primary" id="publishSettingsBtn">
+                  <i class="fas fa-cloud-arrow-up"></i> Publish to Site
                 </button>
               </div>
+              <details class="publish-fallback">
+                <summary>Manual export options</summary>
+                <div class="publish-buttons" style="margin-top: 10px;">
+                  <button class="btn btn-secondary-solid" id="downloadSettingsBtn">
+                    <i class="fas fa-download"></i> Download site-settings.json
+                  </button>
+                  <button class="btn btn-secondary-solid" id="copySettingsBtn">
+                    <i class="fas fa-copy"></i> Copy JSON
+                  </button>
+                </div>
+              </details>
               <p class="last-updated" id="settingsLastUpdated" style="margin-top:12px;"></p>
             </div>
 

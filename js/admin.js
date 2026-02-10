@@ -968,6 +968,7 @@ const Admin = (() => {
     document.getElementById('discardDraftBtn')?.addEventListener('click', discardDraft);
 
     // Publish buttons
+    document.getElementById('publishMenuBtn')?.addEventListener('click', () => publishToSite('menu'));
     document.getElementById('downloadBtn')?.addEventListener('click', downloadMenuJson);
     document.getElementById('copyBtn')?.addEventListener('click', copyJsonToClipboard);
     document.getElementById('downloadMenuPdfBtn')?.addEventListener('click', downloadMenuPdf);
@@ -1001,6 +1002,7 @@ const Admin = (() => {
   function bindEventsEditorEvents() {
     document.getElementById('addEventBtn')?.addEventListener('click', () => openEventModal(-1));
     document.getElementById('discardEventsDraftBtn')?.addEventListener('click', discardEventsDraft);
+    document.getElementById('publishEventsBtn')?.addEventListener('click', () => publishToSite('events'));
     document.getElementById('downloadEventsBtn')?.addEventListener('click', downloadEventsJson);
     document.getElementById('copyEventsBtn')?.addEventListener('click', copyEventsJsonToClipboard);
 
@@ -1328,7 +1330,8 @@ const Admin = (() => {
     // Discard draft
     document.getElementById('discardSettingsDraftBtn')?.addEventListener('click', discardSettingsDraft);
 
-    // Download / Copy
+    // Publish / Download / Copy
+    document.getElementById('publishSettingsBtn')?.addEventListener('click', () => publishToSite('settings'));
     document.getElementById('downloadSettingsBtn')?.addEventListener('click', downloadSettingsJson);
     document.getElementById('copySettingsBtn')?.addEventListener('click', copySettingsJson);
 
@@ -1347,6 +1350,75 @@ const Admin = (() => {
     document.getElementById('announcementEnabled')?.addEventListener('change', updateAnnouncementPreview);
     document.getElementById('announcementMessage')?.addEventListener('input', updateAnnouncementPreview);
     document.getElementById('announcementType')?.addEventListener('change', updateAnnouncementPreview);
+  }
+
+  /* ========== PUBLISH TO SITE ========== */
+
+  async function publishToSite(type) {
+    const dataMap = { menu: menuData, events: eventsData, settings: settingsData };
+    const storageMap = { menu: STORAGE_KEY, events: EVENTS_STORAGE_KEY, settings: SETTINGS_STORAGE_KEY };
+    const typeData = dataMap[type];
+
+    if (!typeData) {
+      showToast('No data to publish', 'error');
+      return;
+    }
+
+    if (!confirm('Publish ' + type + ' changes to the live website?')) return;
+
+    // Collect latest form values for settings
+    if (type === 'settings') collectSettingsFromForm();
+
+    typeData.lastUpdated = new Date().toISOString();
+
+    showToast('Publishing to site...', '');
+
+    try {
+      const resp = await fetch('/api/publish', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': 'Bearer ' + PASSWORD_HASH
+        },
+        body: JSON.stringify({ type: type, data: typeData })
+      });
+
+      const result = await resp.json();
+
+      if (!resp.ok) {
+        throw new Error(result.error || 'Publish failed');
+      }
+
+      // Clear draft on success
+      localStorage.removeItem(storageMap[type]);
+
+      if (type === 'menu') {
+        publishedData = JSON.parse(JSON.stringify(menuData));
+        hasDraft = false;
+        updateDraftBanner();
+        updateLastUpdated();
+      } else if (type === 'events') {
+        publishedEventsData = JSON.parse(JSON.stringify(eventsData));
+        hasEventsDraft = false;
+        updateEventsDraftBanner();
+        updateEventsLastUpdated();
+      } else if (type === 'settings') {
+        localStorage.setItem(SETTINGS_STORAGE_KEY, JSON.stringify(settingsData));
+        publishedSettingsData = JSON.parse(JSON.stringify(settingsData));
+        hasSettingsDraft = false;
+        localStorage.removeItem(storageMap[type]);
+        updateSettingsDraftBanner();
+        updateSettingsLastUpdated();
+      }
+
+      showToast('Published! Site updates in ~30 seconds.', 'success');
+    } catch (err) {
+      if (err.message.includes('not configured')) {
+        showToast('Publishing not set up yet. Use manual export below.', 'error');
+      } else {
+        showToast('Publish failed: ' + err.message, 'error');
+      }
+    }
   }
 
   /* ========== UTILITIES ========== */

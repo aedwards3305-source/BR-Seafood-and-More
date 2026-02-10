@@ -627,6 +627,18 @@
   margin-bottom: 16px;
 }
 
+.publish-fallback summary {
+  cursor: pointer;
+  color: var(--text-secondary);
+  font-size: .85rem;
+  padding: 4px 0;
+  user-select: none;
+}
+
+.publish-fallback summary:hover {
+  color: var(--teal);
+}
+
 .last-updated {
   font-size: .8rem;
   color: var(--text-secondary);
