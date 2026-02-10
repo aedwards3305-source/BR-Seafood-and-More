@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-02-09T12:00:00Z",
+  "lastUpdated": "2026-02-10T15:38:05.261Z",
   "events": [
     {
       "id": "farmers-market-march",
@@ -11,30 +11,6 @@
       "description": "Kick off the spring season with us! We'll be serving all your favorites including our famous Shrimp & Catfish Combo.",
       "icon": "fas fa-store",
       "featured": true,
-      "active": true
-    },
-    {
-      "id": "community-cookout-april",
-      "title": "Community Cookout",
-      "date": "2026-04-05",
-      "endDate": "",
-      "time": "11:00 AM - 6:00 PM",
-      "location": "Island Park, Fargo",
-      "description": "Join us for a family-friendly cookout in the park. Live music, games, and of course, golden fried seafood!",
-      "icon": "fas fa-people-group",
-      "featured": false,
-      "active": true
-    },
-    {
-      "id": "food-truck-friday",
-      "title": "Food Truck Friday",
-      "date": "2026-04-17",
-      "endDate": "",
-      "time": "11:00 AM - 8:00 PM",
-      "location": "Broadway Square, Fargo",
-      "description": "We're joining the weekly Food Truck Friday lineup. Come grab lunch or dinner with us!",
-      "icon": "fas fa-truck",
-      "featured": false,
       "active": true
     },
     {
