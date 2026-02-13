@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-02-10T16:46:23.982Z",
+  "lastUpdated": "2026-02-13T23:06:03.095Z",
   "settings": {
     "sidesIncluded": 2,
     "extraSidePrice": 3,
@@ -111,6 +111,16 @@
           "price": 32,
           "featured": false,
           "badgeText": ""
+        },
+        {
+          "id": "6-sea-scallops",
+          "name": "(6) Sea Scallops",
+          "icon": "fas fa-fish",
+          "active": true,
+          "description": "Golden Fried hand breaded",
+          "price": 18,
+          "featured": false,
+          "badgeText": ""
         }
       ]
     },
@@ -165,6 +175,12 @@
         {
           "id": "green-beans",
           "name": "Green Beans",
+          "icon": "fas fa-seedling",
+          "active": true
+        },
+        {
+          "id": "mac-cheese-5-00",
+          "name": "Mac/Cheese  $5.00",
           "icon": "fas fa-seedling",
           "active": true
         }
