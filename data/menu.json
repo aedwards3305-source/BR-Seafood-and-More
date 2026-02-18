@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-02-18T05:03:07.184Z",
+  "lastUpdated": "2026-02-18T05:04:19.338Z",
   "settings": {
     "sidesIncluded": 2,
     "extraSidePrice": 3,
@@ -137,7 +137,7 @@
           "name": "(4) Bones BBQ Ribs",
           "icon": "fas fa-plate-wheat",
           "active": true,
-          "description": "Tender Pork Ribs with BBQ Sauce comes with 2 Side Dishes",
+          "description": "Tender Pork Ribs with BBQ Sauce comes with 2 regular Sides",
           "price": 16,
           "featured": false,
           "badgeText": ""
