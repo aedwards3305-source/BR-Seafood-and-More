@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-02-18T04:48:48.298Z",
+  "lastUpdated": "2026-02-18T05:03:07.184Z",
   "settings": {
     "sidesIncluded": 2,
     "extraSidePrice": 3,
@@ -17,7 +17,7 @@
           "name": "(10) Shrimp & (10) Catfish Combo",
           "icon": "fas fa-star",
           "active": true,
-          "description": "10 pc golden fried shrimp and 10 catfish — the best of both worlds",
+          "description": "10 pc golden fried shrimp and 10 catfish — the best of both worlds  with 2 reg. sides",
           "price": 36,
           "featured": true,
           "badgeText": "Best Seller"
@@ -27,7 +27,7 @@
           "name": "Golden Fried Shrimp (10 pc)",
           "icon": "fas fa-shrimp",
           "active": true,
-          "description": "10 pieces of plump, golden fried shrimp",
+          "description": "10 pieces of plump, golden fried shrimp comes with 2  regular sides",
           "price": 26,
           "featured": false,
           "badgeText": ""
@@ -54,7 +54,7 @@
         },
         {
           "id": "catfish-2pc",
-          "name": "( 2 Pc ) Golden Fried Catfish Fillets",
+          "name": "( 2 Pc ) Golden Fried Catfish Fillets comes with 2 regular sides",
           "icon": "fas fa-fish",
           "active": true,
           "description": "2 pieces of golden fried catfish fillet",
@@ -97,7 +97,7 @@
           "name": "(20 Pc) All On Deck Platter",
           "icon": "fas fa-fish",
           "active": true,
-          "description": "7 Shrimp, 7 Catfish Nuggets, 4 Gator Bites, and 2 Frog Legs",
+          "description": "7 Shrimp, 7 Catfish Nuggets, 4 Gator Bites, and 2 Frog Legs comes with 2 regular sides",
           "price": 38,
           "featured": false,
           "badgeText": ""
@@ -107,7 +107,7 @@
           "name": "(12 Pc ) Trio Platter",
           "icon": "fas fa-fish",
           "active": true,
-          "description": "4 Shrimp, 4 Gator Bites, 4 Catfish Nuggets",
+          "description": "4 Shrimp, 4 Gator Bites, 4 Catfish Nuggets comes with 2 regular sides",
           "price": 32,
           "featured": false,
           "badgeText": ""
@@ -117,7 +117,7 @@
           "name": "(8) Sea Scallops",
           "icon": "fas fa-fish",
           "active": true,
-          "description": "Golden Fried hand breaded",
+          "description": "Golden Fried hand breaded comes with 2 regular sides",
           "price": 18,
           "featured": false,
           "badgeText": ""
