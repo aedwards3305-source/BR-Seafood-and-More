@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-02-18T05:04:19.338Z",
+  "lastUpdated": "2026-02-18T05:12:02.224Z",
   "settings": {
     "sidesIncluded": 2,
     "extraSidePrice": 3,
@@ -17,7 +17,7 @@
           "name": "(10) Shrimp & (10) Catfish Combo",
           "icon": "fas fa-star",
           "active": true,
-          "description": "10 pc golden fried shrimp and 10 catfish — the best of both worlds  with 2 reg. sides",
+          "description": "10 pc golden fried shrimp and 10 catfish — the best of both worlds  with 2 regular. sides",
           "price": 36,
           "featured": true,
           "badgeText": "Best Seller"
@@ -34,7 +34,7 @@
         },
         {
           "id": "golden-fried-shrimp-8",
-          "name": "Golden Fried Shrimp (8 pc) w/ fries only",
+          "name": "Golden Fried Shrimp (8 pc) w/ Fries only",
           "icon": "fas fa-shrimp",
           "active": true,
           "description": "8 pieces of perfectly crispy fried shrimp",
@@ -54,10 +54,10 @@
         },
         {
           "id": "catfish-2pc",
-          "name": "( 2 Pc ) Golden Fried Catfish Fillets comes with 2 regular sides",
+          "name": "( 2 Pc ) Golden Fried Catfish Fillets",
           "icon": "fas fa-fish",
           "active": true,
-          "description": "2 pieces of golden fried catfish fillet",
+          "description": "2 pieces of golden fried catfish fillet comes with 2 regular sides",
           "price": 18,
           "featured": false,
           "badgeText": ""
@@ -67,7 +67,7 @@
           "name": "(3 Pc ) Golden Fried Whittings  Fillets",
           "icon": "fas fa-fish",
           "active": true,
-          "description": "golden fried",
+          "description": "golden fried hand breaded with 2 regular sides",
           "price": 16,
           "featured": false,
           "badgeText": ""
@@ -77,7 +77,7 @@
           "name": "(26 Pc ) Captains Platter",
           "icon": "fas fa-fish",
           "active": true,
-          "description": "8 shrimp 6 Gator Bites, 8 Catfish Nuggets, 2 pcs of Fillet Whittings 2 Frog Legs 2 Large Sides",
+          "description": "8 shrimp 6 Gator Bites, 8 Catfish Nuggets, 2 pcs of Fillet Whittings comes with 2 Frog Legs  comes with 2 large sides",
           "price": 44,
           "featured": false,
           "badgeText": ""
