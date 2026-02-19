@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-02-19T21:40:19.356Z",
+  "lastUpdated": "2026-02-19T21:42:32.072Z",
   "settings": {
     "sidesIncluded": 2,
     "extraSidePrice": 3,
@@ -159,6 +159,16 @@
           "active": true,
           "description": "Smoked Hot Dog with Fries Only",
           "price": 12,
+          "featured": false,
+          "badgeText": ""
+        },
+        {
+          "id": "6-pcs-golden-fried-oysters-with-2-regular-sides",
+          "name": "(6) pcs Golden Fried Oysters with 2 regular sides",
+          "icon": "fas fa-fish",
+          "active": true,
+          "description": "",
+          "price": 16,
           "featured": false,
           "badgeText": ""
         }
