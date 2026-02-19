@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-02-18T05:14:48.148Z",
+  "lastUpdated": "2026-02-19T21:40:19.356Z",
   "settings": {
     "sidesIncluded": 2,
     "extraSidePrice": 3,
@@ -216,7 +216,7 @@
           "id": "green-beans",
           "name": "Green Beans",
           "icon": "fas fa-seedling",
-          "active": true
+          "active": false
         },
         {
           "id": "mac-cheese-5-00",
