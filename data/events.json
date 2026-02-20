@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-02-20T01:27:44.625Z",
+  "lastUpdated": "2026-02-20T01:28:43.264Z",
   "events": [
     {
       "id": "farmers-market-march",
@@ -23,6 +23,18 @@
       "description": "Treat Mom to a seafood feast! Special Mother's Day platters available. Pre-orders encouraged — call us to reserve yours.",
       "icon": "fas fa-heart",
       "featured": true,
+      "active": true
+    },
+    {
+      "id": "closed-today-thursday-february-19th-due-to-extreme-weather-conditions-will-re-open-tomorrow-friday-at-5pm-thank-you-for-your-understanding",
+      "title": "Closed today Thursday February 19th due to extreme weather conditions will re-open tomorrow Friday at 5pm thank you for your understanding",
+      "date": "2026-02-19",
+      "endDate": "2026-02-20",
+      "time": "730pm",
+      "location": "The Spot",
+      "description": "",
+      "icon": "fas fa-calendar-days",
+      "featured": false,
       "active": true
     }
   ]
