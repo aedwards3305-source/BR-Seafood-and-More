@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-02-19T21:53:51.365Z",
+  "lastUpdated": "2026-02-21T18:19:00.622Z",
   "settings": {
     "sidesIncluded": 2,
     "extraSidePrice": 3,
@@ -164,11 +164,11 @@
         },
         {
           "id": "6-pcs-golden-fried-oysters-with-2-regular-sides",
-          "name": "(6) pcs Golden Fried Oysters with 2 regular sides",
+          "name": "(6) pcs Golden Fried Oysters with Fries Only",
           "icon": "fas fa-fish",
           "active": true,
           "description": "",
-          "price": 16,
+          "price": 12,
           "featured": false,
           "badgeText": ""
         }
@@ -226,7 +226,7 @@
           "id": "green-beans",
           "name": "Green Beans",
           "icon": "fas fa-seedling",
-          "active": true
+          "active": false
         },
         {
           "id": "mac-cheese-5-00",
