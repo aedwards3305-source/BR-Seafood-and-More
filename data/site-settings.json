@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-02-09T18:00:00Z",
+  "lastUpdated": "2026-02-21T18:23:15.320Z",
   "contact": {
     "phone": "(701) 818-3664",
     "phoneRaw": "7018183664",
@@ -12,8 +12,14 @@
     "googleMapsUrl": ""
   },
   "hours": [
-    { "days": "Wed & Thu", "time": "5 PM – 9 PM" },
-    { "days": "Fri & Sat", "time": "5 PM – 11 PM" }
+    {
+      "days": "Wed & Thu",
+      "time": "5 PM – 9 PM"
+    },
+    {
+      "days": "Fri & Sat",
+      "time": "12pm – 11 PM"
+    }
   ],
   "social": {
     "facebook": "",
