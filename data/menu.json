@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-02-21T18:19:00.622Z",
+  "lastUpdated": "2026-02-22T01:22:30.368Z",
   "settings": {
     "sidesIncluded": 2,
     "extraSidePrice": 3,
@@ -56,7 +56,7 @@
           "id": "catfish-2pc",
           "name": "( 2 Pc ) Golden Fried Catfish Fillets",
           "icon": "fas fa-fish",
-          "active": true,
+          "active": false,
           "description": "2 pieces of golden fried catfish fillet comes with 2 regular sides",
           "price": 18,
           "featured": false,
@@ -136,7 +136,7 @@
           "id": "chili-cheese-hot-dog-with-fries-only",
           "name": "(4) Bones BBQ Ribs",
           "icon": "fas fa-plate-wheat",
-          "active": true,
+          "active": false,
           "description": "Tender Pork Ribs with BBQ Sauce comes with 2 regular Sides",
           "price": 16,
           "featured": false,
