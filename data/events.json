@@ -1,23 +1,43 @@
 {
-  "lastUpdated": "2026-02-20T01:28:43.264Z",
+  "lastUpdated": "2026-02-26T13:55:16.144Z",
   "events": [
     {
       "id": "farmers-market-march",
-      "title": "Downtown Farmers Market",
-      "date": "2026-03-15",
-      "endDate": "",
+      "title": "Minot Spring Art & Craft Fair",
+      "date": "2026-04-10",
       "time": "10:00 AM - 3:00 PM",
-      "location": "Downtown Fargo Farmers Market",
+      "location": "ND State Fair Center Minot",
       "description": "Kick off the spring season with us! We'll be serving all your favorites including our famous Shrimp & Catfish Combo.",
-      "icon": "fas fa-store",
+      "icon": "fas fa-building",
       "featured": true,
+      "active": true
+    },
+    {
+      "id": "community-cookout-april",
+      "title": "Community Cookout",
+      "date": "2026-04-05",
+      "time": "11:00 AM - 6:00 PM",
+      "location": "Island Park, Fargo",
+      "description": "Join us for a family-friendly cookout in the park. Live music, games, and of course, golden fried seafood!",
+      "icon": "fas fa-people-group",
+      "featured": false,
+      "active": true
+    },
+    {
+      "id": "food-truck-friday",
+      "title": "Food Truck Friday",
+      "date": "2026-04-17",
+      "time": "11:00 AM - 8:00 PM",
+      "location": "Broadway Square, Fargo",
+      "description": "We're joining the weekly Food Truck Friday lineup. Come grab lunch or dinner with us!",
+      "icon": "fas fa-truck",
+      "featured": false,
       "active": true
     },
     {
       "id": "mothers-day-special",
       "title": "Mother's Day Special",
       "date": "2026-05-10",
-      "endDate": "",
       "time": "11:00 AM - 7:00 PM",
       "location": "B&R Seafood Kitchen",
       "description": "Treat Mom to a seafood feast! Special Mother's Day platters available. Pre-orders encouraged — call us to reserve yours.",
@@ -26,15 +46,15 @@
       "active": true
     },
     {
-      "id": "closed-today-thursday-february-19th-due-to-extreme-weather-conditions-will-re-open-tomorrow-friday-at-5pm-thank-you-for-your-understanding",
-      "title": "Closed today Thursday February 19th due to extreme weather conditions will re-open tomorrow Friday at 5pm thank you for your understanding",
-      "date": "2026-02-19",
-      "endDate": "2026-02-20",
-      "time": "730pm",
-      "location": "The Spot",
-      "description": "",
-      "icon": "fas fa-calendar-days",
-      "featured": false,
+      "id": "all-you-can-eat-fish-fry",
+      "title": "All- You -Can -Eat   Fish Fry & FIXIN'S",
+      "date": "2026-03-27",
+      "endDate": "2026-03-27",
+      "time": "6pm - 8pm",
+      "location": "At The Spot ( 6 2nd  St NE Minot 58703 )  East side station",
+      "description": "All- you -can -eat  Fish Fry & Fixin's\n Golden Fried Whiting and Catfish Fillets  served with Collard Greens, Baked Beans, Coleslaw, Corn On The Cob\n$30 per person All You Can Eat\n$25 per person Take out Special 2 piece with 2 sides\nTickets will be available At EVENTBRITECOM, THE SPOT, & B & R SEAFOOD & MORE\nThank You",
+      "icon": "fas fa-building",
+      "featured": true,
       "active": true
     }
   ]
