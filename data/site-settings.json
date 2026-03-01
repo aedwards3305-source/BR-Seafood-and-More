@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-02-27T04:56:07.802Z",
+  "lastUpdated": "2026-03-01T22:19:23.677Z",
   "contact": {
     "phone": "(701) 818-3664",
     "phoneRaw": "7018183664",
@@ -14,11 +14,11 @@
   "hours": [
     {
       "days": "Wed & Thu",
-      "time": "Closed"
+      "time": "5pm - 9pm"
     },
     {
       "days": "Fri & Sat",
-      "time": "Closed"
+      "time": "5pm - 11pm"
     }
   ],
   "social": {
@@ -65,8 +65,8 @@
   },
   "announcement": {
     "enabled": true,
-    "message": "B and R seafood and More will be closed February 27th & February 28th  will be going out of town to pick up supplies. Will re-open Wednesday March 4th -March 7th \nThank you for your patience  and understanding.",
-    "type": "info",
+    "message": "B and R seafood and More will be closed from March 11th to March 27th,  we will be going out of town to pick up supplies. Will re-open Friday March 27th  for an All You Can Eat Fish Fry Event Only , tickets can be purchased at The Spot,  B & R Seafood & More , or online at  EVENTBRITECOM. We will reopen for normal business on Saturday March 28th at 5pm. look forward to seeing all of you for the Fish Fry event , tickets are going fast.",
+    "type": "urgent",
     "dismissible": false
   }
 }
