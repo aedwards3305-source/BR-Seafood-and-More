@@ -403,7 +403,7 @@ const Admin = (() => {
       document.getElementById('itemPrice').required = false;
     }
 
-    const modalLabels = { dinners: 'Add Dinner Item', sides: 'Add Side', 'specialty-sides': 'Add Specialty Side' };
+    const modalLabels = { dinners: 'Add Dinner Item', sides: 'Add Side', 'specialty-sides': 'Add Specialty Item' };
     document.getElementById('modalTitle').textContent =
       isNew ? (modalLabels[categoryId] || 'Add Item') : 'Edit Item';
 

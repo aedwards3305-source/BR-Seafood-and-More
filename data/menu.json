@@ -242,6 +242,21 @@
           "id": "mac-cheese-5-00",
           "name": "Mac/Cheese  $5.00",
           "icon": "fas fa-seedling",
+          "active": false
+        }
+      ]
+    },
+    {
+      "id": "specialty-sides",
+      "name": "Specialty Items",
+      "icon": "fas fa-star",
+      "badge": "Premium Add-Ons",
+      "items": [
+        {
+          "id": "macaroni-and-cheese",
+          "name": "Macaroni and Cheese",
+          "price": 5,
+          "icon": "fas fa-bowl-food",
           "active": true
         }
       ]
