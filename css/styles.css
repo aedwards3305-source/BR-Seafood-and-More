@@ -1971,8 +1971,11 @@ ul { list-style: none; }
   padding: 12px 0;
   font-size: .9rem;
   font-weight: 500;
-  position: relative;
-  z-index: 90;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1100;
 }
 
 .announcement-inner {

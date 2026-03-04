@@ -273,17 +273,25 @@ const SiteSettings = (() => {
     inner += '</div>';
     banner.innerHTML = inner;
 
-    // Insert after navbar
+    // Insert before navbar so it sits at the very top
     const navbar = document.getElementById('navbar');
-    if (navbar && navbar.nextSibling) {
-      navbar.parentNode.insertBefore(banner, navbar.nextSibling);
-    } else {
-      document.body.prepend(banner);
+    document.body.prepend(banner);
+
+    // Push navbar and body content down by the banner height
+    function adjustForBanner() {
+      const h = banner.offsetHeight;
+      if (navbar) navbar.style.top = h + 'px';
+      document.body.style.paddingTop = h + 'px';
     }
+    adjustForBanner();
+    window.addEventListener('resize', adjustForBanner);
 
     if (a.dismissible) {
       banner.querySelector('.announcement-dismiss').addEventListener('click', () => {
         banner.remove();
+        if (navbar) navbar.style.top = '';
+        document.body.style.paddingTop = '';
+        window.removeEventListener('resize', adjustForBanner);
         localStorage.setItem(dismissKey, 'true');
       });
     }
