@@ -901,6 +901,12 @@ ul { list-style: none; }
   box-shadow: var(--shadow-xl);
 }
 
+a.contact-card-link {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
 .contact-icon {
   display: inline-flex;
   align-items: center;

@@ -151,6 +151,10 @@ const SiteSettings = (() => {
         const paragraphs = card.querySelectorAll('p');
         if (paragraphs[0]) paragraphs[0].textContent = data.location.address;
         if (paragraphs[1]) paragraphs[1].textContent = data.location.note;
+        // Update MapQuest link with address from settings
+        if (card.tagName === 'A') {
+          card.href = 'https://www.mapquest.com/search/' + encodeURIComponent(data.location.address);
+        }
       }
     }
 
