@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-03-05T13:50:32.182Z",
+  "lastUpdated": "2026-03-05T13:51:44.922Z",
   "settings": {
     "sidesIncluded": 2,
     "extraSidePrice": 3,
@@ -129,16 +129,6 @@
           "active": true,
           "description": "35 pcs of Golden Fried Seafood hand breaded with 2 Large side dishes",
           "price": 56,
-          "featured": false,
-          "badgeText": ""
-        },
-        {
-          "id": "shrimp-gumbo-over-rice",
-          "name": "Shrimp Gumbo over Rice",
-          "icon": "fas fa-bowl-food",
-          "active": true,
-          "description": "Large Bowl Homemade   Gumbo with rice only",
-          "price": 12,
           "featured": false,
           "badgeText": ""
         },
