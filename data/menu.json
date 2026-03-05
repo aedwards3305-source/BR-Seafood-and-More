@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-03-05T15:04:34.784Z",
+  "lastUpdated": "2026-03-05T15:12:01.958Z",
   "settings": {
     "sidesIncluded": 2,
     "extraSidePrice": 3,
@@ -128,7 +128,17 @@
           "icon": "fas fa-fish",
           "active": true,
           "description": "golden fried",
-          "price": 18,
+          "price": 16,
+          "featured": false,
+          "badgeText": ""
+        },
+        {
+          "id": "golden-fried-sea-scallops-8pc",
+          "name": "Golden Fried Sea Scallops ( 8pc )",
+          "icon": "fas fa-fish",
+          "active": true,
+          "description": "Hand Breaded Golden Fried",
+          "price": 16,
           "featured": false,
           "badgeText": ""
         },
@@ -143,12 +153,22 @@
           "badgeText": ""
         },
         {
-          "id": "golden-fried-sea-scallops-8pc",
-          "name": "Golden Fried Sea Scallops ( 8pc )",
+          "id": "haddock-fillet-2pc",
+          "name": "Haddock Fillet (2pc )",
           "icon": "fas fa-fish",
           "active": true,
-          "description": "Hand Breaded Golden Fried",
-          "price": 16,
+          "description": "Hand breaded Golden fried",
+          "price": 14,
+          "featured": false,
+          "badgeText": ""
+        },
+        {
+          "id": "flounder-fillet-2pc",
+          "name": "Flounder Fillet (2pc)",
+          "icon": "fas fa-fish",
+          "active": true,
+          "description": "Hand breaded Golden fried",
+          "price": 12,
           "featured": false,
           "badgeText": ""
         }
