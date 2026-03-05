@@ -471,6 +471,11 @@ const Admin = (() => {
       return;
     }
 
+    if ((isDinners || isSpecialtySides) && !document.getElementById('itemPrice').value) {
+      showToast('Price is required', 'error');
+      return;
+    }
+
     const id = isNew
       ? name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '')
       : document.getElementById('itemId').value;
