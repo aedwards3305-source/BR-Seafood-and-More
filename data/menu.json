@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-03-05T15:14:56.806Z",
+  "lastUpdated": "2026-03-05T15:17:22.080Z",
   "settings": {
     "sidesIncluded": 2,
     "extraSidePrice": 3,
@@ -249,6 +249,13 @@
           "icon": "fas fa-plate-wheat",
           "active": true,
           "price": 16
+        },
+        {
+          "id": "shrimp-gumbo-large-bowl",
+          "name": "Shrimp Gumbo Large Bowl",
+          "icon": "fas fa-bowl-food",
+          "active": true,
+          "price": 12
         }
       ]
     }
