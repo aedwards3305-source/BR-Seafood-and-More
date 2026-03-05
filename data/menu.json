@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-03-05T14:26:17.164Z",
+  "lastUpdated": "2026-03-05T14:28:28.961Z",
   "settings": {
     "sidesIncluded": 2,
     "extraSidePrice": 3,
@@ -14,7 +14,7 @@
       "items": [
         {
           "id": "macaroni-and-cheese",
-          "name": "(26 Pc ) Captains Platter",
+          "name": "Captains Platter (26 Pc)",
           "icon": "fas fa-fish",
           "active": true,
           "description": "8 shrimp 6 Gator Bites, 8 Catfish Nuggets, 2 pcs of Fillet Whittings 2 Frog Legs 2 Large Sides",
@@ -24,7 +24,7 @@
         },
         {
           "id": "20-pc-all-on-deck",
-          "name": "(20 Pc) All On Deck Platter",
+          "name": "All On Deck Platter (20 Pc)",
           "icon": "fas fa-fish",
           "active": true,
           "description": "7 Shrimp, 7 Catfish Nuggets, 4 Gator Bites, and 2 Frog Legs",
@@ -43,8 +43,28 @@
           "badgeText": "Best Seller"
         },
         {
+          "id": "20-pieces-golden-fried-catfish-nuggets",
+          "name": "20 Pieces Golden Fried Catfish Nuggets",
+          "icon": "fas fa-fish",
+          "active": true,
+          "description": "20 PC hand Breaded Golden Fried Catfish Nuggets Great taste fried to perfection",
+          "price": 36,
+          "featured": true,
+          "badgeText": ""
+        },
+        {
+          "id": "20-golden-fried-shrimp",
+          "name": "20 Golden Fried Shrimp",
+          "icon": "fas fa-fish",
+          "active": true,
+          "description": "Hand breaded Golden Fried Shrimp",
+          "price": 36,
+          "featured": false,
+          "badgeText": ""
+        },
+        {
           "id": "12-pc-trio-platter",
-          "name": "(12 Pc ) Trio Platter",
+          "name": "Trio Platter (12 Pc)",
           "icon": "fas fa-fish",
           "active": true,
           "description": "4 Shrimp, 4 Gator Bites, 4 Catfish Nuggets",
@@ -63,8 +83,18 @@
           "badgeText": ""
         },
         {
+          "id": "gator-bites-8-pc",
+          "name": "Gator Bites (8 PC)",
+          "icon": "fas fa-fish",
+          "active": true,
+          "description": "",
+          "price": 26,
+          "featured": false,
+          "badgeText": ""
+        },
+        {
           "id": "catfish-2pc",
-          "name": "( 2 Pc ) Golden Fried Catfish Fillets",
+          "name": "Golden Fried Catfish Fillets (2 Pc)",
           "icon": "fas fa-fish",
           "active": true,
           "description": "2 pieces of golden fried catfish fillet",
@@ -74,7 +104,7 @@
         },
         {
           "id": "catfish-nuggets",
-          "name": "(3 Pc ) Golden Fried Whittings  Fillets",
+          "name": "Golden Fried Whittings  Fillets (3 Pc)",
           "icon": "fas fa-fish",
           "active": true,
           "description": "golden fried",
@@ -94,7 +124,7 @@
         },
         {
           "id": "golden-fried-catfish",
-          "name": "(8) Pc Golden Fried Catfish Nuggets w/Fries only",
+          "name": "Golden Fried Catfish Nuggets w/Fries only (8 Pc)",
           "icon": "fas fa-fish",
           "active": true,
           "description": "Tender catfish nuggets fried golden and crispy",
@@ -104,21 +134,11 @@
         },
         {
           "id": "2-pc-golden-fried-cajun-frog-legs",
-          "name": "(2 Pc) Golden Fried  Cajun Frog Legs",
+          "name": "Golden Fried  Cajun Frog Legs (2 Pc)",
           "icon": "fas fa-fish",
           "active": true,
           "description": "",
           "price": 14,
-          "featured": false,
-          "badgeText": ""
-        },
-        {
-          "id": "35-pc-enough-for-2-10-shrimp-10-catfish-nuggets-6-gator-4-scallops-3-whittings-fillet-2-frog-legs",
-          "name": "(35 pc ) Enough for (2)  10 Shrimp, 10 Catfish Nuggets,  6 Gator,  4 Scallops,  3 Whittings Fillet,  2 Frog Legs",
-          "icon": "fas fa-fish",
-          "active": true,
-          "description": "35 pcs of hand breaded variety  of seafood",
-          "price": 56,
           "featured": false,
           "badgeText": ""
         }
