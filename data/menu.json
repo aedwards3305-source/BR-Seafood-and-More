@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-03-05T15:12:01.958Z",
+  "lastUpdated": "2026-03-05T15:14:56.806Z",
   "settings": {
     "sidesIncluded": 2,
     "extraSidePrice": 3,
@@ -242,6 +242,13 @@
           "price": 5,
           "icon": "fas fa-bowl-food",
           "active": true
+        },
+        {
+          "id": "bbq-pork-ribs-4-bones",
+          "name": "BBQ Pork Ribs ( 4 Bones ) w/2 side dishes",
+          "icon": "fas fa-plate-wheat",
+          "active": true,
+          "price": 16
         }
       ]
     }
