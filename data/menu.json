@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-03-05T04:03:07.902Z",
+  "lastUpdated": "2026-03-05T13:50:32.182Z",
   "settings": {
     "sidesIncluded": 2,
     "extraSidePrice": 3,
@@ -133,16 +133,6 @@
           "badgeText": ""
         },
         {
-          "id": "chili-cheese-hot-dog-with-fries-only",
-          "name": "(4) Bones BBQ  Pork Ribs",
-          "icon": "fas fa-plate-wheat",
-          "active": true,
-          "description": "Tender Pork Ribs with BBQ Sauce comes with 2 regular Sides",
-          "price": 16,
-          "featured": false,
-          "badgeText": ""
-        },
-        {
           "id": "shrimp-gumbo-over-rice",
           "name": "Shrimp Gumbo over Rice",
           "icon": "fas fa-bowl-food",
@@ -258,6 +248,20 @@
           "price": 5,
           "icon": "fas fa-bowl-food",
           "active": true
+        },
+        {
+          "id": "4-bones-bbq-pork-ribs-with-your-choice-of-2-sides",
+          "name": "(4) Bones BBQ Pork Ribs with your choice of 2 sides",
+          "icon": "fas fa-plate-wheat",
+          "active": true,
+          "price": 16
+        },
+        {
+          "id": "shrimp-gumbo-over-rice-homemade",
+          "name": "Shrimp Gumbo over Rice  (Homemade)",
+          "icon": "fas fa-bowl-food",
+          "active": true,
+          "price": 12
         }
       ]
     }
