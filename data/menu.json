@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-03-05T14:29:53.316Z",
+  "lastUpdated": "2026-03-05T14:31:19.036Z",
   "settings": {
     "sidesIncluded": 2,
     "extraSidePrice": 3,
@@ -14,7 +14,7 @@
       "items": [
         {
           "id": "macaroni-and-cheese",
-          "name": "Captains Platter (26 Pc)",
+          "name": "(26 Pc ) Captains Platter",
           "icon": "fas fa-fish",
           "active": true,
           "description": "8 shrimp 6 Gator Bites, 8 Catfish Nuggets, 2 pcs of Fillet Whittings 2 Frog Legs 2 Large Sides",
@@ -24,7 +24,7 @@
         },
         {
           "id": "20-pc-all-on-deck",
-          "name": "All On Deck Platter (20 Pc)",
+          "name": "(20 Pc) All On Deck Platter",
           "icon": "fas fa-fish",
           "active": true,
           "description": "7 Shrimp, 7 Catfish Nuggets, 4 Gator Bites, and 2 Frog Legs",
@@ -43,28 +43,8 @@
           "badgeText": "Best Seller"
         },
         {
-          "id": "20-pieces-golden-fried-catfish-nuggets",
-          "name": "20 Pieces Golden Fried Catfish Nuggets",
-          "icon": "fas fa-fish",
-          "active": true,
-          "description": "20 PC hand Breaded Golden Fried Catfish Nuggets Great taste fried to perfection",
-          "price": 36,
-          "featured": true,
-          "badgeText": ""
-        },
-        {
-          "id": "20-golden-fried-shrimp",
-          "name": "20 Golden Fried Shrimp",
-          "icon": "fas fa-fish",
-          "active": true,
-          "description": "Hand breaded Golden Fried Shrimp",
-          "price": 36,
-          "featured": false,
-          "badgeText": ""
-        },
-        {
           "id": "12-pc-trio-platter",
-          "name": "Trio Platter (12 Pc)",
+          "name": "(12 Pc ) Trio Platter",
           "icon": "fas fa-fish",
           "active": true,
           "description": "4 Shrimp, 4 Gator Bites, 4 Catfish Nuggets",
@@ -83,18 +63,8 @@
           "badgeText": ""
         },
         {
-          "id": "gator-bites-8-pc",
-          "name": "Gator Bites (8 PC)",
-          "icon": "fas fa-fish",
-          "active": true,
-          "description": "",
-          "price": 26,
-          "featured": false,
-          "badgeText": ""
-        },
-        {
           "id": "catfish-2pc",
-          "name": "Golden Fried Catfish Fillets (2 Pc)",
+          "name": "( 2 Pc ) Golden Fried Catfish Fillets",
           "icon": "fas fa-fish",
           "active": true,
           "description": "2 pieces of golden fried catfish fillet",
@@ -104,7 +74,7 @@
         },
         {
           "id": "catfish-nuggets",
-          "name": "Golden Fried Whittings  Fillets (3 Pc)",
+          "name": "(3 Pc ) Golden Fried Whittings  Fillets",
           "icon": "fas fa-fish",
           "active": true,
           "description": "golden fried",
@@ -113,12 +83,42 @@
           "badgeText": ""
         },
         {
+          "id": "golden-fried-shrimp-8",
+          "name": "Golden Fried Shrimp (8 pc) w/ fries only",
+          "icon": "fas fa-shrimp",
+          "active": true,
+          "description": "8 pieces of perfectly crispy fried shrimp",
+          "price": 16,
+          "featured": false,
+          "badgeText": ""
+        },
+        {
+          "id": "golden-fried-catfish",
+          "name": "(8) Pc Golden Fried Catfish Nuggets w/Fries only",
+          "icon": "fas fa-fish",
+          "active": true,
+          "description": "Tender catfish nuggets fried golden and crispy",
+          "price": 16,
+          "featured": false,
+          "badgeText": ""
+        },
+        {
           "id": "2-pc-golden-fried-cajun-frog-legs",
-          "name": "Golden Fried  Cajun Frog Legs (2 Pc)",
+          "name": "(2 Pc) Golden Fried  Cajun Frog Legs",
           "icon": "fas fa-fish",
           "active": true,
           "description": "",
           "price": 14,
+          "featured": false,
+          "badgeText": ""
+        },
+        {
+          "id": "35-pc-enough-for-2-10-shrimp-10-catfish-nuggets-6-gator-4-scallops-3-whittings-fillet-2-frog-legs",
+          "name": "(35 pc ) Enough for (2)  10 Shrimp, 10 Catfish Nuggets,  6 Gator,  4 Scallops,  3 Whittings Fillet,  2 Frog Legs",
+          "icon": "fas fa-fish",
+          "active": true,
+          "description": "35 pcs of hand breaded variety  of seafood",
+          "price": 56,
           "featured": false,
           "badgeText": ""
         }
