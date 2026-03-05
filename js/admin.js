@@ -217,6 +217,15 @@ const Admin = (() => {
       return;
     }
 
+    // Merge in any new categories from published data missing in an old draft
+    if (hasDraft && publishedData) {
+      publishedData.categories.forEach(pubCat => {
+        if (!menuData.categories.find(c => c.id === pubCat.id)) {
+          menuData.categories.push(JSON.parse(JSON.stringify(pubCat)));
+        }
+      });
+    }
+
     renderEditor();
     refreshPreview();
     updateDraftBanner();
