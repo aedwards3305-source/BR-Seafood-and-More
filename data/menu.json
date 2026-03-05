@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-03-05T14:12:16.223Z",
+  "lastUpdated": "2026-03-05T14:26:17.164Z",
   "settings": {
     "sidesIncluded": 2,
     "extraSidePrice": 3,
@@ -109,6 +109,16 @@
           "active": true,
           "description": "",
           "price": 14,
+          "featured": false,
+          "badgeText": ""
+        },
+        {
+          "id": "35-pc-enough-for-2-10-shrimp-10-catfish-nuggets-6-gator-4-scallops-3-whittings-fillet-2-frog-legs",
+          "name": "(35 pc ) Enough for (2)  10 Shrimp, 10 Catfish Nuggets,  6 Gator,  4 Scallops,  3 Whittings Fillet,  2 Frog Legs",
+          "icon": "fas fa-fish",
+          "active": true,
+          "description": "35 pcs of hand breaded variety  of seafood",
+          "price": 56,
           "featured": false,
           "badgeText": ""
         }
