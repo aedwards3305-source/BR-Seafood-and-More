@@ -226,6 +226,17 @@ const Admin = (() => {
       });
     }
 
+    // Ensure specialty-sides category always exists
+    if (!menuData.categories.find(c => c.id === 'specialty-sides')) {
+      menuData.categories.push({
+        id: 'specialty-sides',
+        name: 'Specialty Items',
+        icon: 'fas fa-star',
+        badge: 'Premium Add-Ons',
+        items: []
+      });
+    }
+
     renderEditor();
     refreshPreview();
     updateDraftBanner();
