@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-03-05T14:12:12.058Z",
+  "lastUpdated": "2026-03-05T14:12:16.223Z",
   "settings": {
     "sidesIncluded": 2,
     "extraSidePrice": 3,
@@ -13,152 +13,102 @@
       "badge": "Includes 2 Sides",
       "items": [
         {
+          "id": "macaroni-and-cheese",
+          "name": "(26 Pc ) Captains Platter",
+          "icon": "fas fa-fish",
+          "active": true,
+          "description": "8 shrimp 6 Gator Bites, 8 Catfish Nuggets, 2 pcs of Fillet Whittings 2 Frog Legs 2 Large Sides",
+          "price": 44,
+          "featured": false,
+          "badgeText": ""
+        },
+        {
+          "id": "20-pc-all-on-deck",
+          "name": "(20 Pc) All On Deck Platter",
+          "icon": "fas fa-fish",
+          "active": true,
+          "description": "7 Shrimp, 7 Catfish Nuggets, 4 Gator Bites, and 2 Frog Legs",
+          "price": 38,
+          "featured": false,
+          "badgeText": ""
+        },
+        {
           "id": "shrimp-catfish-combo",
-          "name": "(10) Shrimp & (10) Catfish Combo with 2 regular sides",
+          "name": "(10) Shrimp & (10) Catfish Combo",
           "icon": "fas fa-star",
           "active": true,
-          "description": "10 pc golden fried shrimp and 10 catfish — the best of both worlds  with 2 regular. sides",
+          "description": "10 pc golden fried shrimp and 10 catfish — the best of both worlds",
           "price": 36,
           "featured": true,
           "badgeText": "Best Seller"
         },
         {
-          "id": "golden-fried-shrimp-10",
-          "name": "Golden Fried Shrimp (10 pc) with 2 regular side dishes",
-          "icon": "fas fa-shrimp",
-          "active": true,
-          "description": "10 pieces of plump, golden fried shrimp comes with 2  regular sides",
-          "price": 26,
-          "featured": false,
-          "badgeText": ""
-        },
-        {
-          "id": "golden-fried-shrimp-8",
-          "name": "Golden Fried Shrimp (20 pc) with 2  regular side dishes",
-          "icon": "fas fa-shrimp",
-          "active": true,
-          "description": "20 pieces of perfectly crispy fried shrimp",
-          "price": 36,
-          "featured": false,
-          "badgeText": ""
-        },
-        {
-          "id": "golden-fried-catfish",
-          "name": "(10) Pc Golden Fried Catfish Nuggets with 2  regular  side dishes",
+          "id": "12-pc-trio-platter",
+          "name": "(12 Pc ) Trio Platter",
           "icon": "fas fa-fish",
           "active": true,
-          "description": "Tender catfish nuggets fried golden and crispy",
+          "description": "4 Shrimp, 4 Gator Bites, 4 Catfish Nuggets",
+          "price": 32,
+          "featured": false,
+          "badgeText": ""
+        },
+        {
+          "id": "golden-fried-shrimp-10",
+          "name": "Golden Fried Shrimp (10 pc)",
+          "icon": "fas fa-shrimp",
+          "active": true,
+          "description": "10 pieces of plump, golden fried shrimp",
           "price": 26,
           "featured": false,
           "badgeText": ""
         },
         {
           "id": "catfish-2pc",
-          "name": "( 2 Pc ) Golden Fried Catfish Fillets with 2 regular side dishes",
+          "name": "( 2 Pc ) Golden Fried Catfish Fillets",
           "icon": "fas fa-fish",
           "active": true,
-          "description": "2 pieces of golden fried catfish fillet comes with 2 regular sides",
+          "description": "2 pieces of golden fried catfish fillet",
           "price": 18,
           "featured": false,
           "badgeText": ""
         },
         {
           "id": "catfish-nuggets",
-          "name": "(3 Pc ) Golden Fried Whittings  Fillets with 2 regular side dishes",
+          "name": "(3 Pc ) Golden Fried Whittings  Fillets",
           "icon": "fas fa-fish",
           "active": true,
-          "description": "golden fried hand breaded with 2 regular sides",
-          "price": 16,
-          "featured": false,
-          "badgeText": ""
-        },
-        {
-          "id": "macaroni-and-cheese",
-          "name": "(26 Pc ) Captains Platter with 2 large side dishes",
-          "icon": "fas fa-fish",
-          "active": true,
-          "description": "8 shrimp 6 Gator Bites, 8 Catfish Nuggets, 2 pcs of Fillet Whittings comes with 2 Frog Legs  comes with 2 large sides",
-          "price": 44,
-          "featured": false,
-          "badgeText": ""
-        },
-        {
-          "id": "2-pc-golden-fried-cajun-frog-legs",
-          "name": "(3 Pc) Golden Fried  Cajun Frog Legs with 2 regular side dishes",
-          "icon": "fas fa-fish",
-          "active": true,
-          "description": "(3) pcs of Hand breaded Golden Fried",
-          "price": 16,
-          "featured": false,
-          "badgeText": ""
-        },
-        {
-          "id": "20-pc-all-on-deck",
-          "name": "(20 Pc) All On Deck Platter with 2 regular side dishes",
-          "icon": "fas fa-fish",
-          "active": true,
-          "description": "7 Shrimp, 7 Catfish Nuggets, 4 Gator Bites, and 2 Frog Legs comes with 2 regular sides",
-          "price": 38,
-          "featured": false,
-          "badgeText": ""
-        },
-        {
-          "id": "12-pc-trio-platter",
-          "name": "(12 Pc ) Trio Platter with 2 regular side dishes",
-          "icon": "fas fa-fish",
-          "active": true,
-          "description": "4 Shrimp, 4 Gator Bites, 4 Catfish Nuggets comes with 2 regular sides",
-          "price": 32,
-          "featured": false,
-          "badgeText": ""
-        },
-        {
-          "id": "6-sea-scallops",
-          "name": "(8) Sea Scallops with 2 regular side dishes",
-          "icon": "fas fa-fish",
-          "active": true,
-          "description": "Golden Fried hand breaded comes with 2 regular sides",
+          "description": "golden fried",
           "price": 18,
           "featured": false,
           "badgeText": ""
         },
         {
-          "id": "35pcs-enough-4-two-10-shrimp-10-catfish-nuggets-6-gator-2-fillet-whittings-4-scallops-2-frog-legs",
-          "name": "(35pcs) Enough 4 Two   10 Shrimp, 10 Catfish Nuggets, 6 Gator, 2 Fillet Whittings, 4 Scallops, 2 Frog Legs  2 large side dishes",
+          "id": "golden-fried-shrimp-8",
+          "name": "Golden Fried Shrimp (8 pc) w/ fries only",
+          "icon": "fas fa-shrimp",
+          "active": true,
+          "description": "8 pieces of perfectly crispy fried shrimp",
+          "price": 16,
+          "featured": false,
+          "badgeText": ""
+        },
+        {
+          "id": "golden-fried-catfish",
+          "name": "(8) Pc Golden Fried Catfish Nuggets w/Fries only",
           "icon": "fas fa-fish",
           "active": true,
-          "description": "35 pcs of Golden Fried Seafood hand breaded with 2 Large side dishes",
-          "price": 56,
+          "description": "Tender catfish nuggets fried golden and crispy",
+          "price": 16,
           "featured": false,
           "badgeText": ""
         },
         {
-          "id": "chili-cheese-hot-dog-with-fries",
-          "name": "Chili Cheese Hot Dog with Fries",
-          "icon": "fas fa-hotdog",
-          "active": false,
-          "description": "Smoked Hot Dog with Fries Only",
-          "price": 12,
-          "featured": false,
-          "badgeText": ""
-        },
-        {
-          "id": "6-pcs-golden-fried-oysters-with-2-regular-sides",
-          "name": "(4) pcs Golden Fried Oysters with 2  regular side dishes",
-          "icon": "fas fa-fish",
-          "active": true,
-          "description": "Hand breaded Golden Fried",
-          "price": 12,
-          "featured": false,
-          "badgeText": ""
-        },
-        {
-          "id": "20pc-golden-fried-catfish-nuggets-w-2-sides",
-          "name": "(20pc)  Golden Fried Catfish Nuggets with 2  regular side dishes",
+          "id": "2-pc-golden-fried-cajun-frog-legs",
+          "name": "(2 Pc) Golden Fried  Cajun Frog Legs",
           "icon": "fas fa-fish",
           "active": true,
           "description": "",
-          "price": 36,
+          "price": 14,
           "featured": false,
           "badgeText": ""
         }
@@ -210,19 +160,13 @@
           "id": "coleslaw",
           "name": "Coleslaw",
           "icon": "fas fa-seedling",
-          "active": false
+          "active": true
         },
         {
           "id": "green-beans",
           "name": "Green Beans",
           "icon": "fas fa-seedling",
-          "active": false
-        },
-        {
-          "id": "mac-cheese-5-00",
-          "name": "Mac/Cheese  $5.00",
-          "icon": "fas fa-seedling",
-          "active": false
+          "active": true
         }
       ]
     },
@@ -238,20 +182,6 @@
           "price": 5,
           "icon": "fas fa-bowl-food",
           "active": true
-        },
-        {
-          "id": "4-bones-bbq-pork-ribs-with-your-choice-of-2-sides",
-          "name": "(4) Bones BBQ Pork Ribs with your choice of 2 sides",
-          "icon": "fas fa-plate-wheat",
-          "active": true,
-          "price": 16
-        },
-        {
-          "id": "shrimp-gumbo-over-rice-homemade",
-          "name": "Shrimp Gumbo over Rice  (Homemade)",
-          "icon": "fas fa-bowl-food",
-          "active": true,
-          "price": 12
         }
       ]
     }
