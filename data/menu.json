@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-03-05T14:56:59.800Z",
+  "lastUpdated": "2026-03-05T15:02:07.684Z",
   "settings": {
     "sidesIncluded": 2,
     "extraSidePrice": 3,
@@ -39,6 +39,16 @@
           "active": true,
           "description": "7 Shrimp, 7 Catfish Nuggets, 4 Gator Bites, and 2 Frog Legs",
           "price": 38,
+          "featured": false,
+          "badgeText": ""
+        },
+        {
+          "id": "golden-fried-shrimp-20-pc",
+          "name": "Golden Fried Shrimp (20 pc )",
+          "icon": "fas fa-fish",
+          "active": true,
+          "description": "",
+          "price": 36,
           "featured": false,
           "badgeText": ""
         },
@@ -83,8 +93,8 @@
           "badgeText": ""
         },
         {
-          "id": "gator-bites-8-pc",
-          "name": "Gator Bites (8 Pc)",
+          "id": "golden-fried-catfish-nuggets-10-pc",
+          "name": "Golden Fried Catfish Nuggets (10 Pc)",
           "icon": "fas fa-fish",
           "active": true,
           "description": "",
@@ -93,8 +103,8 @@
           "badgeText": ""
         },
         {
-          "id": "golden-fried-catfish-nuggets-10-pc",
-          "name": "Golden Fried Catfish Nuggets (10 Pc)",
+          "id": "gator-bites-8-pc",
+          "name": "Gator Bites (8 Pc)",
           "icon": "fas fa-fish",
           "active": true,
           "description": "",
@@ -124,21 +134,11 @@
         },
         {
           "id": "2-pc-golden-fried-cajun-frog-legs",
-          "name": "Golden Fried  Cajun Frog Legs (2 Pc)",
+          "name": "Golden Fried  Cajun Frog Legs (3 Pc)",
           "icon": "fas fa-fish",
           "active": true,
           "description": "",
           "price": 14,
-          "featured": false,
-          "badgeText": ""
-        },
-        {
-          "id": "golden-fried-shrimp-20-pc",
-          "name": "Golden Fried Shrimp (20 pc )",
-          "icon": "fas fa-fish",
-          "active": true,
-          "description": "",
-          "price": 36,
           "featured": false,
           "badgeText": ""
         }
