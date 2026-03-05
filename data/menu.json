@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-03-05T14:28:28.961Z",
+  "lastUpdated": "2026-03-05T14:29:53.316Z",
   "settings": {
     "sidesIncluded": 2,
     "extraSidePrice": 3,
@@ -109,26 +109,6 @@
           "active": true,
           "description": "golden fried",
           "price": 18,
-          "featured": false,
-          "badgeText": ""
-        },
-        {
-          "id": "golden-fried-shrimp-8",
-          "name": "Golden Fried Shrimp (8 pc) w/ fries only",
-          "icon": "fas fa-shrimp",
-          "active": true,
-          "description": "8 pieces of perfectly crispy fried shrimp",
-          "price": 16,
-          "featured": false,
-          "badgeText": ""
-        },
-        {
-          "id": "golden-fried-catfish",
-          "name": "Golden Fried Catfish Nuggets w/Fries only (8 Pc)",
-          "icon": "fas fa-fish",
-          "active": true,
-          "description": "Tender catfish nuggets fried golden and crispy",
-          "price": 16,
           "featured": false,
           "badgeText": ""
         },
