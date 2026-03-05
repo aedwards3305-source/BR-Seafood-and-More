@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-03-05T14:38:39.113Z",
+  "lastUpdated": "2026-03-05T14:40:26.315Z",
   "settings": {
     "sidesIncluded": 2,
     "extraSidePrice": 3,
@@ -39,6 +39,16 @@
           "active": true,
           "description": "7 Shrimp, 7 Catfish Nuggets, 4 Gator Bites, and 2 Frog Legs",
           "price": 38,
+          "featured": false,
+          "badgeText": ""
+        },
+        {
+          "id": "golden-fried-catfish-nuggets-2-pc",
+          "name": "Golden Fried Catfish Nuggets (2 Pc)",
+          "icon": "fas fa-fish",
+          "active": true,
+          "description": "",
+          "price": 36,
           "featured": false,
           "badgeText": ""
         },
