@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-03-02T21:03:35.495Z",
+  "lastUpdated": "2026-03-05T04:03:07.902Z",
   "settings": {
     "sidesIncluded": 2,
     "extraSidePrice": 3,
@@ -134,7 +134,7 @@
         },
         {
           "id": "chili-cheese-hot-dog-with-fries-only",
-          "name": "(4) Bones BBQ Ribs",
+          "name": "(4) Bones BBQ  Pork Ribs",
           "icon": "fas fa-plate-wheat",
           "active": true,
           "description": "Tender Pork Ribs with BBQ Sauce comes with 2 regular Sides",
@@ -242,21 +242,6 @@
           "id": "mac-cheese-5-00",
           "name": "Mac/Cheese  $5.00",
           "icon": "fas fa-seedling",
-          "active": false
-        }
-      ]
-    },
-    {
-      "id": "specialty-sides",
-      "name": "Specialty Items",
-      "icon": "fas fa-star",
-      "badge": "Premium Add-Ons",
-      "items": [
-        {
-          "id": "macaroni-and-cheese",
-          "name": "Macaroni and Cheese",
-          "price": 5,
-          "icon": "fas fa-bowl-food",
           "active": true
         }
       ]
