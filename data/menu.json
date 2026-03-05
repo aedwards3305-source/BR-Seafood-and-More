@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-03-05T15:17:22.080Z",
+  "lastUpdated": "2026-03-05T15:18:09.710Z",
   "settings": {
     "sidesIncluded": 2,
     "extraSidePrice": 3,
@@ -244,18 +244,18 @@
           "active": true
         },
         {
-          "id": "bbq-pork-ribs-4-bones",
-          "name": "BBQ Pork Ribs ( 4 Bones ) w/2 side dishes",
-          "icon": "fas fa-plate-wheat",
-          "active": true,
-          "price": 16
-        },
-        {
           "id": "shrimp-gumbo-large-bowl",
           "name": "Shrimp Gumbo Large Bowl",
           "icon": "fas fa-bowl-food",
           "active": true,
           "price": 12
+        },
+        {
+          "id": "bbq-pork-ribs-4-bones",
+          "name": "BBQ Pork Ribs ( 4 Bones ) w/2 side dishes",
+          "icon": "fas fa-plate-wheat",
+          "active": true,
+          "price": 16
         }
       ]
     }
