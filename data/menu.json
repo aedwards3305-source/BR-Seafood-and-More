@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-03-05T15:02:07.684Z",
+  "lastUpdated": "2026-03-05T15:04:34.784Z",
   "settings": {
     "sidesIncluded": 2,
     "extraSidePrice": 3,
@@ -139,6 +139,16 @@
           "active": true,
           "description": "",
           "price": 14,
+          "featured": false,
+          "badgeText": ""
+        },
+        {
+          "id": "golden-fried-sea-scallops-8pc",
+          "name": "Golden Fried Sea Scallops ( 8pc )",
+          "icon": "fas fa-fish",
+          "active": true,
+          "description": "Hand Breaded Golden Fried",
+          "price": 16,
           "featured": false,
           "badgeText": ""
         }
