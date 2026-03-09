@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-03-09T14:04:49.517Z",
+  "lastUpdated": "2026-03-09T14:08:20.001Z",
   "contact": {
     "phone": "(701) 818-3664",
     "phoneRaw": "7018183664",
@@ -56,8 +56,8 @@
   },
   "announcement": {
     "enabled": true,
-    "message": "We will be closed from Friday February 27th to March 27th. For personal affairs and business picking up supplies for food trailer.\nWe will re-open on the 27th of March for a special event at The Spot in Minot for  Fish Fry Event.\nPlease look at this website for further information regarding this event.\nWe appreciate your support and understanding.",
-    "type": "info",
+    "message": "We will be closed from Wednesday March 11th to March 27th. For personal affairs and business picking up supplies for food trailer.\nWe will re-open on the 27th of March for a special event at The Spot in Minot for  Fish Fry Event.\nPlease look at this website for further information regarding this event.\nWe appreciate your support and understanding.",
+    "type": "urgent",
     "dismissible": false
   }
 }
