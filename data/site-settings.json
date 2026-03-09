@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-03-04T23:39:27.911Z",
+  "lastUpdated": "2026-03-09T14:04:49.517Z",
   "contact": {
     "phone": "(701) 818-3664",
     "phoneRaw": "7018183664",
@@ -11,16 +11,7 @@
     "note": "Located at The Spot parking area",
     "googleMapsUrl": ""
   },
-  "hours": [
-    {
-      "days": "Wed & Thu",
-      "time": "5pm - 9pm"
-    },
-    {
-      "days": "Fri & Sat",
-      "time": "5pm - 11pm"
-    }
-  ],
+  "hours": [],
   "social": {
     "facebook": "",
     "instagram": "",
@@ -65,8 +56,8 @@
   },
   "announcement": {
     "enabled": true,
-    "message": "B & R Seafood & More will be closed from March 11th through March 27th while we travel to pick up supplies.\nWe will re-open Friday, March 27th for our special All-You-Can-Eat Fish Fry Event.\nTickets can be purchased at The Spot, B & R Seafood & More, or online here:\nhttps://www.eventbrite.com/e/fish-fry-fixins-tickets-1984004731560\n\nThis event is ticketed and tickets are going fast!\n\nWe will resume normal business hours on Saturday, March 28th at 5 PM.\n\nWe look forward to seeing everyone at the Fish Fry event!",
-    "type": "urgent",
-    "dismissible": true
+    "message": "We will be closed from Friday February 27th to March 27th. For personal affairs and business picking up supplies for food trailer.\nWe will re-open on the 27th of March for a special event at The Spot in Minot for  Fish Fry Event.\nPlease look at this website for further information regarding this event.\nWe appreciate your support and understanding.",
+    "type": "info",
+    "dismissible": false
   }
 }
