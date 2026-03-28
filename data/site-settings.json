@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-03-28T16:03:55.585Z",
+  "lastUpdated": "2026-03-28T16:05:40.087Z",
   "contact": {
     "phone": "(701) 818-3664",
     "phoneRaw": "7018183664",
@@ -56,7 +56,7 @@
   },
   "announcement": {
     "enabled": true,
-    "message": "Hello, \nThe 1st Fish Fry at The Spot was a wonderful event. We thank the owner of The Spot, the staff,  and the wonderful customers that supported this event.\nLooking forward to the next event at The Spot \nWe will re-open on Wednesday April 1st at 5pm .\nLook forward to seeing old and new customers. \nGreatly appreciate your support and understanding.",
+    "message": "Hello, \nThe 1st Fish Fry at The Spot was a wonderful event. We thank the owner of The Spot, the staff,  and the wonderful customers that supported this event.\nLooking forward to the next event at The Spot \n\nWe will re-open on Wednesday April 1st at 5pm .\nLook forward to seeing old and new customers. \nGreatly appreciate your support and understanding.",
     "type": "info",
     "dismissible": false
   }
