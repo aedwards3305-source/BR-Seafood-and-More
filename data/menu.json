@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-03-08T04:40:16.888Z",
+  "lastUpdated": "2026-03-30T15:06:08.680Z",
   "settings": {
     "sidesIncluded": 2,
     "extraSidePrice": 3,
@@ -76,7 +76,7 @@
           "id": "macaroni-and-cheese",
           "name": "(26 Pc ) Captains Platter",
           "icon": "fas fa-fish",
-          "active": true,
+          "active": false,
           "description": "8 shrimp 6 Gator Bites, 8 Catfish Nuggets, 2 pcs of Fillet Whittings comes with 2 Frog Legs  comes with 2 large sides",
           "price": 44,
           "featured": false,
@@ -86,7 +86,7 @@
           "id": "2-pc-golden-fried-cajun-frog-legs",
           "name": "(2 Pc) Golden Fried  Cajun Frog Legs with Fries Only",
           "icon": "fas fa-fish",
-          "active": true,
+          "active": false,
           "description": "(4) pcs of Hand breaded Golden Fried",
           "price": 14,
           "featured": false,
@@ -96,7 +96,7 @@
           "id": "20-pc-all-on-deck",
           "name": "(20 Pc) All On Deck Platter",
           "icon": "fas fa-fish",
-          "active": true,
+          "active": false,
           "description": "7 Shrimp, 7 Catfish Nuggets, 4 Gator Bites, and 2 Frog Legs comes with 2 regular sides",
           "price": 38,
           "featured": false,
@@ -126,7 +126,7 @@
           "id": "35pcs-enough-4-two-10-shrimp-10-catfish-nuggets-6-gator-2-fillet-whittings-4-scallops-2-frog-legs",
           "name": "(35pcs) Enough 4 Two   10 Shrimp, 10 Catfish Nuggets, 6 Gator, 2 Fillet Whittings, 4 Scallops, 2 Frog Legs",
           "icon": "fas fa-fish",
-          "active": true,
+          "active": false,
           "description": "35 pcs of Golden Fried Seafood hand breaded with 2 Large side dishes",
           "price": 56,
           "featured": false,
@@ -146,7 +146,7 @@
           "id": "shrimp-gumbo-over-rice",
           "name": "Shrimp Gumbo over Rice",
           "icon": "fas fa-bowl-food",
-          "active": true,
+          "active": false,
           "description": "Large Bowl Homemade   Gumbo with rice only",
           "price": 12,
           "featured": false,
@@ -194,19 +194,19 @@
           "id": "baked-beans",
           "name": "Baked Beans",
           "icon": "fas fa-seedling",
-          "active": false
+          "active": true
         },
         {
           "id": "collard-greens",
           "name": "Collard Greens",
           "icon": "fas fa-pepper-hot",
-          "active": false
+          "active": true
         },
         {
           "id": "corn-on-the-cob",
           "name": "1/2  Cajun Corn on the Cob",
           "icon": "fas fa-wheat-awn",
-          "active": false
+          "active": true
         },
         {
           "id": "hush-puppies",
