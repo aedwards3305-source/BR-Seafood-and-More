@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-03-30T15:06:08.680Z",
+  "lastUpdated": "2026-04-01T18:17:43.163Z",
   "settings": {
     "sidesIncluded": 2,
     "extraSidePrice": 3,
@@ -56,7 +56,7 @@
           "id": "catfish-2pc",
           "name": "( 2 Pc ) Golden Fried Catfish Fillets",
           "icon": "fas fa-fish",
-          "active": true,
+          "active": false,
           "description": "2 pieces of golden fried catfish fillet comes with 2 regular sides",
           "price": 18,
           "featured": false,
@@ -76,8 +76,8 @@
           "id": "macaroni-and-cheese",
           "name": "(26 Pc ) Captains Platter",
           "icon": "fas fa-fish",
-          "active": false,
-          "description": "8 shrimp 6 Gator Bites, 8 Catfish Nuggets, 2 pcs of Fillet Whittings comes with 2 Frog Legs  comes with 2 large sides",
+          "active": true,
+          "description": "8 shrimp, 6 Gator Bites, 8 Catfish Nuggets, 2 pcs of Fillet whittings, 2 Oysters  comes with 2 large sides",
           "price": 44,
           "featured": false,
           "badgeText": ""
@@ -96,8 +96,8 @@
           "id": "20-pc-all-on-deck",
           "name": "(20 Pc) All On Deck Platter",
           "icon": "fas fa-fish",
-          "active": false,
-          "description": "7 Shrimp, 7 Catfish Nuggets, 4 Gator Bites, and 2 Frog Legs comes with 2 regular sides",
+          "active": true,
+          "description": "7 Shrimp, 7 Catfish Nuggets, 4 Gator Bites, and 2 Oysters comes with 2 regular sides",
           "price": 38,
           "featured": false,
           "badgeText": ""
@@ -114,11 +114,11 @@
         },
         {
           "id": "6-sea-scallops",
-          "name": "(8) Sea Scallops",
+          "name": "(8) Gator Bites",
           "icon": "fas fa-fish",
           "active": true,
           "description": "Golden Fried hand breaded comes with 2 regular sides",
-          "price": 18,
+          "price": 26,
           "featured": false,
           "badgeText": ""
         },
@@ -144,9 +144,9 @@
         },
         {
           "id": "shrimp-gumbo-over-rice",
-          "name": "Shrimp Gumbo over Rice",
+          "name": "Cajun Sausage Green Peppers/Onions Fajita over Rice",
           "icon": "fas fa-bowl-food",
-          "active": false,
+          "active": true,
           "description": "Large Bowl Homemade   Gumbo with rice only",
           "price": 12,
           "featured": false,
@@ -194,7 +194,7 @@
           "id": "baked-beans",
           "name": "Baked Beans",
           "icon": "fas fa-seedling",
-          "active": true
+          "active": false
         },
         {
           "id": "collard-greens",
@@ -242,7 +242,7 @@
           "id": "mac-cheese-5-00",
           "name": "Mac/Cheese  $5.00",
           "icon": "fas fa-seedling",
-          "active": true
+          "active": false
         }
       ]
     },
@@ -255,9 +255,9 @@
         {
           "id": "macaroni-and-cheese",
           "name": "Macaroni and Cheese",
-          "price": 5,
           "icon": "fas fa-bowl-food",
-          "active": true
+          "active": false,
+          "price": 5
         }
       ]
     }
