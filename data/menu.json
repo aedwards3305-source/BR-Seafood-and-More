@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-04-01T18:17:43.163Z",
+  "lastUpdated": "2026-04-01T18:54:16.765Z",
   "settings": {
     "sidesIncluded": 2,
     "extraSidePrice": 3,
@@ -147,7 +147,7 @@
           "name": "Cajun Sausage Green Peppers/Onions Fajita over Rice",
           "icon": "fas fa-bowl-food",
           "active": true,
-          "description": "Large Bowl Homemade   Gumbo with rice only",
+          "description": "Large Bowl Homemade Cajun Sausage with rice and Fajita only",
           "price": 12,
           "featured": false,
           "badgeText": ""
