@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-04-01T18:54:16.765Z",
+  "lastUpdated": "2026-04-03T17:01:27.183Z",
   "settings": {
     "sidesIncluded": 2,
     "extraSidePrice": 3,
@@ -164,11 +164,11 @@
         },
         {
           "id": "6-pcs-golden-fried-oysters-with-2-regular-sides",
-          "name": "(4) pcs Golden Fried Oysters w/ 2 sides",
+          "name": "(6) pcs Golden Fried Oysters w/ 2 sides",
           "icon": "fas fa-fish",
           "active": true,
           "description": "",
-          "price": 12,
+          "price": 14,
           "featured": false,
           "badgeText": ""
         },
@@ -179,6 +179,16 @@
           "active": true,
           "description": "",
           "price": 36,
+          "featured": false,
+          "badgeText": ""
+        },
+        {
+          "id": "2-pc-golden-fried-fillet-haddock",
+          "name": "(2) Pc Golden Fried Fillet Haddock",
+          "icon": "fas fa-fish",
+          "active": true,
+          "description": "Hand breaded",
+          "price": 16,
           "featured": false,
           "badgeText": ""
         }
@@ -194,7 +204,7 @@
           "id": "baked-beans",
           "name": "Baked Beans",
           "icon": "fas fa-seedling",
-          "active": false
+          "active": true
         },
         {
           "id": "collard-greens",
@@ -242,7 +252,7 @@
           "id": "mac-cheese-5-00",
           "name": "Mac/Cheese  $5.00",
           "icon": "fas fa-seedling",
-          "active": false
+          "active": true
         }
       ]
     },
