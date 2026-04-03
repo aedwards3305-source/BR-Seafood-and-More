@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-04-03T17:04:22.307Z",
+  "lastUpdated": "2026-04-03T23:07:23.829Z",
   "settings": {
     "sidesIncluded": 2,
     "extraSidePrice": 3,
@@ -66,7 +66,7 @@
           "id": "catfish-nuggets",
           "name": "(3 Pc ) Golden Fried Whittings  Fillets",
           "icon": "fas fa-fish",
-          "active": true,
+          "active": false,
           "description": "golden fried hand breaded with 2 regular sides",
           "price": 16,
           "featured": false,
