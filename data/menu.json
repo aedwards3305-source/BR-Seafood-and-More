@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-04-04T18:53:16.050Z",
+  "lastUpdated": "2026-04-04T21:23:16.676Z",
   "settings": {
     "sidesIncluded": 2,
     "extraSidePrice": 3,
@@ -188,6 +188,16 @@
           "icon": "fas fa-hotdog",
           "active": false,
           "description": "Smoked Hot Dog with Fries Only",
+          "price": 12,
+          "featured": false,
+          "badgeText": ""
+        },
+        {
+          "id": "3-pcs-of-bbq-chicken-w-2-sides",
+          "name": "(3) pcs of BBQ Chicken w/2 sides",
+          "icon": "fas fa-drumstick-bite",
+          "active": true,
+          "description": "BBQ Chicken",
           "price": 12,
           "featured": false,
           "badgeText": ""
