@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-04-04T21:23:16.676Z",
+  "lastUpdated": "2026-04-09T16:19:50.295Z",
   "settings": {
     "sidesIncluded": 2,
     "extraSidePrice": 3,
@@ -64,7 +64,7 @@
         },
         {
           "id": "catfish-nuggets",
-          "name": "(3 Pc ) Golden Fried Whittings  Fillets",
+          "name": "(4 Pc ) Golden Fried Whittings  Fillets",
           "icon": "fas fa-fish",
           "active": true,
           "description": "golden fried hand breaded with 2 regular sides",
@@ -97,7 +97,7 @@
           "name": "(20 Pc) All On Deck Platter",
           "icon": "fas fa-fish",
           "active": true,
-          "description": "7 Shrimp, 7 Catfish Nuggets, 4 Gator Bites, and 2 Oysters comes with 2 regular sides",
+          "description": "7 Shrimp, 7 Catfish Nuggets, 4 Gator Bites, and 2 Scallops comes with 2 regular sides",
           "price": 38,
           "featured": false,
           "badgeText": ""
@@ -124,9 +124,9 @@
         },
         {
           "id": "35pcs-enough-4-two-10-shrimp-10-catfish-nuggets-6-gator-2-fillet-whittings-4-scallops-2-frog-legs",
-          "name": "(35pcs) Enough 4 Two   10 Shrimp, 10 Catfish Nuggets, 6 Gator, 2 Fillet Whittings, 4 Scallops, 2 Frog Legs",
+          "name": "(35pcs) Enough 4 Two   10 Shrimp, 10 Catfish Nuggets, 6 Gator, 3 Fillet Whittings, 4 Scallops, 2 Oysters w/2 Large Sides",
           "icon": "fas fa-fish",
-          "active": false,
+          "active": true,
           "description": "35 pcs of Golden Fried Seafood hand breaded with 2 Large side dishes",
           "price": 56,
           "featured": false,
@@ -138,7 +138,7 @@
           "icon": "fas fa-fish",
           "active": true,
           "description": "",
-          "price": 14,
+          "price": 18,
           "featured": false,
           "badgeText": ""
         },
@@ -156,7 +156,7 @@
           "id": "2-pc-golden-fried-fillet-haddock",
           "name": "(2) Pc Golden Fried Fillet Haddock",
           "icon": "fas fa-fish",
-          "active": true,
+          "active": false,
           "description": "Hand breaded",
           "price": 16,
           "featured": false,
@@ -166,7 +166,7 @@
           "id": "chili-cheese-hot-dog-with-fries-only",
           "name": "(4) Bones BBQ Ribs",
           "icon": "fas fa-plate-wheat",
-          "active": false,
+          "active": true,
           "description": "Tender Pork Ribs with BBQ Sauce comes with 2 regular Sides",
           "price": 16,
           "featured": false,
