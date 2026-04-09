@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-04-09T16:25:14.135Z",
+  "lastUpdated": "2026-04-09T16:28:17.549Z",
   "settings": {
     "sidesIncluded": 2,
     "extraSidePrice": 3,
@@ -168,7 +168,7 @@
           "icon": "fas fa-plate-wheat",
           "active": true,
           "description": "Tender Pork Ribs with BBQ Sauce comes with 2 regular Sides",
-          "price": 16,
+          "price": 18,
           "featured": false,
           "badgeText": ""
         },
