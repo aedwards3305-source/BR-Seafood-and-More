@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-04-09T16:28:17.549Z",
+  "lastUpdated": "2026-04-09T23:35:54.576Z",
   "settings": {
     "sidesIncluded": 2,
     "extraSidePrice": 3,
@@ -261,6 +261,12 @@
         {
           "id": "mac-cheese-5-00",
           "name": "Mac/Cheese  $5.00",
+          "icon": "fas fa-seedling",
+          "active": true
+        },
+        {
+          "id": "cornbread",
+          "name": "Cornbread",
           "icon": "fas fa-seedling",
           "active": true
         }
