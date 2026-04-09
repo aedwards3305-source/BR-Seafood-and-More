@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-04-09T16:21:14.415Z",
+  "lastUpdated": "2026-04-09T16:25:14.135Z",
   "settings": {
     "sidesIncluded": 2,
     "extraSidePrice": 3,
@@ -196,7 +196,7 @@
           "id": "3-pcs-of-bbq-chicken-w-2-sides",
           "name": "(3) pcs of BBQ Chicken w/2 sides",
           "icon": "fas fa-drumstick-bite",
-          "active": true,
+          "active": false,
           "description": "BBQ Chicken",
           "price": 12,
           "featured": false,
