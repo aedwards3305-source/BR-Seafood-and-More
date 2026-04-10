@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-04-09T23:35:54.576Z",
+  "lastUpdated": "2026-04-10T18:01:30.475Z",
   "settings": {
     "sidesIncluded": 2,
     "extraSidePrice": 3,
@@ -53,10 +53,20 @@
           "badgeText": ""
         },
         {
+          "id": "20pc-golden-fried-catfish-nuggets-w-2-sides",
+          "name": "(20pc)  Golden Fried Catfish Nuggets w/2 sides",
+          "icon": "fas fa-fish",
+          "active": true,
+          "description": "",
+          "price": 36,
+          "featured": false,
+          "badgeText": ""
+        },
+        {
           "id": "catfish-2pc",
           "name": "( 2 Pc ) Golden Fried Catfish Fillets",
           "icon": "fas fa-fish",
-          "active": false,
+          "active": true,
           "description": "2 pieces of golden fried catfish fillet comes with 2 regular sides",
           "price": 18,
           "featured": false,
@@ -126,7 +136,7 @@
           "id": "35pcs-enough-4-two-10-shrimp-10-catfish-nuggets-6-gator-2-fillet-whittings-4-scallops-2-frog-legs",
           "name": "(35pcs) Enough 4 Two   10 Shrimp, 10 Catfish Nuggets, 6 Gator, 3 Fillet Whittings, 4 Scallops, 2 Oysters w/2 Large Sides",
           "icon": "fas fa-fish",
-          "active": true,
+          "active": false,
           "description": "35 pcs of Golden Fried Seafood hand breaded with 2 Large side dishes",
           "price": 56,
           "featured": false,
@@ -134,31 +144,21 @@
         },
         {
           "id": "6-pcs-golden-fried-oysters-with-2-regular-sides",
-          "name": "(6) pcs Golden Fried Oysters w/ 2 sides",
+          "name": "(4) pcs Golden Fried Oysters w/ 2 sides",
           "icon": "fas fa-fish",
           "active": true,
           "description": "",
-          "price": 18,
-          "featured": false,
-          "badgeText": ""
-        },
-        {
-          "id": "20pc-golden-fried-catfish-nuggets-w-2-sides",
-          "name": "(20pc)  Golden Fried Catfish Nuggets w/2 sides",
-          "icon": "fas fa-fish",
-          "active": true,
-          "description": "",
-          "price": 36,
+          "price": 12,
           "featured": false,
           "badgeText": ""
         },
         {
           "id": "2-pc-golden-fried-fillet-haddock",
-          "name": "(2) Pc Golden Fried Fillet Haddock",
+          "name": "(6) Pc Golden Fried Scallops",
           "icon": "fas fa-fish",
-          "active": false,
+          "active": true,
           "description": "Hand breaded",
-          "price": 16,
+          "price": 18,
           "featured": false,
           "badgeText": ""
         },
@@ -184,11 +184,11 @@
         },
         {
           "id": "chili-cheese-hot-dog-with-fries",
-          "name": "Chili Cheese Hot Dog with Fries",
-          "icon": "fas fa-hotdog",
-          "active": false,
-          "description": "Smoked Hot Dog with Fries Only",
-          "price": 12,
+          "name": "6oz Prime Rib",
+          "icon": "fas fa-plate-wheat",
+          "active": true,
+          "description": "Slowly cooked moist and tender",
+          "price": 18,
           "featured": false,
           "badgeText": ""
         },
@@ -268,6 +268,12 @@
           "id": "cornbread",
           "name": "Cornbread",
           "icon": "fas fa-seedling",
+          "active": true
+        },
+        {
+          "id": "mash-potatoes",
+          "name": "Mash Potatoes",
+          "icon": "fas fa-bowl-food",
           "active": true
         }
       ]
