@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-04-10T18:01:30.475Z",
+  "lastUpdated": "2026-04-10T18:03:17.768Z",
   "settings": {
     "sidesIncluded": 2,
     "extraSidePrice": 3,
@@ -260,8 +260,8 @@
         },
         {
           "id": "mac-cheese-5-00",
-          "name": "Mac/Cheese  $5.00",
-          "icon": "fas fa-seedling",
+          "name": "Mac/Cheese  $3.00 extra",
+          "icon": "fas fa-bowl-food",
           "active": true
         },
         {
