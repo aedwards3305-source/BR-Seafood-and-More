@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-04-10T18:03:17.768Z",
+  "lastUpdated": "2026-04-15T22:05:21.972Z",
   "settings": {
     "sidesIncluded": 2,
     "extraSidePrice": 3,
@@ -174,11 +174,11 @@
         },
         {
           "id": "shrimp-gumbo-over-rice",
-          "name": "Cajun Sausage Green Peppers/Onions Fajita over Rice",
+          "name": "Crawfish Etoffee",
           "icon": "fas fa-bowl-food",
           "active": true,
-          "description": "Large Bowl Homemade Cajun Sausage with rice and Fajita only",
-          "price": 12,
+          "description": "Large Bowl Homemade Cajun Crawfish Etouffe'e",
+          "price": 16,
           "featured": false,
           "badgeText": ""
         },
