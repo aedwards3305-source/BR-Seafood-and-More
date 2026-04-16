@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-04-15T22:08:03.169Z",
+  "lastUpdated": "2026-04-16T21:59:41.418Z",
   "settings": {
     "sidesIncluded": 2,
     "extraSidePrice": 3,
@@ -186,7 +186,7 @@
           "id": "chili-cheese-hot-dog-with-fries",
           "name": "6oz Prime Rib",
           "icon": "fas fa-plate-wheat",
-          "active": true,
+          "active": false,
           "description": "Slowly cooked moist and tender",
           "price": 18,
           "featured": false,
