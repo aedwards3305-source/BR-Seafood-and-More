@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-04-16T21:59:59.167Z",
+  "lastUpdated": "2026-04-18T03:23:41.004Z",
   "settings": {
     "sidesIncluded": 2,
     "extraSidePrice": 3,
@@ -126,7 +126,7 @@
           "id": "6-sea-scallops",
           "name": "(8) Gator Bites",
           "icon": "fas fa-fish",
-          "active": true,
+          "active": false,
           "description": "Golden Fried hand breaded comes with 2 regular sides",
           "price": 26,
           "featured": false,
@@ -166,7 +166,7 @@
           "id": "chili-cheese-hot-dog-with-fries-only",
           "name": "(4) Bones BBQ Ribs",
           "icon": "fas fa-plate-wheat",
-          "active": true,
+          "active": false,
           "description": "Tender Pork Ribs with BBQ Sauce comes with 2 regular Sides",
           "price": 18,
           "featured": false,
