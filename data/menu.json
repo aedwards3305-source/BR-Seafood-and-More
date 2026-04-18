@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-04-18T18:33:15.955Z",
+  "lastUpdated": "2026-04-18T21:51:45.587Z",
   "settings": {
     "sidesIncluded": 2,
     "extraSidePrice": 3,
@@ -147,8 +147,8 @@
           "name": "(4) pcs Golden Fried Oysters w/ 2 sides",
           "icon": "fas fa-fish",
           "active": true,
-          "description": "",
-          "price": 12,
+          "description": "Hand Breaded Golden Fried",
+          "price": 14,
           "featured": false,
           "badgeText": ""
         },
@@ -176,7 +176,7 @@
           "id": "shrimp-gumbo-over-rice",
           "name": "Crawfish Etoffee",
           "icon": "fas fa-bowl-food",
-          "active": true,
+          "active": false,
           "description": "Large Bowl Homemade Cajun Crawfish Etouffe'e",
           "price": 16,
           "featured": false,
