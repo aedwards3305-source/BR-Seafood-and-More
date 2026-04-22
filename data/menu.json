@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-04-22T14:48:55.388Z",
+  "lastUpdated": "2026-04-22T14:58:09.585Z",
   "settings": {
     "sidesIncluded": 2,
     "extraSidePrice": 3,
@@ -209,6 +209,36 @@
           "active": false,
           "description": "BBQ Chicken",
           "price": 12,
+          "featured": false,
+          "badgeText": ""
+        },
+        {
+          "id": "snacker-2-pcs-catfish-fillet-with-fries-only",
+          "name": "Snacker (2) pcs Catfish Fillet with fries only",
+          "icon": "fas fa-fish",
+          "active": true,
+          "description": "golden fried hand breaded",
+          "price": 14,
+          "featured": false,
+          "badgeText": ""
+        },
+        {
+          "id": "snacker-2-pcs-whitting-fillet-with-fries-only",
+          "name": "Snacker (2) pcs Whitting Fillet with fries only",
+          "icon": "fas fa-fish",
+          "active": true,
+          "description": "golden fried hand breaded",
+          "price": 14,
+          "featured": false,
+          "badgeText": ""
+        },
+        {
+          "id": "snacker-6-pcs-shrimp-with-fries-only",
+          "name": "Snacker (6) pcs Shrimp with fries only",
+          "icon": "fas fa-fish",
+          "active": true,
+          "description": "golden fried hand breaded",
+          "price": 14,
           "featured": false,
           "badgeText": ""
         }
