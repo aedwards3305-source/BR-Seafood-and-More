@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-04-18T21:51:45.587Z",
+  "lastUpdated": "2026-04-22T14:38:48.486Z",
   "settings": {
     "sidesIncluded": 2,
     "extraSidePrice": 3,
@@ -63,6 +63,16 @@
           "badgeText": ""
         },
         {
+          "id": "catfish-nuggets",
+          "name": "(3 Pc ) Golden Fried Whittings  Fillets",
+          "icon": "fas fa-fish",
+          "active": true,
+          "description": "golden fried hand breaded with 2 regular sides",
+          "price": 16,
+          "featured": false,
+          "badgeText": ""
+        },
+        {
           "id": "catfish-2pc",
           "name": "( 2 Pc ) Golden Fried Catfish Fillets",
           "icon": "fas fa-fish",
@@ -73,12 +83,52 @@
           "badgeText": ""
         },
         {
-          "id": "catfish-nuggets",
-          "name": "(4 Pc ) Golden Fried Whittings  Fillets",
+          "id": "6-sea-scallops",
+          "name": "(8) Gator Bites",
           "icon": "fas fa-fish",
           "active": true,
-          "description": "golden fried hand breaded with 2 regular sides",
-          "price": 16,
+          "description": "Golden Fried hand breaded comes with 2 regular sides",
+          "price": 26,
+          "featured": false,
+          "badgeText": ""
+        },
+        {
+          "id": "2-pc-golden-fried-cajun-frog-legs",
+          "name": "(2 ) Golden Fried  Cajun Frog Legs with 2 sides",
+          "icon": "fas fa-fish",
+          "active": true,
+          "description": "(2) of Hand breaded Golden Fried",
+          "price": 22,
+          "featured": false,
+          "badgeText": ""
+        },
+        {
+          "id": "2-pc-golden-fried-fillet-haddock",
+          "name": "(6) Pc Golden Fried Scallops",
+          "icon": "fas fa-fish",
+          "active": true,
+          "description": "Hand breaded",
+          "price": 18,
+          "featured": false,
+          "badgeText": ""
+        },
+        {
+          "id": "6-pcs-golden-fried-oysters-with-2-regular-sides",
+          "name": "(4) pcs Golden Fried Oysters w/ 2 sides",
+          "icon": "fas fa-fish",
+          "active": true,
+          "description": "Hand Breaded Golden Fried",
+          "price": 12,
+          "featured": false,
+          "badgeText": ""
+        },
+        {
+          "id": "35pcs-enough-4-two-10-shrimp-10-catfish-nuggets-6-gator-2-fillet-whittings-4-scallops-2-frog-legs",
+          "name": "(32 pcs) Enough 4 Two   8 Shrimp, 8 Catfish Nuggets, 6 Gator, 2 Fillet Whittings, 4 Sea Scallops, 4 Oysters w/2 Large Sides",
+          "icon": "fas fa-fish",
+          "active": true,
+          "description": "32 pcs of Golden Fried Seafood hand breaded with 2 Large side dishes",
+          "price": 52,
           "featured": false,
           "badgeText": ""
         },
@@ -93,21 +143,11 @@
           "badgeText": ""
         },
         {
-          "id": "2-pc-golden-fried-cajun-frog-legs",
-          "name": "(2 Pc) Golden Fried  Cajun Frog Legs with Fries Only",
-          "icon": "fas fa-fish",
-          "active": false,
-          "description": "(4) pcs of Hand breaded Golden Fried",
-          "price": 14,
-          "featured": false,
-          "badgeText": ""
-        },
-        {
           "id": "20-pc-all-on-deck",
           "name": "(20 Pc) All On Deck Platter",
           "icon": "fas fa-fish",
           "active": true,
-          "description": "7 Shrimp, 7 Catfish Nuggets, 4 Gator Bites, and 2 Scallops comes with 2 regular sides",
+          "description": "7 Shrimp, 7 Catfish Nuggets, 4 Gator Bites, and 2 Oysters comes with 2 regular sides",
           "price": 38,
           "featured": false,
           "badgeText": ""
@@ -119,46 +159,6 @@
           "active": true,
           "description": "4 Shrimp, 4 Gator Bites, 4 Catfish Nuggets comes with 2 regular sides",
           "price": 32,
-          "featured": false,
-          "badgeText": ""
-        },
-        {
-          "id": "6-sea-scallops",
-          "name": "(8) Gator Bites",
-          "icon": "fas fa-fish",
-          "active": false,
-          "description": "Golden Fried hand breaded comes with 2 regular sides",
-          "price": 26,
-          "featured": false,
-          "badgeText": ""
-        },
-        {
-          "id": "35pcs-enough-4-two-10-shrimp-10-catfish-nuggets-6-gator-2-fillet-whittings-4-scallops-2-frog-legs",
-          "name": "(35pcs) Enough 4 Two   10 Shrimp, 10 Catfish Nuggets, 6 Gator, 3 Fillet Whittings, 4 Scallops, 2 Oysters w/2 Large Sides",
-          "icon": "fas fa-fish",
-          "active": false,
-          "description": "35 pcs of Golden Fried Seafood hand breaded with 2 Large side dishes",
-          "price": 56,
-          "featured": false,
-          "badgeText": ""
-        },
-        {
-          "id": "6-pcs-golden-fried-oysters-with-2-regular-sides",
-          "name": "(4) pcs Golden Fried Oysters w/ 2 sides",
-          "icon": "fas fa-fish",
-          "active": true,
-          "description": "Hand Breaded Golden Fried",
-          "price": 14,
-          "featured": false,
-          "badgeText": ""
-        },
-        {
-          "id": "2-pc-golden-fried-fillet-haddock",
-          "name": "(6) Pc Golden Fried Scallops",
-          "icon": "fas fa-fish",
-          "active": true,
-          "description": "Hand breaded",
-          "price": 18,
           "featured": false,
           "badgeText": ""
         },
