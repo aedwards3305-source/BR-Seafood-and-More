@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-04-22T14:38:48.486Z",
+  "lastUpdated": "2026-04-22T14:47:46.161Z",
   "settings": {
     "sidesIncluded": 2,
     "extraSidePrice": 3,
@@ -201,6 +201,16 @@
           "price": 12,
           "featured": false,
           "badgeText": ""
+        },
+        {
+          "id": "18-pcs-taste-it-all-platter",
+          "name": "(18) pcs Taste It All Platter",
+          "icon": "fas fa-fish",
+          "active": true,
+          "description": "3 Shrimp, 3 Catfish Nuggs, 3 Oysters,  3 Scallops, 3 Gators,  3 Whitting Fillet",
+          "price": 36,
+          "featured": false,
+          "badgeText": ""
         }
       ]
     },
@@ -288,7 +298,7 @@
           "id": "macaroni-and-cheese",
           "name": "Macaroni and Cheese",
           "icon": "fas fa-bowl-food",
-          "active": false,
+          "active": true,
           "price": 5
         }
       ]
