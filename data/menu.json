@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-04-22T14:47:46.161Z",
+  "lastUpdated": "2026-04-22T14:48:55.388Z",
   "settings": {
     "sidesIncluded": 2,
     "extraSidePrice": 3,
@@ -153,6 +153,16 @@
           "badgeText": ""
         },
         {
+          "id": "18-pcs-taste-it-all-platter",
+          "name": "(18) pcs Taste It All Platter",
+          "icon": "fas fa-fish",
+          "active": true,
+          "description": "3 Shrimp, 3 Catfish Nuggs, 3 Oysters,  3 Scallops, 3 Gators,  3 Whitting Fillet",
+          "price": 36,
+          "featured": false,
+          "badgeText": ""
+        },
+        {
           "id": "12-pc-trio-platter",
           "name": "(12 Pc ) Trio Platter",
           "icon": "fas fa-fish",
@@ -199,16 +209,6 @@
           "active": false,
           "description": "BBQ Chicken",
           "price": 12,
-          "featured": false,
-          "badgeText": ""
-        },
-        {
-          "id": "18-pcs-taste-it-all-platter",
-          "name": "(18) pcs Taste It All Platter",
-          "icon": "fas fa-fish",
-          "active": true,
-          "description": "3 Shrimp, 3 Catfish Nuggs, 3 Oysters,  3 Scallops, 3 Gators,  3 Whitting Fillet",
-          "price": 36,
           "featured": false,
           "badgeText": ""
         }
