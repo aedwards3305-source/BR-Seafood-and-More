@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-04-22T14:58:09.585Z",
+  "lastUpdated": "2026-04-25T22:05:44.968Z",
   "settings": {
     "sidesIncluded": 2,
     "extraSidePrice": 3,
@@ -66,7 +66,7 @@
           "id": "catfish-nuggets",
           "name": "(3 Pc ) Golden Fried Whittings  Fillets",
           "icon": "fas fa-fish",
-          "active": true,
+          "active": false,
           "description": "golden fried hand breaded with 2 regular sides",
           "price": 16,
           "featured": false,
@@ -76,7 +76,7 @@
           "id": "catfish-2pc",
           "name": "( 2 Pc ) Golden Fried Catfish Fillets",
           "icon": "fas fa-fish",
-          "active": true,
+          "active": false,
           "description": "2 pieces of golden fried catfish fillet comes with 2 regular sides",
           "price": 18,
           "featured": false,
@@ -216,7 +216,7 @@
           "id": "snacker-2-pcs-catfish-fillet-with-fries-only",
           "name": "Snacker (2) pcs Catfish Fillet with fries only",
           "icon": "fas fa-fish",
-          "active": true,
+          "active": false,
           "description": "golden fried hand breaded",
           "price": 14,
           "featured": false,
@@ -226,7 +226,7 @@
           "id": "snacker-2-pcs-whitting-fillet-with-fries-only",
           "name": "Snacker (2) pcs Whitting Fillet with fries only",
           "icon": "fas fa-fish",
-          "active": true,
+          "active": false,
           "description": "golden fried hand breaded",
           "price": 14,
           "featured": false,
@@ -254,7 +254,7 @@
           "id": "baked-beans",
           "name": "Baked Beans",
           "icon": "fas fa-seedling",
-          "active": true
+          "active": false
         },
         {
           "id": "collard-greens",
