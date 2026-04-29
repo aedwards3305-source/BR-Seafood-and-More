@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-04-12T20:04:08.094Z",
+  "lastUpdated": "2026-04-29T19:38:52.172Z",
   "events": [
     {
       "id": "all-you-can-eat-fish-fry",
@@ -11,6 +11,18 @@
       "description": "All- you -can -eat  Fish Fry & Fixin's\n Golden Fried Whiting and Catfish Fillets  served with Collard Greens, Baked Beans, Coleslaw, Corn On The Cob\n$30 per person All You Can Eat\n$25 per person Take out Special 2 piece with 2 sides\nTickets will be available At EVENTBRITECOM, THE SPOT, & B & R SEAFOOD & MORE\nThank You",
       "icon": "fas fa-building",
       "featured": true,
+      "active": true
+    },
+    {
+      "id": "hello-b-r-seafood-more-will-be-closed-from-today-wednesday-april-29th-and-will-re-open-wednesday-may-13th-at-5pm-we-will-be-picking-up-supplies-while-closed-we-thank-each-and-everyone-of-you-for-kind-patience-and-support",
+      "title": "Hello, B & R Seafood & More will be closed from  today Wednesday April 29th and will re-open Wednesday May 13th at 5pm.  We will be picking up supplies while closed. We thank each and everyone of you for kind patience and support.",
+      "date": "2026-04-29",
+      "endDate": "2026-05-13",
+      "time": "5pm",
+      "location": "At The Spot",
+      "description": "",
+      "icon": "fas fa-calendar-days",
+      "featured": false,
       "active": true
     }
   ]
