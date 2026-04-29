@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-04-12T20:17:24.057Z",
+  "lastUpdated": "2026-04-29T20:59:27.342Z",
   "contact": {
     "phone": "(701) 818-3664",
     "phoneRaw": "7018183664",
@@ -56,8 +56,8 @@
   },
   "announcement": {
     "enabled": true,
-    "message": "",
-    "type": "info",
+    "message": "Hello, B & R Seafood & More will be closed from today Wednesday April 29th, and we will re-open for business  on Wednesday May 13th at 5 pm. We will be out of town picking up supplies. Looking  forward to returning and seeing old & new customers/friends . Thank you all for your kind understanding and patience.",
+    "type": "urgent",
     "dismissible": false
   }
 }
