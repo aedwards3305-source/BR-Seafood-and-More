@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-05-12T00:18:42.911Z",
+  "lastUpdated": "2026-05-12T00:21:18.276Z",
   "events": [
     {
       "id": "all-you-can-eat-fish-fry",
@@ -58,6 +58,18 @@
       "location": "Health Dept",
       "description": "",
       "icon": "fas fa-calendar-days",
+      "featured": false,
+      "active": true
+    },
+    {
+      "id": "tioga-street-festival",
+      "title": "Tioga Street Festival",
+      "date": "2026-06-16",
+      "endDate": "2026-06-16",
+      "time": "5pm - 9pm",
+      "location": "Tioga North Dakota",
+      "description": "Fun & Food",
+      "icon": "fas fa-people-group",
       "featured": false,
       "active": true
     }
