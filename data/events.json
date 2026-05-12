@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-05-12T00:24:20.891Z",
+  "lastUpdated": "2026-05-12T00:27:15.903Z",
   "events": [
     {
       "id": "all-you-can-eat-fish-fry",
@@ -82,6 +82,18 @@
       "location": "Glenburn North Dakota",
       "description": "Fun, Food, and Entertainment",
       "icon": "fas fa-cake-candles",
+      "featured": false,
+      "active": true
+    },
+    {
+      "id": "walhalla-street-festival",
+      "title": "Walhalla Street Festival",
+      "date": "2026-07-04",
+      "endDate": "2026-07-04",
+      "time": "11pm-7pm",
+      "location": "Walhalla North Dakota",
+      "description": "Fun, Food, and Entertainment",
+      "icon": "fas fa-people-group",
       "featured": false,
       "active": true
     }
