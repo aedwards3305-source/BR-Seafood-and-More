@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-05-12T00:27:15.903Z",
+  "lastUpdated": "2026-05-12T00:29:38.137Z",
   "events": [
     {
       "id": "all-you-can-eat-fish-fry",
@@ -93,6 +93,18 @@
       "time": "11pm-7pm",
       "location": "Walhalla North Dakota",
       "description": "Fun, Food, and Entertainment",
+      "icon": "fas fa-people-group",
+      "featured": false,
+      "active": true
+    },
+    {
+      "id": "langdon-street-fest",
+      "title": "Langdon Street Fest",
+      "date": "2026-07-18",
+      "endDate": "2026-07-18",
+      "time": "11pm-7pm",
+      "location": "Langdon  North Dakota",
+      "description": "Fun, Food, and  Entertainment",
       "icon": "fas fa-people-group",
       "featured": false,
       "active": true
