@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-05-12T00:21:18.276Z",
+  "lastUpdated": "2026-05-12T00:24:20.891Z",
   "events": [
     {
       "id": "all-you-can-eat-fish-fry",
@@ -70,6 +70,18 @@
       "location": "Tioga North Dakota",
       "description": "Fun & Food",
       "icon": "fas fa-people-group",
+      "featured": false,
+      "active": true
+    },
+    {
+      "id": "glenburn-street-festival",
+      "title": "Glenburn Street Festival",
+      "date": "2026-06-20",
+      "endDate": "2026-06-20",
+      "time": "3pm-12midnight",
+      "location": "Glenburn North Dakota",
+      "description": "Fun, Food, and Entertainment",
+      "icon": "fas fa-cake-candles",
       "featured": false,
       "active": true
     }
