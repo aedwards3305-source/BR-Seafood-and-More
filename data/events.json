@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-05-12T00:10:59.994Z",
+  "lastUpdated": "2026-05-12T00:14:26.135Z",
   "events": [
     {
       "id": "all-you-can-eat-fish-fry",
@@ -33,6 +33,18 @@
       "time": "5pm -9pm",
       "location": "Tioga North Dakota",
       "description": "Fun, Food and Entertainment",
+      "icon": "fas fa-people-group",
+      "featured": false,
+      "active": true
+    },
+    {
+      "id": "street-fest",
+      "title": "Street Fest",
+      "date": "2026-05-29",
+      "endDate": "2026-05-30",
+      "time": "2pm -7pm",
+      "location": "Parshall North Dakota",
+      "description": "Fun, Food, Festival\n2 day event",
       "icon": "fas fa-people-group",
       "featured": false,
       "active": true
