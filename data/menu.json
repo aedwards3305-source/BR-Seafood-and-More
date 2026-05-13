@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-05-13T04:38:25.553Z",
+  "lastUpdated": "2026-05-13T04:42:16.684Z",
   "settings": {
     "sidesIncluded": 2,
     "extraSidePrice": 3,
@@ -24,7 +24,7 @@
         },
         {
           "id": "golden-fried-shrimp-10",
-          "name": "Golden Fried Shrimp (10 pc) w/2 regular sides",
+          "name": "(10 pcs) Golden Fried Shrimp  w/2 regular sides",
           "icon": "fas fa-shrimp",
           "active": true,
           "description": "10 pieces of plump, golden fried shrimp comes with 2  regular sides",
@@ -34,7 +34,7 @@
         },
         {
           "id": "golden-fried-shrimp-8",
-          "name": "Golden Fried Shrimp (20 pc) w/ 2 regular sides",
+          "name": "(20 pcs) Golden Fried Shrimp w/ 2 regular sides",
           "icon": "fas fa-shrimp",
           "active": true,
           "description": "20 pieces of perfectly crispy fried shrimp",
