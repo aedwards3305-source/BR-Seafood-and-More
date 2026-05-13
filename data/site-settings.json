@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-05-12T20:52:55.898Z",
+  "lastUpdated": "2026-05-13T04:52:55.749Z",
   "contact": {
     "phone": "(701) 818-3664",
     "phoneRaw": "7018183664",
@@ -11,16 +11,7 @@
     "note": "Located at The Spot parking area",
     "googleMapsUrl": ""
   },
-  "hours": [
-    {
-      "days": "Wed & Thurs",
-      "time": "5pm-9pm"
-    },
-    {
-      "days": "Fri & Sat",
-      "time": "5pm-11pm"
-    }
-  ],
+  "hours": [],
   "social": {
     "facebook": "",
     "instagram": "",
@@ -64,8 +55,8 @@
     ]
   },
   "announcement": {
-    "enabled": true,
-    "message": "Hello, B & R Seafood & More will be closed from today Wednesday April 29th, and we will re-open for business  on Wednesday May 13th at 5 pm. We will be out of town picking up supplies. Looking  forward to returning and seeing old & new customers/friends . Thank you all for your kind understanding and patience.",
+    "enabled": false,
+    "message": "",
     "type": "urgent",
     "dismissible": false
   }
