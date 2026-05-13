@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-05-13T04:42:16.684Z",
+  "lastUpdated": "2026-05-13T04:49:30.398Z",
   "settings": {
     "sidesIncluded": 2,
     "extraSidePrice": 3,
@@ -44,7 +44,7 @@
         },
         {
           "id": "golden-fried-catfish",
-          "name": "(10) Pc Golden Fried Catfish Nuggets w/2  regular  sides",
+          "name": "(10 pcs) Golden Fried Catfish Nuggets w/2  regular  sides",
           "icon": "fas fa-fish",
           "active": true,
           "description": "Tender catfish nuggets fried golden and crispy",
@@ -54,7 +54,7 @@
         },
         {
           "id": "20pc-golden-fried-catfish-nuggets-w-2-sides",
-          "name": "(20pc)  Golden Fried Catfish Nuggets w/2  regular sides",
+          "name": "(20 pcs)  Golden Fried Catfish Nuggets w/2  regular sides",
           "icon": "fas fa-fish",
           "active": true,
           "description": "",
@@ -64,7 +64,7 @@
         },
         {
           "id": "catfish-nuggets",
-          "name": "(3 Pc ) Golden Fried Whittings  Fillets w/2 regular sides",
+          "name": "(3 pc ) Golden Fried Whittings  Fillets w/2 regular sides",
           "icon": "fas fa-fish",
           "active": true,
           "description": "golden fried hand breaded with 2 regular sides",
@@ -104,7 +104,7 @@
         },
         {
           "id": "2-pc-golden-fried-fillet-haddock",
-          "name": "(6) Pc Golden Fried Scallops w/2 regular sides",
+          "name": "(6 pc) Golden Fried Scallops w/2 regular sides",
           "icon": "fas fa-fish",
           "active": true,
           "description": "Hand breaded",
@@ -114,7 +114,7 @@
         },
         {
           "id": "6-pcs-golden-fried-oysters-with-2-regular-sides",
-          "name": "(6) pcs Golden Fried Oysters w/2  regular sides",
+          "name": "(6 pcs) Golden Fried Oysters w/2  regular sides",
           "icon": "fas fa-fish",
           "active": true,
           "description": "Hand Breaded Golden Fried",
@@ -134,7 +134,7 @@
         },
         {
           "id": "macaroni-and-cheese",
-          "name": "(26 Pc ) Captains Platter 8 Shrimp, 8 Catfish  Nugs, 6 Gator Bites, 2 Fillet Whitting Fish, 2 Oysters, and 2 large Sides",
+          "name": "(26 pcs ) Captains Platter 8 Shrimp, 8 Catfish  Nugs, 6 Gator Bites, 2 Fillet Whitting Fish, 2 Oysters, and 2 large Sides",
           "icon": "fas fa-fish",
           "active": true,
           "description": "8 shrimp, 6 Gator Bites, 8 Catfish Nuggets, 2 pcs of Fillet Whitting, 2 Oysters  comes with 2 large sides",
@@ -144,7 +144,7 @@
         },
         {
           "id": "20-pc-all-on-deck",
-          "name": "(20 Pc) All On Deck Platter 7 Shrimp, 7 Catfish Nuggets,  4 Gator Bites, 2 Oysters w/2 regular sides",
+          "name": "(20 pcs ) All On Deck Platter 7 Shrimp, 7 Catfish Nuggets,  4 Gator Bites, 2 Oysters w/2 regular sides",
           "icon": "fas fa-fish",
           "active": true,
           "description": "7 Shrimp, 7 Catfish Nuggets, 4 Gator Bites, and 2 Oysters comes with 2 regular sides",
@@ -154,7 +154,7 @@
         },
         {
           "id": "18-pcs-taste-it-all-platter",
-          "name": "(18) pcs Taste It All Platter 3 Shrimp, 3 Catfish Nuggets, 3 Oysters, 3 Scallops, 3 Gators,  3 Whitting Fillet Fish w/2 regular sides",
+          "name": "(18 pcs)  Taste It All Platter 3 Shrimp, 3 Catfish Nuggets, 3 Oysters, 3 Scallops, 3 Gators,  3 Whitting Fillet Fish w/2 regular sides",
           "icon": "fas fa-fish",
           "active": true,
           "description": "3 Shrimp, 3 Catfish Nuggs, 3 Oysters,  3 Scallops, 3 Gators,  3 Whitting Fillet Fish w/2 regular sides",
@@ -164,7 +164,7 @@
         },
         {
           "id": "12-pc-trio-platter",
-          "name": "(12 Pc ) Trio Platter 4 Shrimp, 4 Catfish Nuggets, 4 Gator Bites w/2 regular sides",
+          "name": "(12 pcs ) Trio Platter 4 Shrimp, 4 Catfish Nuggets, 4 Gator Bites w/2 regular sides",
           "icon": "fas fa-fish",
           "active": true,
           "description": "4 Shrimp, 4 Gator Bites, 4 Catfish Nuggets comes with 2 regular sides",
