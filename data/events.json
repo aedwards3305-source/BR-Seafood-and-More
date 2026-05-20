@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-05-13T04:51:11.834Z",
+  "lastUpdated": "2026-05-20T19:07:11.342Z",
   "events": [
     {
       "id": "all-you-can-eat-fish-fry",
@@ -23,7 +23,7 @@
       "description": "Fun, Food and Entertainment",
       "icon": "fas fa-people-group",
       "featured": false,
-      "active": true
+      "active": false
     },
     {
       "id": "street-fest",
@@ -35,7 +35,7 @@
       "description": "Fun, Food, Festival\n2 day event",
       "icon": "fas fa-people-group",
       "featured": false,
-      "active": true
+      "active": false
     },
     {
       "id": "health-dept-street-fest",
@@ -47,7 +47,7 @@
       "description": "",
       "icon": "fas fa-calendar-days",
       "featured": false,
-      "active": true
+      "active": false
     },
     {
       "id": "tioga-street-festival",
@@ -94,6 +94,18 @@
       "location": "Langdon  North Dakota",
       "description": "Fun, Food, and  Entertainment",
       "icon": "fas fa-people-group",
+      "featured": false,
+      "active": true
+    },
+    {
+      "id": "tioga-street-fest",
+      "title": "Tioga Street Fest",
+      "date": "2026-07-21",
+      "endDate": "2026-07-21",
+      "time": "5pm - 9pm",
+      "location": "Tioga North Dakota",
+      "description": "Fun, Food, and Entertainment",
+      "icon": "fas fa-calendar-days",
       "featured": false,
       "active": true
     }
