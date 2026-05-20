@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-05-13T04:49:30.398Z",
+  "lastUpdated": "2026-05-20T19:00:31.541Z",
   "settings": {
     "sidesIncluded": 2,
     "extraSidePrice": 3,
@@ -96,7 +96,7 @@
           "id": "2-pc-golden-fried-cajun-frog-legs",
           "name": "(2 ) Golden Fried  Cajun Frog Legs w/2  regular sides",
           "icon": "fas fa-fish",
-          "active": true,
+          "active": false,
           "description": "(2) of Hand breaded Golden Fried",
           "price": 22,
           "featured": false,
@@ -254,7 +254,7 @@
           "id": "baked-beans",
           "name": "Baked Beans",
           "icon": "fas fa-seedling",
-          "active": true
+          "active": false
         },
         {
           "id": "collard-greens",
@@ -278,7 +278,7 @@
           "id": "rice",
           "name": "Seasoned White Rice",
           "icon": "fas fa-bowl-rice",
-          "active": true
+          "active": false
         },
         {
           "id": "seasoned-fries",
