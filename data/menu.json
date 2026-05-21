@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-05-20T19:00:31.541Z",
+  "lastUpdated": "2026-05-21T21:56:44.450Z",
   "settings": {
     "sidesIncluded": 2,
     "extraSidePrice": 3,
@@ -66,7 +66,7 @@
           "id": "catfish-nuggets",
           "name": "(3 pc ) Golden Fried Whittings  Fillets w/2 regular sides",
           "icon": "fas fa-fish",
-          "active": true,
+          "active": false,
           "description": "golden fried hand breaded with 2 regular sides",
           "price": 18,
           "featured": false,
@@ -254,7 +254,7 @@
           "id": "baked-beans",
           "name": "Baked Beans",
           "icon": "fas fa-seedling",
-          "active": false
+          "active": true
         },
         {
           "id": "collard-greens",
