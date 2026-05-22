@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-05-21T21:56:44.450Z",
+  "lastUpdated": "2026-05-22T19:54:05.764Z",
   "settings": {
     "sidesIncluded": 2,
     "extraSidePrice": 3,
@@ -64,9 +64,9 @@
         },
         {
           "id": "catfish-nuggets",
-          "name": "(3 pc ) Golden Fried Whittings  Fillets w/2 regular sides",
+          "name": "(2 pc ) Golden Fried Whittings  Fillets w/2 regular sides",
           "icon": "fas fa-fish",
-          "active": false,
+          "active": true,
           "description": "golden fried hand breaded with 2 regular sides",
           "price": 18,
           "featured": false,
@@ -96,8 +96,8 @@
           "id": "2-pc-golden-fried-cajun-frog-legs",
           "name": "(2 ) Golden Fried  Cajun Frog Legs w/2  regular sides",
           "icon": "fas fa-fish",
-          "active": false,
-          "description": "(2) of Hand breaded Golden Fried",
+          "active": true,
+          "description": "(2)  pairs of Hand breaded Golden Fried",
           "price": 22,
           "featured": false,
           "badgeText": ""
@@ -278,7 +278,7 @@
           "id": "rice",
           "name": "Seasoned White Rice",
           "icon": "fas fa-bowl-rice",
-          "active": false
+          "active": true
         },
         {
           "id": "seasoned-fries",
