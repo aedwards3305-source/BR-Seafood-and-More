@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-05-23T22:48:33.649Z",
+  "lastUpdated": "2026-05-24T02:24:56.877Z",
   "settings": {
     "sidesIncluded": 2,
     "extraSidePrice": 3,
@@ -106,7 +106,7 @@
           "id": "2-pc-golden-fried-fillet-haddock",
           "name": "(6 pc) Golden Fried Scallops w/2 regular sides",
           "icon": "fas fa-fish",
-          "active": true,
+          "active": false,
           "description": "Hand breaded",
           "price": 18,
           "featured": false,
@@ -116,7 +116,7 @@
           "id": "6-pcs-golden-fried-oysters-with-2-regular-sides",
           "name": "(6 pcs) Golden Fried Oysters w/2  regular sides",
           "icon": "fas fa-fish",
-          "active": false,
+          "active": true,
           "description": "Hand Breaded Golden Fried",
           "price": 18,
           "featured": false,
@@ -126,7 +126,7 @@
           "id": "35pcs-enough-4-two-10-shrimp-10-catfish-nuggets-6-gator-2-fillet-whittings-4-scallops-2-frog-legs",
           "name": "(32 pcs) Enough 4 Two   8 Shrimp, 8 Catfish Nuggets, 6 Gator, 2 Fillet Whittings, 4 Sea Scallops, 4 Oysters w/2 Large Sides",
           "icon": "fas fa-fish",
-          "active": true,
+          "active": false,
           "description": "32 pcs of Golden Fried Seafood hand breaded with 2 Large side dishes",
           "price": 52,
           "featured": false,
@@ -156,7 +156,7 @@
           "id": "18-pcs-taste-it-all-platter",
           "name": "(18 pcs)  Taste It All Platter 3 Shrimp, 3 Catfish Nuggets, 3 Oysters, 3 Scallops, 3 Gators,  3 Whitting Fillet Fish w/2 regular sides",
           "icon": "fas fa-fish",
-          "active": true,
+          "active": false,
           "description": "3 Shrimp, 3 Catfish Nuggs, 3 Oysters,  3 Scallops, 3 Gators,  3 Whitting Fillet Fish w/2 regular sides",
           "price": 46,
           "featured": false,
@@ -254,7 +254,7 @@
           "id": "baked-beans",
           "name": "Baked Beans",
           "icon": "fas fa-seedling",
-          "active": true
+          "active": false
         },
         {
           "id": "collard-greens",
