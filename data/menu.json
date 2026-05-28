@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-05-27T19:54:08.142Z",
+  "lastUpdated": "2026-05-28T20:43:15.692Z",
   "settings": {
     "sidesIncluded": 2,
     "extraSidePrice": 3,
@@ -116,7 +116,7 @@
           "id": "6-pcs-golden-fried-oysters-with-2-regular-sides",
           "name": "(6 pcs) Golden Fried Oysters w/2  regular sides",
           "icon": "fas fa-fish",
-          "active": true,
+          "active": false,
           "description": "Hand Breaded Golden Fried",
           "price": 18,
           "featured": false,
@@ -124,7 +124,7 @@
         },
         {
           "id": "35pcs-enough-4-two-10-shrimp-10-catfish-nuggets-6-gator-2-fillet-whittings-4-scallops-2-frog-legs",
-          "name": "(32 pcs) Enough 4 Two   8 Shrimp, 8 Catfish Nuggets, 6 Gator, 2 Fillet Whittings, 4 Sea Scallops, 4 Oysters w/2 Large Sides",
+          "name": "(32 pcs) Enough 4 Two   10 Shrimp, 10 Catfish Nuggets, 6 Gator, 2 Fillet Whittings, 4 Sea Scallops,  w/2 Large Sides",
           "icon": "fas fa-fish",
           "active": true,
           "description": "32 pcs of Golden Fried Seafood hand breaded with 2 Large side dishes",
@@ -134,20 +134,20 @@
         },
         {
           "id": "macaroni-and-cheese",
-          "name": "(26 pcs ) Captains Platter 8 Shrimp, 8 Catfish  Nugs, 6 Gator Bites, 2 Fillet Whitting Fish, 2 Oysters, and 2 large Sides",
+          "name": "(26 pcs ) Captains Platter 8 Shrimp, 8 Catfish  Nugs, 6 Gator Bites, 2 Fillet Whitting Fish, 2 Frog Legs, and 2 large Sides",
           "icon": "fas fa-fish",
           "active": true,
-          "description": "8 shrimp, 6 Gator Bites, 8 Catfish Nuggets, 2 pcs of Fillet Whitting, 2 Oysters  comes with 2 large sides",
+          "description": "8 shrimp, 6 Gator Bites, 8 Catfish Nuggets, 2 pcs of Fillet Whitting, 2 Frog Legs  comes with 2 large sides",
           "price": 44,
           "featured": false,
           "badgeText": ""
         },
         {
           "id": "20-pc-all-on-deck",
-          "name": "(20 pcs ) All On Deck Platter 7 Shrimp, 7 Catfish Nuggets,  4 Gator Bites, 2 Oysters w/2 regular sides",
+          "name": "(20 pcs ) All On Deck Platter 8 Shrimp,  8 Catfish Nuggets,  4 Gator Bites, w/2 regular sides",
           "icon": "fas fa-fish",
           "active": true,
-          "description": "7 Shrimp, 7 Catfish Nuggets, 4 Gator Bites, and 2 Oysters comes with 2 regular sides",
+          "description": "8 Shrimp, 8 Catfish Nuggets, 4 Gator Bites,  comes with 2 regular sides",
           "price": 38,
           "featured": false,
           "badgeText": ""
@@ -254,7 +254,7 @@
           "id": "baked-beans",
           "name": "Baked Beans",
           "icon": "fas fa-seedling",
-          "active": false
+          "active": true
         },
         {
           "id": "collard-greens",
