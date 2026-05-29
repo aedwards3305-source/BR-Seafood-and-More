@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-05-28T22:22:48.382Z",
+  "lastUpdated": "2026-05-29T18:08:43.114Z",
   "settings": {
     "sidesIncluded": 2,
     "extraSidePrice": 3,
@@ -186,7 +186,7 @@
           "id": "shrimp-gumbo-over-rice",
           "name": "Crawfish/Crabmeat Gumbo over Rice",
           "icon": "fas fa-bowl-food",
-          "active": true,
+          "active": false,
           "description": "Large Bowl Homemade Cajun Crawfish/Crabmeat over Rice",
           "price": 14,
           "featured": false,
@@ -213,6 +213,16 @@
           "badgeText": ""
         },
         {
+          "id": "snacker-6-pcs-shrimp-with-fries-only",
+          "name": "Snacker (6) pcs Shrimp with fries only",
+          "icon": "fas fa-fish",
+          "active": false,
+          "description": "golden fried hand breaded",
+          "price": 14,
+          "featured": false,
+          "badgeText": ""
+        },
+        {
           "id": "snacker-2-pcs-catfish-fillet-with-fries-only",
           "name": "Snacker (2) pcs Catfish Fillet with fries only",
           "icon": "fas fa-fish",
@@ -225,16 +235,6 @@
         {
           "id": "snacker-2-pcs-whitting-fillet-with-fries-only",
           "name": "Snacker (2) pcs Whitting Fillet with fries only",
-          "icon": "fas fa-fish",
-          "active": false,
-          "description": "golden fried hand breaded",
-          "price": 14,
-          "featured": false,
-          "badgeText": ""
-        },
-        {
-          "id": "snacker-6-pcs-shrimp-with-fries-only",
-          "name": "Snacker (6) pcs Shrimp with fries only",
           "icon": "fas fa-fish",
           "active": false,
           "description": "golden fried hand breaded",
