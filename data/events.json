@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-05-20T19:07:11.342Z",
+  "lastUpdated": "2026-05-29T17:59:32.430Z",
   "events": [
     {
       "id": "all-you-can-eat-fish-fry",
@@ -10,8 +10,8 @@
       "location": "At The Spot ( 6 2nd  St NE Minot 58703 )  East side station",
       "description": "All- you -can -eat  Fish Fry & Fixin's\n Golden Fried Whiting and Catfish Fillets  served with Collard Greens, Baked Beans, Coleslaw, Corn On The Cob\n$30 per person All You Can Eat\n$25 per person Take out Special 2 piece with 2 sides\nTickets will be available At EVENTBRITECOM, THE SPOT, & B & R SEAFOOD & MORE\nThank You",
       "icon": "fas fa-building",
-      "featured": true,
-      "active": true
+      "featured": false,
+      "active": false
     },
     {
       "id": "street-fest",
@@ -106,6 +106,18 @@
       "location": "Tioga North Dakota",
       "description": "Fun, Food, and Entertainment",
       "icon": "fas fa-calendar-days",
+      "featured": false,
+      "active": true
+    },
+    {
+      "id": "sips-summer-event",
+      "title": "Sips Summer Event",
+      "date": "2026-06-13",
+      "endDate": "2026-06-13",
+      "time": "2pm",
+      "location": "Downtown Minot",
+      "description": "A Taste Of Minot \nEat , Sip, Explore \nTickets on Sale contact",
+      "icon": "fas fa-people-group",
       "featured": false,
       "active": true
     }
