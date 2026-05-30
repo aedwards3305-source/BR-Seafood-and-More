@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-05-29T20:14:02.311Z",
+  "lastUpdated": "2026-05-30T00:56:56.721Z",
   "settings": {
     "sidesIncluded": 2,
     "extraSidePrice": 3,
@@ -302,7 +302,7 @@
           "id": "mac-cheese-5-00",
           "name": "Mac/Cheese  $3.00 extra",
           "icon": "fas fa-bowl-food",
-          "active": true
+          "active": false
         },
         {
           "id": "cornbread",
@@ -328,7 +328,7 @@
           "id": "macaroni-and-cheese",
           "name": "Macaroni and Cheese",
           "icon": "fas fa-bowl-food",
-          "active": true,
+          "active": false,
           "price": 5
         }
       ]
