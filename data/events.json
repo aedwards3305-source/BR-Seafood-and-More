@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-05-29T18:02:50.765Z",
+  "lastUpdated": "2026-06-01T15:49:47.398Z",
   "events": [
     {
       "id": "all-you-can-eat-fish-fry",
@@ -48,6 +48,18 @@
       "icon": "fas fa-calendar-days",
       "featured": false,
       "active": false
+    },
+    {
+      "id": "sips-of-summer",
+      "title": "Sips Of Summer",
+      "date": "2026-06-13",
+      "endDate": "2026-06-13",
+      "time": "4 pm",
+      "location": "Downtown Minot",
+      "description": "A walking food tour  please go on Facebook at Sips of Summer",
+      "icon": "fas fa-calendar-days",
+      "featured": false,
+      "active": true
     },
     {
       "id": "tioga-street-festival",
@@ -106,18 +118,6 @@
       "location": "Tioga North Dakota",
       "description": "Fun, Food, and Entertainment",
       "icon": "fas fa-calendar-days",
-      "featured": false,
-      "active": true
-    },
-    {
-      "id": "sips-summer-event",
-      "title": "Sips Summer Event",
-      "date": "2026-06-13",
-      "endDate": "2026-06-13",
-      "time": "2pm",
-      "location": "Downtown Minot",
-      "description": "A Taste Of Minot \nEat , Sip, Explore \nTickets on Sale contact Taste Of Minot on Facebook",
-      "icon": "fas fa-people-group",
       "featured": false,
       "active": true
     }
