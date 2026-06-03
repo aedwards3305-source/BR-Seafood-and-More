@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-01T15:13:04.767Z",
+  "lastUpdated": "2026-06-03T21:10:36.569Z",
   "settings": {
     "sidesIncluded": 2,
     "extraSidePrice": 3,
@@ -118,7 +118,7 @@
           "icon": "fas fa-fish",
           "active": true,
           "description": "Hand Breaded Golden Fried",
-          "price": 18,
+          "price": 22,
           "featured": false,
           "badgeText": ""
         },
