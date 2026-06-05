@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-05T00:18:21.532Z",
+  "lastUpdated": "2026-06-05T19:21:06.181Z",
   "settings": {
     "sidesIncluded": 2,
     "extraSidePrice": 3,
@@ -66,7 +66,7 @@
           "id": "catfish-nuggets",
           "name": "(2 pc ) Golden Fried Whittings  Fillets w/2 regular sides",
           "icon": "fas fa-fish",
-          "active": false,
+          "active": true,
           "description": "golden fried hand breaded with 2 regular sides",
           "price": 18,
           "featured": false,
@@ -76,7 +76,7 @@
           "id": "catfish-2pc",
           "name": "( 2 Pc ) Golden Fried Catfish Fillets w/2 regular sides",
           "icon": "fas fa-fish",
-          "active": false,
+          "active": true,
           "description": "2 pieces of golden fried catfish fillet comes with 2 regular sides",
           "price": 18,
           "featured": false,
@@ -134,10 +134,10 @@
         },
         {
           "id": "macaroni-and-cheese",
-          "name": "(28 pcs ) Captains B Platter 10 Shrimp, 10 Catfish  Nugs, 6 Gator Bites, 2 Fillet Whitting Fish, and 2 large Sides",
+          "name": "(26 pcs ) Captains B Platter 10 Shrimp, 10 Catfish  Nugs, 4 Gator Bites, 2 Fillet Whitting Fish, and 2 large Sides",
           "icon": "fas fa-fish",
           "active": true,
-          "description": "10 shrimp, 6 Gator Bites,  10 Catfish Nuggets, 2 pcs of Fillet Whitting,  comes with 2 large sides",
+          "description": "10 shrimp, 4 Gator Bites,  10 Catfish Nuggets, 2 pcs of Fillet Whitting,  comes with 2 large sides",
           "price": 44,
           "featured": false,
           "badgeText": ""
@@ -154,7 +154,7 @@
         },
         {
           "id": "18-pcs-taste-it-all-platter",
-          "name": "(18 pcs)  Taste It All Platter 4 Shrimp, 4 Catfish Nuggets, 4 Scallops  2 Gators,  2 Whitting Fillet Fish 2 Oysters w/2 regular sides",
+          "name": "(18 pcs)  Taste It All Platter 4 Shrimp, 4 Catfish Nuggets, 4 Scallops  2 Gators,  2 Whitting Fillet Fish, 2 Oysters w/2 regular sides",
           "icon": "fas fa-fish",
           "active": true,
           "description": "4 Shrimp, 4 Catfish Nuggs, 4 Scallops, 2 Gators, Bites, and   2 Whitting Fillet Fish 2 Oysters w/2 regular sides",
@@ -188,8 +188,8 @@
           "icon": "fas fa-bowl-food",
           "active": true,
           "description": "Large Bowl Homemade Cajun Crawfish/Crabmeat over Rice",
-          "price": 14,
-          "featured": false,
+          "price": 9,
+          "featured": true,
           "badgeText": ""
         },
         {
