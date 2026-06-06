@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-06T20:07:46.822Z",
+  "lastUpdated": "2026-06-06T20:09:07.275Z",
   "settings": {
     "sidesIncluded": 2,
     "extraSidePrice": 3,
@@ -269,15 +269,15 @@
           "active": true
         },
         {
-          "id": "hush-puppies",
-          "name": "Hush Puppies",
-          "icon": "fas fa-bread-slice",
-          "active": false
-        },
-        {
           "id": "rice",
           "name": "Seasoned White Rice",
           "icon": "fas fa-bowl-rice",
+          "active": true
+        },
+        {
+          "id": "cornbread",
+          "name": "Cornbread",
+          "icon": "fas fa-seedling",
           "active": true
         },
         {
@@ -285,6 +285,24 @@
           "name": "Seasoned Fries",
           "icon": "fas fa-french-fries",
           "active": true
+        },
+        {
+          "id": "mash-potatoes",
+          "name": "Mash Potatoes",
+          "icon": "fas fa-bowl-food",
+          "active": true
+        },
+        {
+          "id": "mac-cheese-5-00",
+          "name": "Mac/Cheese  $3.00 extra",
+          "icon": "fas fa-bowl-food",
+          "active": true
+        },
+        {
+          "id": "hush-puppies",
+          "name": "Hush Puppies",
+          "icon": "fas fa-bread-slice",
+          "active": false
         },
         {
           "id": "coleslaw",
@@ -297,24 +315,6 @@
           "name": "Green Beans",
           "icon": "fas fa-seedling",
           "active": false
-        },
-        {
-          "id": "mac-cheese-5-00",
-          "name": "Mac/Cheese  $3.00 extra",
-          "icon": "fas fa-bowl-food",
-          "active": true
-        },
-        {
-          "id": "cornbread",
-          "name": "Cornbread",
-          "icon": "fas fa-seedling",
-          "active": true
-        },
-        {
-          "id": "mash-potatoes",
-          "name": "Mash Potatoes",
-          "icon": "fas fa-bowl-food",
-          "active": true
         }
       ]
     },
