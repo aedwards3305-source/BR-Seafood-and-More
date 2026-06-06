@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-06T20:18:17.051Z",
+  "lastUpdated": "2026-06-06T20:22:09.213Z",
   "settings": {
     "sidesIncluded": 2,
     "extraSidePrice": 3,
@@ -167,7 +167,7 @@
           "name": "Crawfish/Crabmeat Gumbo over Rice",
           "icon": "fas fa-bowl-food",
           "active": true,
-          "description": "Large Bowl Homemade Cajun Crawfish/Crabmeat over Rice",
+          "description": "Bowl Homemade Cajun Crawfish/Crabmeat over Rice",
           "price": 9,
           "featured": true,
           "badgeText": ""
