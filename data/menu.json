@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-06T20:09:07.275Z",
+  "lastUpdated": "2026-06-06T20:09:40.813Z",
   "settings": {
     "sidesIncluded": 2,
     "extraSidePrice": 3,
@@ -328,7 +328,7 @@
           "id": "macaroni-and-cheese",
           "name": "Macaroni and Cheese",
           "icon": "fas fa-bowl-food",
-          "active": false,
+          "active": true,
           "price": 5
         }
       ]
