@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-06T20:22:50.571Z",
+  "lastUpdated": "2026-06-11T21:35:45.883Z",
   "settings": {
     "sidesIncluded": 2,
     "extraSidePrice": 3,
@@ -96,7 +96,7 @@
           "id": "2-pc-golden-fried-fillet-haddock",
           "name": "(6 pc) Golden Fried Scallops w/2 regular sides",
           "icon": "fas fa-fish",
-          "active": true,
+          "active": false,
           "description": "Hand breaded",
           "price": 18,
           "featured": false,
@@ -290,7 +290,7 @@
           "id": "mash-potatoes",
           "name": "Mash Potatoes",
           "icon": "fas fa-bowl-food",
-          "active": true
+          "active": false
         },
         {
           "id": "mac-cheese-5-00",
