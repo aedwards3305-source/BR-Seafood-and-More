@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-12T20:20:05.730Z",
+  "lastUpdated": "2026-06-12T20:21:32.461Z",
   "settings": {
     "sidesIncluded": 2,
     "extraSidePrice": 3,
@@ -83,32 +83,22 @@
           "badgeText": ""
         },
         {
-          "id": "6-sea-scallops",
-          "name": "(8) Gator Bites w/2 regular sides",
-          "icon": "fas fa-fish",
-          "active": true,
-          "description": "Golden Fried hand breaded comes with 2 regular sides",
-          "price": 26,
-          "featured": false,
-          "badgeText": ""
-        },
-        {
-          "id": "2-pc-golden-fried-fillet-haddock",
-          "name": "(6 pc) Golden Fried Scallops w/2 regular sides",
-          "icon": "fas fa-fish",
-          "active": false,
-          "description": "Hand breaded",
-          "price": 18,
-          "featured": false,
-          "badgeText": ""
-        },
-        {
           "id": "6-pcs-golden-fried-oysters-with-2-regular-sides",
           "name": "(6 pcs) Golden Fried Oysters w/2  regular sides",
           "icon": "fas fa-fish",
           "active": true,
           "description": "Hand Breaded Golden Fried",
           "price": 22,
+          "featured": false,
+          "badgeText": ""
+        },
+        {
+          "id": "6-sea-scallops",
+          "name": "(8) Gator Bites w/2 regular sides",
+          "icon": "fas fa-fish",
+          "active": true,
+          "description": "Golden Fried hand breaded comes with 2 regular sides",
+          "price": 26,
           "featured": false,
           "badgeText": ""
         },
@@ -159,6 +149,16 @@
           "active": true,
           "description": "4 Shrimp, 4 Gator Bites, 4 Catfish Nuggets comes with 2 regular sides",
           "price": 32,
+          "featured": false,
+          "badgeText": ""
+        },
+        {
+          "id": "2-pc-golden-fried-fillet-haddock",
+          "name": "(6 pc) Golden Fried Scallops w/2 regular sides",
+          "icon": "fas fa-fish",
+          "active": false,
+          "description": "Hand breaded",
+          "price": 18,
           "featured": false,
           "badgeText": ""
         },
