@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-11T21:37:03.929Z",
+  "lastUpdated": "2026-06-12T20:20:05.730Z",
   "settings": {
     "sidesIncluded": 2,
     "extraSidePrice": 3,
@@ -114,7 +114,7 @@
         },
         {
           "id": "35pcs-enough-4-two-10-shrimp-10-catfish-nuggets-6-gator-2-fillet-whittings-4-scallops-2-frog-legs",
-          "name": "(30 pcs) Enough 4 Two Platter   8 Shrimp, 8 Catfish Nuggets, 6 Gator, 2 Fillet Whittings, 4 Sea Scallops, 2 Oysters w/2 Large Sides",
+          "name": "(30 pcs) Enough 4 Two Platter   10 Shrimp, 10 Catfish Nuggets, 6 Gator, 2 Fillet Whittings, 2 Oysters w/2 Large Sides",
           "icon": "fas fa-fish",
           "active": true,
           "description": "30 pcs of Golden Fried Seafood hand breaded with 2 Large side dishes",
@@ -144,10 +144,10 @@
         },
         {
           "id": "18-pcs-taste-it-all-platter",
-          "name": "(18 pcs)  Taste It All Platter 4 Shrimp, 4 Catfish Nuggets, 4 Scallops  2 Gators,  2 Whitting Fillet Fish, 2 Oysters w/2 regular sides",
+          "name": "(18 pcs)  Taste It All Platter 6 Shrimp, 6 Catfish Nuggets, 2 Gators,  2 Whitting Fillet Fish, 2 Oysters w/2 regular sides",
           "icon": "fas fa-fish",
           "active": true,
-          "description": "4 Shrimp, 4 Catfish Nuggs, 4 Scallops, 2 Gators, Bites, and   2 Whitting Fillet Fish 2 Oysters w/2 regular sides",
+          "description": "6 Shrimp, 6 Catfish Nuggs,  2 Gators, Bites, and   2 Whitting Fillet Fish 2 Oysters w/2 regular sides",
           "price": 46,
           "featured": false,
           "badgeText": ""
@@ -290,7 +290,7 @@
           "id": "mash-potatoes",
           "name": "Mash Potatoes",
           "icon": "fas fa-bowl-food",
-          "active": false
+          "active": true
         },
         {
           "id": "mac-cheese-5-00",
