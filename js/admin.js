@@ -568,148 +568,156 @@ const Admin = (() => {
     });
   }
 
-  /* ========== MENU PDF EXPORT ========== */
+  /* ========== MENU PRINT / SAVE AS PDF ========== */
 
-  function buildPrintableMenu() {
-    const el = document.createElement('div');
-    el.style.cssText = 'font-family: Poppins, Arial, sans-serif; color: #1a1a2e; padding: 40px 50px; background: #fff; width: 700px;';
+  // Builds a complete, self-contained HTML document for printing the menu.
+  // Renders active items only, mirroring the public page, and embeds a print
+  // stylesheet so the browser's print dialog (Save as PDF) produces crisp,
+  // vector, brand-matched output.
+  function buildPrintableMenuDoc() {
+    const esc = MenuRenderer.escapeHtml;
+    const price = MenuRenderer.formatPrice;
 
-    let html = '';
+    let body = '';
 
     // Header
-    html += '<div style="text-align:center; margin-bottom: 28px;">';
-    html += '<h1 style="font-family: Playfair Display, Georgia, serif; font-size: 32px; margin: 0; color: #0a1628; letter-spacing: 1px;">B&R Seafood and More</h1>';
-    html += '<p style="color: #6b7280; font-size: 14px; margin: 6px 0 0;">Golden Fried Seafood &amp; Southern Sides</p>';
-    html += '<div style="width: 60px; height: 3px; background: #d4a44c; margin: 16px auto 0;"></div>';
-    html += '</div>';
+    body += '<header class="m-head">';
+    body += '<h1>B&amp;R Seafood and More</h1>';
+    body += '<p class="m-tag">Golden Fried Seafood &amp; Southern Sides</p>';
+    body += '<div class="m-rule"></div>';
+    body += '</header>';
 
-    // Render each category
     menuData.categories.forEach(category => {
       const activeItems = category.items.filter(i => i.active);
       if (activeItems.length === 0) return;
 
-      const isDinners = category.id === 'dinners';
+      body += '<section class="m-cat">';
+      body += '<div class="m-cat-head">';
+      body += '<h2>' + esc(category.name) + '</h2>';
+      if (category.badge) body += '<span class="m-badge">' + esc(category.badge) + '</span>';
+      body += '</div>';
 
-      // Category header
-      html += '<div style="margin-bottom: 24px;">';
-      html += '<div style="display: flex; align-items: center; justify-content: space-between; border-bottom: 2px solid #0d9488; padding-bottom: 8px; margin-bottom: 16px;">';
-      html += '<h2 style="font-family: Playfair Display, Georgia, serif; font-size: 22px; margin: 0; color: #0a1628;">' + MenuRenderer.escapeHtml(category.name) + '</h2>';
-      html += '<span style="background: #0d9488; color: #fff; padding: 4px 14px; border-radius: 20px; font-size: 12px; font-weight: 600;">' + MenuRenderer.escapeHtml(category.badge) + '</span>';
-      html += '</div>';
-
-      if (isDinners) {
-        // Dinner items with prices
+      if (category.id === 'dinners') {
+        body += '<div class="m-dinners">';
         activeItems.forEach(item => {
-          const star = item.featured ? '<span style="color: #d4a44c; margin-right: 6px;">&#9733;</span>' : '';
-          const badge = item.featured && item.badgeText
-            ? '<span style="background: #d4a44c; color: #fff; padding: 2px 10px; border-radius: 12px; font-size: 11px; font-weight: 600; margin-left: 8px;">' + MenuRenderer.escapeHtml(item.badgeText) + '</span>'
+          const star = item.featured ? '<span class="m-star">&#9733;</span>' : '';
+          const tag = item.featured && item.badgeText
+            ? '<span class="m-item-badge">' + esc(item.badgeText) + '</span>'
             : '';
-          html += '<div style="margin-bottom: 14px; padding-bottom: 14px; border-bottom: 1px solid #e5e7eb;">';
-          html += '<div style="display: flex; justify-content: space-between; align-items: baseline;">';
-          html += '<div>' + star + '<span style="font-weight: 600; font-size: 15px;">' + MenuRenderer.escapeHtml(item.name) + '</span>' + badge + '</div>';
-          html += '<span style="font-weight: 700; color: #0d9488; font-size: 16px; white-space: nowrap; margin-left: 12px;">' + MenuRenderer.formatPrice(item.price) + '</span>';
-          html += '</div>';
+          body += '<div class="m-item">';
+          body += '<div class="m-item-row">';
+          body += '<div class="m-item-name">' + star + esc(item.name) + tag + '</div>';
+          body += '<span class="m-item-price">' + price(item.price) + '</span>';
+          body += '</div>';
           if (item.description) {
-            html += '<p style="margin: 4px 0 0; color: #6b7280; font-size: 13px;">' + MenuRenderer.escapeHtml(item.description) + '</p>';
+            body += '<p class="m-item-desc">' + esc(item.description) + '</p>';
           }
-          html += '</div>';
+          body += '</div>';
         });
+        body += '</div>';
       } else if (category.id === 'specialty-sides') {
-        // Specialty sides with prices
-        html += '<div style="display: flex; flex-wrap: wrap; gap: 10px;">';
+        body += '<div class="m-chips">';
         activeItems.forEach(item => {
-          html += '<span style="background: #f3f4f6; padding: 8px 16px; border-radius: 8px; font-size: 14px; font-weight: 500;">'
-            + MenuRenderer.escapeHtml(item.name)
-            + ' <span style="color: #0d9488; font-weight: 700; margin-left: 6px;">' + MenuRenderer.formatPrice(item.price) + '</span>'
-            + '</span>';
+          body += '<span class="m-chip">' + esc(item.name)
+            + ' <span class="m-chip-price">' + price(item.price) + '</span></span>';
         });
-        html += '</div>';
+        body += '</div>';
       } else {
-        // Sides as compact grid
-        html += '<div style="display: flex; flex-wrap: wrap; gap: 10px;">';
+        body += '<div class="m-chips">';
         activeItems.forEach(item => {
-          html += '<span style="background: #f3f4f6; padding: 8px 16px; border-radius: 8px; font-size: 14px; font-weight: 500;">' + MenuRenderer.escapeHtml(item.name) + '</span>';
+          body += '<span class="m-chip">' + esc(item.name) + '</span>';
         });
-        html += '</div>';
+        body += '</div>';
       }
 
-      html += '</div>';
+      body += '</section>';
     });
 
     // Menu note
     if (menuData.settings && menuData.settings.menuNote) {
-      html += '<div style="margin-top: 20px; padding: 14px 18px; background: #f9fafb; border-left: 4px solid #d4a44c; border-radius: 4px; font-size: 13px; color: #6b7280;">';
-      html += MenuRenderer.escapeHtml(menuData.settings.menuNote);
-      html += '</div>';
+      body += '<div class="m-note">' + esc(menuData.settings.menuNote) + '</div>';
     }
 
     // Footer
-    html += '<div style="text-align: center; margin-top: 28px; padding-top: 16px; border-top: 1px solid #e5e7eb;">';
-    html += '<p style="font-size: 12px; color: #9ca3af; margin: 0;">B&R Seafood and More &bull; 6 2nd St NE, Minot, ND 58703 &bull; (701) 818-3664</p>';
-    html += '</div>';
+    body += '<footer class="m-foot">B&amp;R Seafood and More &bull; '
+      + '6 2nd St NE, Minot, ND 58703 &bull; (701) 818-3664</footer>';
 
-    el.innerHTML = html;
-    return el;
+    return '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">'
+      + '<title>B&amp;R Seafood Menu</title>'
+      + '<link rel="preconnect" href="https://fonts.googleapis.com">'
+      + '<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>'
+      + '<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">'
+      + '<style>' + PRINT_MENU_CSS + '</style></head><body>' + body + '</body></html>';
   }
 
-  async function downloadMenuPdf() {
-    if (!menuData) {
-      showToast('No menu data to export', 'error');
+  const PRINT_MENU_CSS = [
+    '@page { size: letter portrait; margin: 0.5in; }',
+    '* { box-sizing: border-box; -webkit-print-color-adjust: exact; print-color-adjust: exact; }',
+    'body { font-family: "Poppins", system-ui, sans-serif; color: #0a1628; margin: 0; }',
+    '.m-head { text-align: center; margin-bottom: 24px; }',
+    '.m-head h1 { font-family: "Playfair Display", Georgia, serif; font-size: 30px; margin: 0; color: #0a1628; letter-spacing: .5px; }',
+    '.m-tag { color: #6b7280; font-size: 13px; margin: 6px 0 0; }',
+    '.m-rule { width: 60px; height: 3px; background: #f59e0b; margin: 14px auto 0; }',
+    '.m-cat { margin-bottom: 22px; break-inside: avoid; }',
+    '.m-cat-head { display: flex; align-items: center; justify-content: space-between; border-bottom: 2px solid #0d9488; padding-bottom: 7px; margin-bottom: 14px; }',
+    '.m-cat-head h2 { font-family: "Playfair Display", Georgia, serif; font-size: 21px; margin: 0; color: #0a1628; }',
+    '.m-badge { background: #0d9488; color: #fff; padding: 4px 13px; border-radius: 20px; font-size: 11px; font-weight: 600; white-space: nowrap; }',
+    '.m-item { margin-bottom: 12px; padding-bottom: 12px; border-bottom: 1px solid #e5e7eb; break-inside: avoid; }',
+    '.m-item-row { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; }',
+    '.m-item-name { font-weight: 600; font-size: 14px; }',
+    '.m-star { color: #f59e0b; margin-right: 6px; }',
+    '.m-item-badge { background: #f59e0b; color: #fff; padding: 2px 9px; border-radius: 12px; font-size: 10px; font-weight: 600; margin-left: 8px; white-space: nowrap; }',
+    '.m-item-price { font-weight: 700; color: #0d9488; font-size: 15px; white-space: nowrap; }',
+    '.m-item-desc { margin: 4px 0 0; color: #6b7280; font-size: 12px; }',
+    '.m-chips { display: flex; flex-wrap: wrap; gap: 9px; }',
+    '.m-chip { background: #f3f4f6; padding: 7px 15px; border-radius: 8px; font-size: 13px; font-weight: 500; break-inside: avoid; }',
+    '.m-chip-price { color: #0d9488; font-weight: 700; margin-left: 5px; }',
+    '.m-note { margin-top: 18px; padding: 13px 17px; background: #f9fafb; border-left: 4px solid #f59e0b; border-radius: 4px; font-size: 12px; color: #6b7280; break-inside: avoid; }',
+    '.m-foot { text-align: center; margin-top: 26px; padding-top: 15px; border-top: 1px solid #e5e7eb; font-size: 11px; color: #9ca3af; }'
+  ].join('\n');
+
+  // Opens the browser print dialog with a brand-styled menu built from the
+  // current (in-memory) menu data, so the admin can Save as PDF or print.
+  function printMenu() {
+    if (!menuData || !menuData.categories) {
+      showToast('No menu data to print', 'error');
       return;
     }
 
-    showToast('Generating PDF...', '');
+    const iframe = document.createElement('iframe');
+    iframe.setAttribute('aria-hidden', 'true');
+    iframe.style.cssText = 'position: fixed; right: 0; bottom: 0; width: 0; height: 0; border: 0;';
+    document.body.appendChild(iframe);
 
-    const printEl = buildPrintableMenu();
-    document.body.appendChild(printEl);
-
-    const opt = {
-      margin: [0.4, 0.5],
-      filename: 'BR-Seafood-Menu.pdf',
-      image: { type: 'jpeg', quality: 0.98 },
-      html2canvas: { scale: 2, useCORS: true },
-      jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' }
+    let printed = false;
+    const triggerPrint = () => {
+      if (printed) return;
+      printed = true;
+      const win = iframe.contentWindow;
+      win.focus();
+      win.print();
     };
 
-    try {
-      const pdfBlob = await html2pdf().set(opt).from(printEl).outputPdf('blob');
-      document.body.removeChild(printEl);
+    const cleanup = () => {
+      // Remove after the dialog is dismissed; guard against premature removal.
+      if (iframe.parentNode) iframe.parentNode.removeChild(iframe);
+    };
 
-      // Try File System Access API for save-location picker
-      if (window.showSaveFilePicker) {
-        try {
-          const handle = await window.showSaveFilePicker({
-            suggestedName: 'BR-Seafood-Menu.pdf',
-            types: [{
-              description: 'PDF Document',
-              accept: { 'application/pdf': ['.pdf'] }
-            }]
-          });
-          const writable = await handle.createWritable();
-          await writable.write(pdfBlob);
-          await writable.close();
-          showToast('Menu PDF saved!', 'success');
-          return;
-        } catch (e) {
-          if (e.name === 'AbortError') return; // User cancelled
-          // Fall through to regular download
-        }
-      }
+    iframe.onload = () => {
+      const win = iframe.contentWindow;
+      win.addEventListener('afterprint', cleanup);
+      const fontsReady = win.document.fonts ? win.document.fonts.ready : Promise.resolve();
+      // Wait for brand fonts, but never block the dialog indefinitely.
+      Promise.race([
+        fontsReady,
+        new Promise(resolve => win.setTimeout(resolve, 1500))
+      ]).then(triggerPrint);
+    };
 
-      // Fallback: regular download
-      const url = URL.createObjectURL(pdfBlob);
-      const a = document.createElement('a');
-      a.href = url;
-      a.download = 'BR-Seafood-Menu.pdf';
-      document.body.appendChild(a);
-      a.click();
-      document.body.removeChild(a);
-      URL.revokeObjectURL(url);
-      showToast('Menu PDF downloaded!', 'success');
-    } catch (err) {
-      document.body.removeChild(printEl);
-      showToast('PDF generation failed', 'error');
-    }
+    const doc = iframe.contentWindow.document;
+    doc.open();
+    doc.write(buildPrintableMenuDoc());
+    doc.close();
   }
 
   /* ================================================================
@@ -1044,7 +1052,7 @@ const Admin = (() => {
     document.getElementById('publishMenuBtn')?.addEventListener('click', () => publishToSite('menu'));
     document.getElementById('downloadBtn')?.addEventListener('click', downloadMenuJson);
     document.getElementById('copyBtn')?.addEventListener('click', copyJsonToClipboard);
-    document.getElementById('downloadMenuPdfBtn')?.addEventListener('click', downloadMenuPdf);
+    document.getElementById('printMenuBtn')?.addEventListener('click', printMenu);
 
     // Modal events
     document.getElementById('itemForm')?.addEventListener('submit', (e) => {
