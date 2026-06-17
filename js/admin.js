@@ -651,9 +651,11 @@ const Admin = (() => {
   }
 
   const PRINT_MENU_CSS = [
-    '@page { size: letter portrait; margin: 0.5in; }',
+    // margin:0 leaves no room for the browser-injected date/title header and
+    // URL/page footer, so they are suppressed. Page spacing comes from body padding.
+    '@page { size: letter portrait; margin: 0; }',
     '* { box-sizing: border-box; -webkit-print-color-adjust: exact; print-color-adjust: exact; }',
-    'body { font-family: "Poppins", system-ui, sans-serif; color: #0a1628; margin: 0; }',
+    'body { font-family: "Poppins", system-ui, sans-serif; color: #0a1628; margin: 0; padding: 0.5in; }',
     '.m-head { text-align: center; margin-bottom: 24px; }',
     '.m-head h1 { font-family: "Playfair Display", Georgia, serif; font-size: 30px; margin: 0; color: #0a1628; letter-spacing: .5px; }',
     '.m-tag { color: #6b7280; font-size: 13px; margin: 6px 0 0; }',
