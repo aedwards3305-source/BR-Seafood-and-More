@@ -658,8 +658,8 @@ const Admin = (() => {
     '.m-head h1 { font-family: "Playfair Display", Georgia, serif; font-size: 30px; margin: 0; color: #0a1628; letter-spacing: .5px; }',
     '.m-tag { color: #6b7280; font-size: 13px; margin: 6px 0 0; }',
     '.m-rule { width: 60px; height: 3px; background: #f59e0b; margin: 14px auto 0; }',
-    '.m-cat { margin-bottom: 22px; break-inside: avoid; }',
-    '.m-cat-head { display: flex; align-items: center; justify-content: space-between; border-bottom: 2px solid #0d9488; padding-bottom: 7px; margin-bottom: 14px; }',
+    '.m-cat { margin-bottom: 22px; }',
+    '.m-cat-head { display: flex; align-items: center; justify-content: space-between; border-bottom: 2px solid #0d9488; padding-bottom: 7px; margin-bottom: 14px; break-inside: avoid; break-after: avoid; }',
     '.m-cat-head h2 { font-family: "Playfair Display", Georgia, serif; font-size: 21px; margin: 0; color: #0a1628; }',
     '.m-badge { background: #0d9488; color: #fff; padding: 4px 13px; border-radius: 20px; font-size: 11px; font-weight: 600; white-space: nowrap; }',
     '.m-item { margin-bottom: 12px; padding-bottom: 12px; border-bottom: 1px solid #e5e7eb; break-inside: avoid; }',
@@ -684,9 +684,13 @@ const Admin = (() => {
       return;
     }
 
+    // The iframe must have a real (non-collapsed) layout box, or Chromium
+    // prints blank pages. Give it letter width and position it off-screen so
+    // the user never sees it; its height is set to the full content height
+    // once the document loads so the whole menu is laid out for printing.
     const iframe = document.createElement('iframe');
     iframe.setAttribute('aria-hidden', 'true');
-    iframe.style.cssText = 'position: fixed; right: 0; bottom: 0; width: 0; height: 0; border: 0;';
+    iframe.style.cssText = 'position: fixed; left: -10000px; top: 0; width: 8.5in; height: 11in; border: 0; background: #fff;';
     document.body.appendChild(iframe);
 
     let printed = false;
@@ -705,6 +709,10 @@ const Admin = (() => {
 
     iframe.onload = () => {
       const win = iframe.contentWindow;
+      // Expand the iframe box to the full content height so every page of a
+      // multi-page menu is laid out and rendered into the print job.
+      const contentHeight = win.document.documentElement.scrollHeight;
+      if (contentHeight) iframe.style.height = contentHeight + 'px';
       win.addEventListener('afterprint', cleanup);
       const fontsReady = win.document.fonts ? win.document.fonts.ready : Promise.resolve();
       // Wait for brand fonts, but never block the dialog indefinitely.
