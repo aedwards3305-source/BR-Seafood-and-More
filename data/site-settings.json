@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-12T20:13:33.095Z",
+  "lastUpdated": "2026-06-17T21:03:33.868Z",
   "contact": {
     "phone": "(701) 818-3664",
     "phoneRaw": "7018183664",
@@ -55,8 +55,8 @@
     ]
   },
   "announcement": {
-    "enabled": false,
-    "message": "",
+    "enabled": true,
+    "message": "Hello,\nWe will be closed today Wednesday June 17th due to an event we worked yesterday. \nToday we are waiting on supplies, we will re-open tomorrow Thursday June 18th at 5pm .\nThank you for your understanding and support.",
     "type": "urgent",
     "dismissible": false
   }
