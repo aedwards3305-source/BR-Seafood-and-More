@@ -578,14 +578,16 @@ const Admin = (() => {
     const esc = MenuRenderer.escapeHtml;
     const price = MenuRenderer.formatPrice;
 
-    let body = '';
+    // The brand header lives in a <thead> so the browser repeats it at the top
+    // of every printed page; the menu content lives in a single <tbody> cell.
+    let head = '';
+    head += '<header class="m-head">';
+    head += '<h1>B&amp;R Seafood and More</h1>';
+    head += '<p class="m-tag">Golden Fried Seafood &amp; Southern Sides</p>';
+    head += '<div class="m-rule"></div>';
+    head += '</header>';
 
-    // Header
-    body += '<header class="m-head">';
-    body += '<h1>B&amp;R Seafood and More</h1>';
-    body += '<p class="m-tag">Golden Fried Seafood &amp; Southern Sides</p>';
-    body += '<div class="m-rule"></div>';
-    body += '</header>';
+    let body = '';
 
     menuData.categories.forEach(category => {
       const activeItems = category.items.filter(i => i.active);
@@ -642,12 +644,17 @@ const Admin = (() => {
     body += '<footer class="m-foot">B&amp;R Seafood and More &bull; '
       + '6 2nd St NE, Minot, ND 58703 &bull; (701) 818-3664</footer>';
 
+    const sheet = '<table class="m-sheet">'
+      + '<thead><tr><td class="m-head-cell">' + head + '</td></tr></thead>'
+      + '<tbody><tr><td class="m-body-cell">' + body + '</td></tr></tbody>'
+      + '</table>';
+
     return '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">'
       + '<title>B&amp;R Seafood Menu</title>'
       + '<link rel="preconnect" href="https://fonts.googleapis.com">'
       + '<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>'
       + '<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">'
-      + '<style>' + PRINT_MENU_CSS + '</style></head><body>' + body + '</body></html>';
+      + '<style>' + PRINT_MENU_CSS + '</style></head><body>' + sheet + '</body></html>';
   }
 
   const PRINT_MENU_CSS = [
@@ -655,8 +662,12 @@ const Admin = (() => {
     // URL/page footer, so they are suppressed. Page spacing comes from body padding.
     '@page { size: letter portrait; margin: 0; }',
     '* { box-sizing: border-box; -webkit-print-color-adjust: exact; print-color-adjust: exact; }',
-    'body { font-family: "Poppins", system-ui, sans-serif; color: #0a1628; margin: 0; padding: 0.5in; }',
-    '.m-head { text-align: center; margin-bottom: 24px; }',
+    'body { font-family: "Poppins", system-ui, sans-serif; color: #0a1628; margin: 0; padding: 0; }',
+    // Table layout lets <thead> repeat the brand header on every printed page.
+    '.m-sheet { width: 100%; border-collapse: collapse; }',
+    '.m-head-cell { padding: 0.45in 0.5in 0; }',
+    '.m-body-cell { padding: 4px 0.5in 0.5in; }',
+    '.m-head { text-align: center; margin-bottom: 18px; }',
     '.m-head h1 { font-family: "Playfair Display", Georgia, serif; font-size: 30px; margin: 0; color: #0a1628; letter-spacing: .5px; }',
     '.m-tag { color: #6b7280; font-size: 13px; margin: 6px 0 0; }',
     '.m-rule { width: 60px; height: 3px; background: #f59e0b; margin: 14px auto 0; }',
