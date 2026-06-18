@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-18T09:23:07.493Z",
+  "lastUpdated": "2026-06-18T22:37:45.802Z",
   "settings": {
     "sidesIncluded": 2,
     "extraSidePrice": 3,
@@ -76,7 +76,7 @@
           "id": "catfish-2pc",
           "name": "( 2 Pc ) Golden Fried Catfish Fillets w/2 regular sides",
           "icon": "fas fa-fish",
-          "active": true,
+          "active": false,
           "description": "2 pieces of golden fried catfish fillet comes with 2 regular sides",
           "price": 18,
           "featured": false,
