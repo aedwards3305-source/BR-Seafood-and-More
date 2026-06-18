@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-12T20:21:32.461Z",
+  "lastUpdated": "2026-06-18T09:23:07.493Z",
   "settings": {
     "sidesIncluded": 2,
     "extraSidePrice": 3,
@@ -156,7 +156,7 @@
           "id": "2-pc-golden-fried-fillet-haddock",
           "name": "(6 pc) Golden Fried Scallops w/2 regular sides",
           "icon": "fas fa-fish",
-          "active": false,
+          "active": true,
           "description": "Hand breaded",
           "price": 18,
           "featured": false,
