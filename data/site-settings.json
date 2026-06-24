@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-20T16:20:59.505Z",
+  "lastUpdated": "2026-06-24T12:55:58.802Z",
   "contact": {
     "phone": "(701) 818-3664",
     "phoneRaw": "7018183664",
@@ -56,7 +56,7 @@
   },
   "announcement": {
     "enabled": true,
-    "message": "Hello,\nWe will be closed today Saturday June 20th due to an event we will be attending   We will re-open on Wednesday June 24th at 5pm .\nHappy Fathers Day to all of the wonderful Father's stay blessed have fun\nThank you for your understanding and support.",
+    "message": "Hello,\nWe will be closed today Wednesday 24th due to Seafood shipment delay We will re-open on Thursday June 25th at 5pm .\n\nThank you for your understanding and support.",
     "type": "urgent",
     "dismissible": false
   }
