@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-18T22:37:45.802Z",
+  "lastUpdated": "2026-06-26T18:26:20.498Z",
   "settings": {
     "sidesIncluded": 2,
     "extraSidePrice": 3,
@@ -86,7 +86,7 @@
           "id": "6-pcs-golden-fried-oysters-with-2-regular-sides",
           "name": "(6 pcs) Golden Fried Oysters w/2  regular sides",
           "icon": "fas fa-fish",
-          "active": true,
+          "active": false,
           "description": "Hand Breaded Golden Fried",
           "price": 22,
           "featured": false,
