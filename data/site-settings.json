@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-24T12:55:58.802Z",
+  "lastUpdated": "2026-06-26T01:19:03.434Z",
   "contact": {
     "phone": "(701) 818-3664",
     "phoneRaw": "7018183664",
@@ -55,8 +55,8 @@
     ]
   },
   "announcement": {
-    "enabled": true,
-    "message": "Hello,\nWe will be closed today Wednesday 24th due to Seafood shipment delay We will re-open on Thursday June 25th at 5pm .\n\nThank you for your understanding and support.",
+    "enabled": false,
+    "message": "",
     "type": "urgent",
     "dismissible": false
   }
