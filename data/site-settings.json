@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-27T23:55:23.598Z",
+  "lastUpdated": "2026-07-01T14:58:13.973Z",
   "contact": {
     "phone": "(701) 818-3664",
     "phoneRaw": "7018183664",
@@ -13,8 +13,12 @@
   },
   "hours": [
     {
-      "days": "Saturday",
+      "days": "Friday & Saturday",
       "time": "5pm-11pm"
+    },
+    {
+      "days": "Wednesday & Thursday",
+      "time": "5pm-9pm"
     }
   ],
   "social": {
