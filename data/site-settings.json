@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-08T21:38:38.307Z",
+  "lastUpdated": "2026-07-08T21:39:57.354Z",
   "contact": {
     "phone": "(701) 818-3664",
     "phoneRaw": "7018183664",
@@ -11,7 +11,12 @@
     "note": "Located at The Spot parking area",
     "googleMapsUrl": ""
   },
-  "hours": [],
+  "hours": [
+    {
+      "days": "Wed & Thurs",
+      "time": "5pm-9pm"
+    }
+  ],
   "social": {
     "facebook": "",
     "instagram": "",
