@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-04T00:42:06.114Z",
+  "lastUpdated": "2026-07-08T21:38:38.307Z",
   "contact": {
     "phone": "(701) 818-3664",
     "phoneRaw": "7018183664",
@@ -55,8 +55,8 @@
     ]
   },
   "announcement": {
-    "enabled": true,
-    "message": "Hello, \nWe will be closed tomorrow for the holiday Saturday July 4th .\nWe will re-open on Wednesday July 8th at 5pm\nPlease have a safe and blessed Fourth of July",
+    "enabled": false,
+    "message": "",
     "type": "urgent",
     "dismissible": false
   }
