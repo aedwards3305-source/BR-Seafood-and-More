@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-01T14:20:11.677Z",
+  "lastUpdated": "2026-07-08T21:44:00.312Z",
   "settings": {
     "sidesIncluded": 2,
     "extraSidePrice": 3,
@@ -106,7 +106,7 @@
           "id": "chili-cheese-hot-dog-with-fries-only",
           "name": "(3) Bones BBQ Ribs",
           "icon": "fas fa-plate-wheat",
-          "active": true,
+          "active": false,
           "description": "Tender Pork Ribs with BBQ Sauce comes with 2 regular Sides",
           "price": 12,
           "featured": false,
@@ -116,7 +116,7 @@
           "id": "shrimp-gumbo-over-rice",
           "name": "(2) Pork Chops  gravy upon request",
           "icon": "fas fa-plate-wheat",
-          "active": true,
+          "active": false,
           "description": "Grilled Pork Chops tender tasty",
           "price": 12,
           "featured": false,
