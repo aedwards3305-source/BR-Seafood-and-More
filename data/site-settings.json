@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-08T21:41:19.501Z",
+  "lastUpdated": "2026-07-11T22:45:43.788Z",
   "contact": {
     "phone": "(701) 818-3664",
     "phoneRaw": "7018183664",
@@ -64,8 +64,8 @@
     ]
   },
   "announcement": {
-    "enabled": false,
-    "message": "",
+    "enabled": true,
+    "message": "Hello due to extreme heat we will open today Saturday July 11th  from 8p-11pm\nStay cool and safe",
     "type": "urgent",
     "dismissible": false
   }
