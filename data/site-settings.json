@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-11T22:45:43.788Z",
+  "lastUpdated": "2026-07-14T01:45:38.128Z",
   "contact": {
     "phone": "(701) 818-3664",
     "phoneRaw": "7018183664",
@@ -11,16 +11,7 @@
     "note": "Located at The Spot parking area",
     "googleMapsUrl": ""
   },
-  "hours": [
-    {
-      "days": "Wed & Thurs",
-      "time": "5pm-9pm"
-    },
-    {
-      "days": "Fri & Sat",
-      "time": "5pm-11pm"
-    }
-  ],
+  "hours": [],
   "social": {
     "facebook": "",
     "instagram": "",
@@ -65,7 +56,7 @@
   },
   "announcement": {
     "enabled": true,
-    "message": "Hello due to extreme heat we will open today Saturday July 11th  from 8p-11pm\nStay cool and safe",
+    "message": "Hello due to numerous upcoming events starting Wednesday July 15th we will not be at The Spot location until further notice.\nThank you for your support and understanding.\nStay cool,  safe, and blessed \nThank you Captain B",
     "type": "urgent",
     "dismissible": false
   }
