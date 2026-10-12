@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-08T21:44:00.312Z",
+  "lastUpdated": "2026-10-12T21:33:28.719Z",
   "settings": {
     "sidesIncluded": 2,
     "extraSidePrice": 3,
@@ -98,7 +98,7 @@
           "icon": "fas fa-fish",
           "active": true,
           "description": "golden fried hand breaded with 2 regular sides",
-          "price": 18,
+          "price": 16,
           "featured": false,
           "badgeText": ""
         },
@@ -272,7 +272,7 @@
           "id": "rice",
           "name": "Seasoned White Rice",
           "icon": "fas fa-bowl-rice",
-          "active": true
+          "active": false
         },
         {
           "id": "cornbread",
@@ -282,7 +282,7 @@
         },
         {
           "id": "seasoned-fries",
-          "name": "Seasoned Fries",
+          "name": "Seasoned Crinkle Fries",
           "icon": "fas fa-french-fries",
           "active": true
         },
@@ -302,7 +302,7 @@
           "id": "mac-cheese-5-00",
           "name": "Mac/Cheese  $2.00 extra",
           "icon": "fas fa-bowl-food",
-          "active": true
+          "active": false
         },
         {
           "id": "hush-puppies",
@@ -328,7 +328,7 @@
           "id": "macaroni-and-cheese",
           "name": "Macaroni and Cheese",
           "icon": "fas fa-bowl-food",
-          "active": true,
+          "active": false,
           "price": 5
         }
       ]
