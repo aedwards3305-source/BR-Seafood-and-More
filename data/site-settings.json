@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-14T01:45:38.128Z",
+  "lastUpdated": "2026-10-12T21:44:04.008Z",
   "contact": {
     "phone": "(701) 818-3664",
     "phoneRaw": "7018183664",
@@ -11,7 +11,16 @@
     "note": "Located at The Spot parking area",
     "googleMapsUrl": ""
   },
-  "hours": [],
+  "hours": [
+    {
+      "days": "We'd & Thu",
+      "time": "5pm-9pm"
+    },
+    {
+      "days": "Fri & Sat",
+      "time": "5pm-11pm"
+    }
+  ],
   "social": {
     "facebook": "",
     "instagram": "",
@@ -56,8 +65,8 @@
   },
   "announcement": {
     "enabled": true,
-    "message": "Hello due to numerous upcoming events starting Wednesday July 15th we will not be at The Spot location until further notice.\nThank you for your support and understanding.\nStay cool,  safe, and blessed \nThank you Captain B",
-    "type": "urgent",
+    "message": "Hello to all, \nB & R Seafood & More will be re-opening this coming Wednesday October 14th, 2026 at 5pm .\nWe are very happy and excited to be back at The Spot Billard Hall\nLook forward to seeing old friends and new customers. \nStop by and say hello. \n\nThank you for your support and understanding.\nStay cool,  safe, and blessed \nCaptain B",
+    "type": "info",
     "dismissible": false
   }
 }
