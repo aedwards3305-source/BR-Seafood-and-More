@@ -741,6 +741,377 @@ const Admin = (() => {
     doc.close();
   }
 
+  /* ========== TV DISPLAY MENU EXPORT ========== */
+
+  // Renders the live menu as a set of 1920x1080 slides for the TV above the
+  // checkout window: a USB-drive-ready JPG set (phase 1, flash drive straight
+  // into the TV's own Media Player) and a PowerPoint of the same slides
+  // (phase 2, laptop over HDMI). Item descriptions are left off these slides
+  // by design — a menu board favors large, scannable name + price over
+  // paragraph copy read from a few feet away — and empty categories are
+  // skipped, mirroring the public renderer and the print menu above.
+
+  const TV_W = 1920;
+  const TV_H = 1080;
+  const TV_PAGE_SIZE = 8; // dinner items per slide (2 cols x 4 rows)
+  const TV_COLORS = {
+    bg: '#0a1628',
+    bgLight: '#13284a',
+    white: '#ffffff',
+    muted: 'rgba(255,255,255,.62)',
+    teal: '#0d9488',
+    tealLight: '#14b8a6',
+    gold: '#f59e0b',
+    line: 'rgba(255,255,255,.14)'
+  };
+
+  // Greedy word-wrap: returns an array of lines that each fit maxWidth at
+  // the canvas context's current font.
+  function tvWrapText(ctx, text, maxWidth) {
+    const words = text.split(/\s+/).filter(Boolean);
+    const lines = [];
+    let line = '';
+    words.forEach(word => {
+      const test = line ? line + ' ' + word : word;
+      if (ctx.measureText(test).width > maxWidth && line) {
+        lines.push(line);
+        line = word;
+      } else {
+        line = test;
+      }
+    });
+    if (line) lines.push(line);
+    return lines;
+  }
+
+  function tvRoundRect(ctx, x, y, w, h, r) {
+    ctx.beginPath();
+    ctx.moveTo(x + r, y);
+    ctx.arcTo(x + w, y, x + w, y + h, r);
+    ctx.arcTo(x + w, y + h, x, y + h, r);
+    ctx.arcTo(x, y + h, x, y, r);
+    ctx.arcTo(x, y, x + w, y, r);
+    ctx.closePath();
+  }
+
+  // Shared background, footer, and page-label chrome for every slide.
+  function tvBaseSlide(ctx, label) {
+    const grad = ctx.createLinearGradient(0, 0, 0, TV_H);
+    grad.addColorStop(0, TV_COLORS.bg);
+    grad.addColorStop(1, TV_COLORS.bgLight);
+    ctx.fillStyle = grad;
+    ctx.fillRect(0, 0, TV_W, TV_H);
+
+    ctx.fillStyle = TV_COLORS.muted;
+    ctx.font = '500 24px Poppins, sans-serif';
+    ctx.textAlign = 'center';
+    ctx.textBaseline = 'alphabetic';
+    ctx.fillText('6 2nd St NE, Minot, ND  •  (701) 818-3664', TV_W / 2, TV_H - 40);
+
+    if (label) {
+      ctx.fillStyle = TV_COLORS.muted;
+      ctx.font = '600 22px Poppins, sans-serif';
+      ctx.textAlign = 'right';
+      ctx.fillText(label, TV_W - 70, 58);
+    }
+  }
+
+  function tvDrawWelcomeSlide(ctx) {
+    tvBaseSlide(ctx, '');
+    ctx.textAlign = 'center';
+    ctx.fillStyle = TV_COLORS.white;
+    ctx.font = '800 130px "Playfair Display", Georgia, serif';
+    ctx.fillText('B&R Seafood', TV_W / 2, 460);
+    ctx.fillText('and More', TV_W / 2, 590);
+
+    ctx.fillStyle = TV_COLORS.gold;
+    ctx.fillRect(TV_W / 2 - 90, 640, 180, 6);
+
+    ctx.fillStyle = TV_COLORS.tealLight;
+    ctx.font = '500 42px Poppins, sans-serif';
+    ctx.fillText('Golden Fried Seafood & Southern Sides', TV_W / 2, 725);
+
+    ctx.fillStyle = TV_COLORS.muted;
+    ctx.font = '500 28px Poppins, sans-serif';
+    ctx.fillText('Family Owned & Operated', TV_W / 2, 785);
+  }
+
+  // A 2-column, fixed 4-row grid (TV_PAGE_SIZE items max). The row height is
+  // derived from the fixed grid rather than this page's own item count, so
+  // spacing stays identical across paginated dinner slides.
+  function tvDrawDinnerSlide(ctx, items, badge, pageLabel) {
+    tvBaseSlide(ctx, pageLabel);
+
+    ctx.textAlign = 'left';
+    ctx.fillStyle = TV_COLORS.white;
+    ctx.font = '800 68px "Playfair Display", Georgia, serif';
+    ctx.fillText('Dinner Plates', 70, 118);
+
+    ctx.font = '600 26px Poppins, sans-serif';
+    const badgeW = ctx.measureText(badge).width + 56;
+    ctx.fillStyle = TV_COLORS.teal;
+    tvRoundRect(ctx, TV_W - 70 - badgeW, 62, badgeW, 58, 29);
+    ctx.fill();
+    ctx.fillStyle = TV_COLORS.white;
+    ctx.textAlign = 'center';
+    ctx.fillText(badge, TV_W - 70 - badgeW / 2, 99);
+
+    ctx.strokeStyle = TV_COLORS.teal;
+    ctx.lineWidth = 3;
+    ctx.beginPath();
+    ctx.moveTo(70, 158);
+    ctx.lineTo(TV_W - 70, 158);
+    ctx.stroke();
+
+    const cols = 2, gutter = 60, top = 200, bottom = TV_H - 90, left = 70, right = TV_W - 70;
+    const colW = (right - left - gutter) / cols;
+    const rows = Math.ceil(TV_PAGE_SIZE / cols);
+    const rowH = (bottom - top) / rows;
+
+    items.forEach((item, i) => {
+      const col = i % cols, row = Math.floor(i / cols);
+      const x = left + col * (colW + gutter);
+      const y = top + row * rowH;
+
+      if (item.featured) {
+        ctx.fillStyle = TV_COLORS.gold;
+        ctx.fillRect(x, y + 10, 6, rowH - 40);
+      }
+      const textX = x + (item.featured ? 24 : 0);
+
+      ctx.textAlign = 'left';
+      ctx.fillStyle = TV_COLORS.white;
+      ctx.font = '600 32px Poppins, sans-serif';
+      const nameMaxW = colW - 190 - (item.featured ? 24 : 0);
+      const lines = tvWrapText(ctx, item.name.trim(), nameMaxW).slice(0, 2);
+      const ty = y + 46;
+      lines.forEach((line, li) => ctx.fillText(line, textX, ty + li * 38));
+
+      ctx.textAlign = 'right';
+      ctx.fillStyle = TV_COLORS.gold;
+      ctx.font = '700 42px Poppins, sans-serif';
+      ctx.fillText(MenuRenderer.formatPrice(item.price), x + colW, y + 46);
+
+      if (item.featured && item.badgeText) {
+        ctx.font = '700 19px Poppins, sans-serif';
+        const bw = ctx.measureText(item.badgeText).width + 30;
+        ctx.fillStyle = TV_COLORS.gold;
+        tvRoundRect(ctx, x + colW - bw, y + 60, bw, 34, 17);
+        ctx.fill();
+        ctx.fillStyle = TV_COLORS.bg;
+        ctx.textAlign = 'center';
+        ctx.font = '700 17px Poppins, sans-serif';
+        ctx.fillText(item.badgeText, x + colW - bw / 2, y + 84);
+      }
+
+      ctx.strokeStyle = TV_COLORS.line;
+      ctx.lineWidth = 1;
+      ctx.beginPath();
+      ctx.moveTo(x, y + rowH - 16);
+      ctx.lineTo(x + colW, y + rowH - 16);
+      ctx.stroke();
+    });
+  }
+
+  function tvDrawSidesSlide(ctx, sides, specialty, note) {
+    tvBaseSlide(ctx, '');
+
+    ctx.textAlign = 'left';
+    ctx.fillStyle = TV_COLORS.white;
+    ctx.font = '800 68px "Playfair Display", Georgia, serif';
+    ctx.fillText('Southern Sides', 70, 118);
+
+    ctx.font = '600 26px Poppins, sans-serif';
+    const badge = 'Choose 2 with any dinner';
+    const badgeW = ctx.measureText(badge).width + 56;
+    ctx.fillStyle = TV_COLORS.teal;
+    tvRoundRect(ctx, TV_W - 70 - badgeW, 62, badgeW, 58, 29);
+    ctx.fill();
+    ctx.fillStyle = TV_COLORS.white;
+    ctx.textAlign = 'center';
+    ctx.fillText(badge, TV_W - 70 - badgeW / 2, 99);
+
+    ctx.strokeStyle = TV_COLORS.teal;
+    ctx.lineWidth = 3;
+    ctx.beginPath();
+    ctx.moveTo(70, 158);
+    ctx.lineTo(TV_W - 70, 158);
+    ctx.stroke();
+
+    const left = 70, right = TV_W - 70;
+    let cx = left, cy = 210;
+    const chipH = 70, chipGap = 20, rowGap = 22;
+    ctx.font = '600 28px Poppins, sans-serif';
+    sides.forEach(item => {
+      const w = ctx.measureText(item.name).width + 64;
+      if (cx + w > right) { cx = left; cy += chipH + rowGap; }
+      ctx.fillStyle = 'rgba(255,255,255,.08)';
+      tvRoundRect(ctx, cx, cy, w, chipH, 14);
+      ctx.fill();
+      ctx.strokeStyle = TV_COLORS.line;
+      ctx.lineWidth = 1;
+      tvRoundRect(ctx, cx, cy, w, chipH, 14);
+      ctx.stroke();
+      ctx.fillStyle = TV_COLORS.white;
+      ctx.textAlign = 'left';
+      ctx.textBaseline = 'middle';
+      ctx.fillText(item.name, cx + 28, cy + chipH / 2 + 2);
+      ctx.textBaseline = 'alphabetic';
+      cx += w + chipGap;
+    });
+
+    let noteY = cy + chipH + 50;
+
+    if (note) {
+      ctx.textAlign = 'left';
+      ctx.font = '400 24px Poppins, sans-serif';
+      const noteLines = tvWrapText(ctx, note, right - left - 60);
+      const noteH = 36 + noteLines.length * 32;
+      ctx.fillStyle = 'rgba(255,255,255,.06)';
+      tvRoundRect(ctx, left, noteY, right - left, noteH, 10);
+      ctx.fill();
+      ctx.fillStyle = TV_COLORS.gold;
+      ctx.fillRect(left, noteY, 6, noteH);
+      ctx.fillStyle = TV_COLORS.muted;
+      noteLines.forEach((line, i) => ctx.fillText(line, left + 36, noteY + 38 + i * 32));
+      noteY += noteH + 40;
+    }
+
+    if (specialty && specialty.length) {
+      ctx.textAlign = 'left';
+      ctx.fillStyle = TV_COLORS.gold;
+      ctx.font = '700 28px Poppins, sans-serif';
+      ctx.fillText('SPECIALTY ITEMS', left, noteY + 8);
+      let sx = left, sy = noteY + 34;
+      ctx.font = '600 26px Poppins, sans-serif';
+      specialty.forEach(item => {
+        const priceText = '  ' + MenuRenderer.formatPrice(item.price);
+        const label = item.name + priceText;
+        const w = ctx.measureText(label).width + 56;
+        if (sx + w > right) { sx = left; sy += 64; }
+        ctx.fillStyle = 'rgba(245,158,11,.14)';
+        tvRoundRect(ctx, sx, sy, w, 54, 12);
+        ctx.fill();
+        ctx.fillStyle = TV_COLORS.white;
+        ctx.textBaseline = 'middle';
+        ctx.fillText(item.name, sx + 24, sy + 29);
+        const nameW = ctx.measureText(item.name).width;
+        ctx.fillStyle = TV_COLORS.gold;
+        ctx.fillText(priceText, sx + 24 + nameW, sy + 29);
+        ctx.textBaseline = 'alphabetic';
+        sx += w + chipGap;
+      });
+    }
+  }
+
+  function tvChunk(arr, size) {
+    const out = [];
+    for (let i = 0; i < arr.length; i += size) out.push(arr.slice(i, i + size));
+    return out;
+  }
+
+  // Builds the ordered slide list, waits for brand fonts, and returns
+  // [{ name, dataUrl }] — JPEG data URLs at 1920x1080, ready to zip or embed
+  // into a PowerPoint. Reflects the current (in-memory) menuData, same as
+  // the print menu above.
+  async function buildTvSlides() {
+    const fontsReady = document.fonts ? document.fonts.ready : Promise.resolve();
+    await Promise.race([fontsReady, new Promise(resolve => setTimeout(resolve, 1500))]);
+
+    const dinnersCat = getCategory('dinners');
+    const sidesCat = getCategory('sides');
+    const specialtyCat = getCategory('specialty-sides');
+    const dinners = dinnersCat ? dinnersCat.items.filter(i => i.active) : [];
+    const sides = sidesCat ? sidesCat.items.filter(i => i.active) : [];
+    const specialty = specialtyCat ? specialtyCat.items.filter(i => i.active) : [];
+    const note = menuData.settings && menuData.settings.menuNote;
+    const dinnerBadge = (dinnersCat && dinnersCat.badge) || 'Includes 2 Sides';
+
+    const slides = [{ name: '00-welcome', draw: tvDrawWelcomeSlide }];
+
+    const pages = tvChunk(dinners, TV_PAGE_SIZE);
+    pages.forEach((page, i) => {
+      const label = pages.length > 1 ? (i + 1) + ' of ' + pages.length : '';
+      slides.push({
+        name: 'dinner-plates-' + (i + 1),
+        draw: ctx => tvDrawDinnerSlide(ctx, page, dinnerBadge, label)
+      });
+    });
+
+    if (sides.length || specialty.length || note) {
+      slides.push({
+        name: 'southern-sides',
+        draw: ctx => tvDrawSidesSlide(ctx, sides, specialty, note)
+      });
+    }
+
+    return slides.map(s => {
+      const canvas = document.createElement('canvas');
+      canvas.width = TV_W;
+      canvas.height = TV_H;
+      s.draw(canvas.getContext('2d'));
+      return { name: s.name, dataUrl: canvas.toDataURL('image/jpeg', 0.92) };
+    });
+  }
+
+  async function downloadTvImages() {
+    if (!menuData || !menuData.categories) {
+      showToast('No menu data to export', 'error');
+      return;
+    }
+    if (typeof JSZip === 'undefined') {
+      showToast('TV export library failed to load — check your connection', 'error');
+      return;
+    }
+    showToast('Building TV slideshow…');
+    try {
+      const slides = await buildTvSlides();
+      const zip = new JSZip();
+      slides.forEach((s, i) => {
+        const num = String(i + 1).padStart(2, '0');
+        const base64 = s.dataUrl.split(',')[1];
+        zip.file(num + '-' + s.name + '.jpg', base64, { base64: true });
+      });
+      const blob = await zip.generateAsync({ type: 'blob' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = 'br-seafood-tv-menu.zip';
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      URL.revokeObjectURL(url);
+      showToast(slides.length + ' slides downloaded — unzip onto the USB drive', 'success');
+    } catch (err) {
+      showToast('TV slideshow export failed: ' + err.message, 'error');
+    }
+  }
+
+  async function downloadTvPowerPoint() {
+    if (!menuData || !menuData.categories) {
+      showToast('No menu data to export', 'error');
+      return;
+    }
+    if (typeof PptxGenJS === 'undefined') {
+      showToast('PowerPoint export library failed to load — check your connection', 'error');
+      return;
+    }
+    showToast('Building PowerPoint…');
+    try {
+      const slides = await buildTvSlides();
+      const pres = new PptxGenJS();
+      pres.layout = 'LAYOUT_WIDE'; // 13.333in x 7.5in, native 16:9 widescreen
+      slides.forEach(s => {
+        const slide = pres.addSlide();
+        slide.addImage({ data: s.dataUrl, x: 0, y: 0, w: 13.333, h: 7.5 });
+      });
+      await pres.writeFile({ fileName: 'br-seafood-tv-menu.pptx' });
+      showToast('PowerPoint downloaded — set Slide Show > Set Up Show to loop before using it on the laptop', 'success');
+    } catch (err) {
+      showToast('PowerPoint export failed: ' + err.message, 'error');
+    }
+  }
+
   /* ================================================================
      EVENTS MANAGEMENT
      ================================================================ */
@@ -1074,6 +1445,8 @@ const Admin = (() => {
     document.getElementById('downloadBtn')?.addEventListener('click', downloadMenuJson);
     document.getElementById('copyBtn')?.addEventListener('click', copyJsonToClipboard);
     document.getElementById('printMenuBtn')?.addEventListener('click', printMenu);
+    document.getElementById('tvImagesBtn')?.addEventListener('click', downloadTvImages);
+    document.getElementById('tvPptBtn')?.addEventListener('click', downloadTvPowerPoint);
 
     // Modal events
     document.getElementById('itemForm')?.addEventListener('submit', (e) => {
