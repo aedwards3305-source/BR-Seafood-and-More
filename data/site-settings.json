@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-10-21T22:15:06.393Z",
+  "lastUpdated": "2026-10-21T22:16:27.580Z",
   "contact": {
     "phone": "(701) 818-3664",
     "phoneRaw": "7018183664",
@@ -64,7 +64,7 @@
     ]
   },
   "announcement": {
-    "enabled": false,
+    "enabled": true,
     "message": "",
     "type": "info",
     "dismissible": false
