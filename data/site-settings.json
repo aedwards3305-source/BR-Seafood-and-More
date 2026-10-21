@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-10-21T22:10:01.131Z",
+  "lastUpdated": "2026-10-21T22:15:06.393Z",
   "contact": {
     "phone": "(701) 818-3664",
     "phoneRaw": "7018183664",
@@ -64,8 +64,8 @@
     ]
   },
   "announcement": {
-    "enabled": true,
-    "message": "Hello to all, \nB & R Seafood & More will be re-opening \nWe are very happy and excited to be back at The Spot Billard Hall\nLook forward to seeing old friends and new customers. \nStop by and say hello. \n\nThank you for your support and understanding.\nStay safe, and blessed \nCaptain B",
+    "enabled": false,
+    "message": "",
     "type": "info",
     "dismissible": false
   }
