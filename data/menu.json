@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-10-12T21:33:28.719Z",
+  "lastUpdated": "2026-10-21T22:08:28.062Z",
   "settings": {
     "sidesIncluded": 2,
     "extraSidePrice": 3,
@@ -312,9 +312,9 @@
         },
         {
           "id": "coleslaw",
-          "name": "Coleslaw",
+          "name": "Green Beans",
           "icon": "fas fa-seedling",
-          "active": false
+          "active": true
         }
       ]
     },
