@@ -644,6 +644,28 @@
   color: var(--text-secondary);
 }
 
+/* ---------- TV Display Menu Section ---------- */
+.tv-export-section .editor-section-header {
+  justify-content: flex-start;
+  gap: 12px;
+}
+
+.tv-export-badge {
+  background: rgba(10,22,40,.08);
+  color: var(--navy);
+  padding: 4px 12px;
+  border-radius: 50px;
+  font-size: .75rem;
+  font-weight: 600;
+}
+
+.tv-export-help {
+  font-size: .85rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: 16px;
+}
+
 /* ---------- Preview Panel ---------- */
 .preview-panel {
   position: sticky;

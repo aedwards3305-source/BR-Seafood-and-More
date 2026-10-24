@@ -196,6 +196,29 @@
               </details>
               <p class="last-updated" id="lastUpdated"></p>
             </div>
+
+            <!-- TV Display Menu Section -->
+            <div class="editor-section tv-export-section">
+              <div class="editor-section-header">
+                <h2><i class="fas fa-tv"></i> TV Display Menu</h2>
+                <span class="tv-export-badge">Checkout window</span>
+              </div>
+              <p class="tv-export-help">
+                Builds a looping slideshow from the live menu above. Use the
+                <strong>USB Drive</strong> set now &mdash; unzip it and copy the images
+                straight onto a FAT32 flash drive, then plug it into the TV's USB port
+                and start its Media Player. Switch to the <strong>PowerPoint</strong>
+                file once the laptop is wired in over HDMI.
+              </p>
+              <div class="publish-buttons">
+                <button class="btn btn-secondary-solid" id="tvImagesBtn">
+                  <i class="fab fa-usb"></i> USB Drive Slideshow (.zip)
+                </button>
+                <button class="btn btn-secondary-solid" id="tvPptBtn">
+                  <i class="fas fa-file-powerpoint"></i> PowerPoint for Laptop (.pptx)
+                </button>
+              </div>
+            </div>
           </div>
 
           <!-- Preview Panel -->
@@ -745,6 +768,9 @@
 
   <script src="js/menu-renderer.js"></script>
   <script src="js/events-renderer.js"></script>
+  <!-- TV Display Menu export: zips the USB slideshow, builds the PowerPoint -->
+  <script src="https://cdn.jsdelivr.net/npm/jszip@3.10.1/dist/jszip.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/pptxgenjs@3.12.0/dist/pptxgen.bundle.js"></script>
   <script src="js/admin.js"></script>
 </body>
 </html>

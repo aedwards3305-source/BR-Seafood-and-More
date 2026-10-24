@@ -1,0 +1,82 @@
+/* ============================================
+   B&R Seafood and More - Seasonal Greetings
+   Backgrounds, greeting line and floating icons
+   for the homepage hero. Applied by js/seasonal.js
+   through data-season on the hero.
+   ============================================ */
+
+/* ---------- Palettes ---------- */
+.hero[data-season="halloween"] {
+  background: linear-gradient(135deg, #1b0f2e 0%, #3a1f4f 45%, #6b2d0f 100%);
+}
+
+.hero[data-season="thanksgiving"] {
+  background: linear-gradient(135deg, #3b1d0a 0%, #7a3e12 50%, #b5651d 100%);
+}
+
+.hero[data-season="christmas"] {
+  background: linear-gradient(135deg, #0b2e1f 0%, #14532d 50%, #7f1d1d 100%);
+}
+
+.hero[data-season="federal"] {
+  background: linear-gradient(135deg, #0b1f44 0%, #1e3a8a 50%, #7f1d1d 100%);
+}
+
+/* ---------- Greeting line ---------- */
+.season-greeting {
+  font-family: 'Dancing Script', cursive;
+  font-weight: 700;
+  font-size: clamp(1.6rem, 4vw, 2.4rem);
+  line-height: 1.2;
+  margin: 0 0 12px;
+  color: #ffd28a;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, .45);
+}
+
+.season-greeting[hidden] {
+  display: none;
+}
+
+.hero[data-season="christmas"] .season-greeting,
+.hero[data-season="federal"] .season-greeting {
+  color: #fde68a;
+}
+
+/* ---------- Floating icons ---------- */
+.season-decor {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.season-icon {
+  position: absolute;
+  bottom: -40px;
+  color: rgba(255, 255, 255, .22);
+  animation-name: season-rise;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+.hero[data-season="halloween"] .season-icon { color: rgba(255, 170, 80, .3); }
+.hero[data-season="thanksgiving"] .season-icon { color: rgba(255, 210, 138, .3); }
+
+@keyframes season-rise {
+  0%   { transform: translateY(0) rotate(0deg); opacity: 0; }
+  10%  { opacity: 1; }
+  90%  { opacity: 1; }
+  100% { transform: translateY(-115vh) rotate(25deg); opacity: 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .season-decor {
+    display: none;
+  }
+}
+
+/* ---------- Keep the hero content above the decoration ---------- */
+.hero[data-season] .hero-content {
+  z-index: 2;
+}

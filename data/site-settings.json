@@ -63,6 +63,9 @@
       }
     ]
   },
+  "seasonal": {
+    "enabled": true
+  },
   "announcement": {
     "enabled": true,
     "message": "",
