@@ -25,20 +25,6 @@ const SeasonalArt = (() => {
 
   // ---------- Halloween ----------
 
-  /** A gnarled dead tree: tapered trunk and forked limbs, base at (x, 206). */
-  function deadTree(x, s, flip) {
-    const k = flip ? -s : s;
-    return `<g transform="translate(${x} 206) scale(${k} ${s})" fill="#07050F">
-      <path d="M-7 0C-5 -22 -9 -44 -4 -70C-2 -80 2 -80 4 -70C8 -44 5 -22 7 0Z"/>
-      <path d="M-2 -40C-14 -52 -22 -58 -34 -72L-37 -67L-30 -78L-27 -71C-22 -68 -14 -62 -2 -48Z"/>
-      <path d="M2 -52C12 -62 20 -70 30 -88L27 -90L34 -96L35 -88C40 -84 46 -84 49 -80L40 -74C34 -68 20 -58 4 -46Z"/>
-      <path d="M-4 -70C-8 -80 -14 -88 -12 -102L-9 -101C-11 -92 -6 -84 -1 -74Z"/>
-      <path d="M2 -78C4 -88 8 -94 14 -104L17 -102C12 -94 9 -88 5 -76Z"/>
-      <path d="M-5 -30C-18 -28 -26 -20 -38 -22L-38 -19C-26 -17 -18 -14 -3 -22Z"/>
-      <path d="M6 -22C16 -26 24 -26 34 -34L34 -31C26 -23 18 -21 6 -18Z"/>
-    </g>`;
-  }
-
   /** A stone with a rounded top, slightly tilted, base at (x, 206). */
   function gravestone(x, s, tilt) {
     return `<g transform="translate(${x} 206) rotate(${tilt}) scale(${s})" fill="#0A0716">
@@ -138,9 +124,6 @@ const SeasonalArt = (() => {
       <circle cx="938" cy="66" r="3.5" fill="#E2CF8C" opacity="0.5"/>
       ${landscape()}
       ${mansion()}
-      ${deadTree(110, 1.5, false)}
-      ${deadTree(1100, 1.6, true)}
-      ${deadTree(230, 1.0, true)}
       ${gravestone(430, 1.0, -4)}
       ${gravestone(452, 0.8, 3)}
       ${gravestone(1010, 0.9, 5)}
