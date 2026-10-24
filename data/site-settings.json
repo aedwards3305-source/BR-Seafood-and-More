@@ -54,6 +54,9 @@
       }
     ]
   },
+  "seasonal": {
+    "enabled": true
+  },
   "announcement": {
     "enabled": false,
     "message": "",
