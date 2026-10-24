@@ -80,3 +80,204 @@
 .hero[data-season] .hero-content {
   z-index: 2;
 }
+
+/* ============================================
+   Scene art: Halloween, Thanksgiving, Christmas
+   ============================================ */
+
+.season-art {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: calc(100vh - clamp(160px, 30vh, 260px));
+  height: clamp(160px, 30vh, 260px);
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.season-scene {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* ---------- Halloween: lightning, bats, lanterns ---------- */
+.season-flash {
+  position: absolute;
+  inset: 0;
+  background: #DCE6FF;
+  opacity: 0;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.hero[data-season="halloween"] .season-flash {
+  animation: season-storm-flash 7s linear infinite;
+}
+
+.season-bolt {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60%;
+  opacity: 0;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.hero[data-season="halloween"] .season-bolt {
+  animation: season-storm-bolt 7s linear infinite;
+}
+
+.season-bats {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.season-bat-track {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  animation-name: season-bat-fly;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+.season-bat {
+  display: block;
+  height: auto;
+  fill: #05030A;
+  animation: season-bob 1.4s ease-in-out infinite alternate;
+}
+
+.season-flicker {
+  animation: season-flicker 1.6s ease-in-out infinite;
+}
+
+/* ---------- Thanksgiving: a turkey runs across ---------- */
+.season-turkey-run {
+  position: absolute;
+  bottom: 4%;
+  left: 0;
+  width: clamp(120px, 14vw, 170px);
+  animation: season-turkey-run 12s linear infinite;
+}
+
+.season-turkey-run.is-still {
+  animation: none;
+  left: auto;
+  right: 8vw;
+}
+
+.season-turkey-svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.season-turkey-leg {
+  transform-box: fill-box;
+  transform-origin: 50% 0;
+  animation: season-turkey-leg 0.36s ease-in-out infinite alternate;
+}
+
+.season-turkey-bob {
+  animation: season-turkey-bob 0.18s ease-in-out infinite alternate;
+}
+
+/* ---------- Christmas: Santa's sled crosses the sky ---------- */
+.season-sled-run {
+  position: absolute;
+  bottom: 12%;
+  left: 0;
+  width: clamp(180px, 20vw, 260px);
+  animation: season-sled-run 16s linear infinite;
+}
+
+.season-sled-svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* ---------- Keyframes ---------- */
+@keyframes season-storm-flash {
+  0%, 62%, 100% { opacity: 0; }
+  63% { opacity: 0.4; }
+  65% { opacity: 0.08; }
+  67% { opacity: 0.28; }
+  72% { opacity: 0; }
+}
+
+@keyframes season-storm-bolt {
+  0%, 62%, 100% { opacity: 0; }
+  63%, 66% { opacity: 1; }
+  67%, 69% { opacity: 0.85; }
+  72% { opacity: 0; }
+}
+
+@keyframes season-flicker {
+  0%, 100% { opacity: 1; }
+  40% { opacity: 0.75; }
+  55% { opacity: 0.95; }
+  70% { opacity: 0.7; }
+}
+
+@keyframes season-bat-fly {
+  from { transform: translateX(-12vw); }
+  to { transform: translateX(112vw); }
+}
+
+@keyframes season-bob {
+  from { transform: translateY(0); }
+  to { transform: translateY(-6px); }
+}
+
+@keyframes season-turkey-run {
+  0% { transform: translateX(-200px); }
+  75%, 100% { transform: translateX(calc(100vw + 20px)); }
+}
+
+@keyframes season-turkey-leg {
+  from { transform: rotate(-24deg); }
+  to { transform: rotate(24deg); }
+}
+
+@keyframes season-turkey-bob {
+  from { transform: translateY(0); }
+  to { transform: translateY(-3px); }
+}
+
+@keyframes season-sled-run {
+  0% { transform: translateX(-300px); }
+  70%, 100% { transform: translateX(calc(100vw + 60px)); }
+}
+
+/* ---------- Reduced motion: scenes stand still ---------- */
+@media (prefers-reduced-motion: reduce) {
+  .season-flash,
+  .season-bolt,
+  .season-bats,
+  .season-art-sled {
+    display: none;
+  }
+
+  .season-turkey-run,
+  .season-turkey-leg,
+  .season-turkey-bob,
+  .season-flicker {
+    animation: none;
+  }
+}
+
+/* The scenes pass behind the subtitle; a soft shadow keeps it readable. */
+.hero[data-season] .hero-subtitle {
+  text-shadow: 0 1px 10px rgba(0, 0, 0, .7);
+}

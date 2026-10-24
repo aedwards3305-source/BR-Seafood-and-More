@@ -120,6 +120,12 @@ const Seasonal = (() => {
 
   const PREVIEW_PARAM = 'seasonal';
   const VALID_KEYS = ['halloween', 'thanksgiving', 'christmas', 'federal'];
+  const PREVIEW_GREETINGS = {
+    halloween: 'Happy Halloween from B&R Seafood and More!',
+    thanksgiving: 'Happy Thanksgiving from B&R Seafood and More!',
+    christmas: 'Merry Christmas from B&R Seafood and More!',
+    federal: 'Happy Holidays from B&R Seafood and More!',
+  };
 
   /** A season for preview, e.g. ?seasonal=halloween, or null. */
   function previewFromUrl() {
@@ -136,8 +142,7 @@ const Seasonal = (() => {
   function resolve(now, enabled, preview) {
     if (preview === 'off') return null;
     if (preview) {
-      const season = SeasonalCalendar.seasonOn(now);
-      return { key: preview, name: preview, greeting: season?.greeting || 'Happy Holidays from B&R Seafood and More!' };
+      return { key: preview, name: preview, greeting: PREVIEW_GREETINGS[preview] };
     }
     if (!enabled) return null;
     return SeasonalCalendar.seasonOn(now);
@@ -171,6 +176,10 @@ const Seasonal = (() => {
 
     document.body.dataset.season = season.key;
     hero.dataset.season = season.key;
+
+    if (typeof SeasonalArt !== 'undefined') {
+      SeasonalArt.render(season.key, hero, SeasonalArt.reducedMotion());
+    }
 
     if (greeting) {
       greeting.textContent = season.greeting;
