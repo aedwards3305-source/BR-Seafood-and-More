@@ -97,15 +97,18 @@ const SeasonalArt = (() => {
   /** Distant ridge line and a foreground ground band, with mist between them. */
   function landscape() {
     return `
+      <rect x="-2000" y="170" width="5200" height="60" fill="#1C1836"/>
+      <rect x="-2000" y="196" width="5200" height="34" fill="#0F0C20"/>
+      <rect x="-2000" y="214" width="5200" height="16" fill="#07050F"/>
       <path d="M0 172C120 150 230 160 360 168S600 146 760 162 1010 150 1200 166V230H0Z" fill="#1C1836"/>
-      <rect x="0" y="176" width="1200" height="36" fill="url(#season-mist)"/>
+      <rect x="-2000" y="176" width="5200" height="36" fill="url(#season-mist)"/>
       <path d="M0 196C140 186 260 192 420 194S700 184 860 192 1080 196 1200 188V230H0Z" fill="#0F0C20"/>
-      <rect x="0" y="194" width="1200" height="20" fill="url(#season-mist)" opacity="0.7"/>
+      <rect x="-2000" y="194" width="5200" height="20" fill="url(#season-mist)" opacity="0.7"/>
       <path d="M0 214C200 206 380 212 600 214S960 206 1200 212V230H0Z" fill="#07050F"/>`;
   }
 
   function halloweenScene() {
-    return `<svg class="season-scene" viewBox="0 0 1200 230" preserveAspectRatio="xMidYMax slice" aria-hidden="true" focusable="false">
+    return `<svg class="season-scene" viewBox="-1500 0 4200 230" preserveAspectRatio="xMidYMax slice" aria-hidden="true" focusable="false">
       <defs>
         <radialGradient id="season-glow" cx="0.5" cy="0.5" r="0.5">
           <stop offset="0" stop-color="#FFB347" stop-opacity="0.6"/>
