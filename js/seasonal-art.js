@@ -25,61 +25,126 @@ const SeasonalArt = (() => {
 
   // ---------- Halloween ----------
 
-  function bareTree(x, s, flip) {
-    return `<g transform="translate(${x} 206) scale(${flip ? -s : s} ${s})" fill="none" stroke="#0B1120" stroke-linecap="round">
-      <path d="M0 0C1 -14 -2 -30 2 -46" stroke-width="6"/>
-      <path d="M1 -26C-8 -34 -14 -36 -22 -46M-22 -46l-6 -2M-22 -46l-1 -7" stroke-width="3"/>
-      <path d="M2 -36C10 -42 14 -50 22 -54M22 -54l6 -1M22 -54l2 -6" stroke-width="3"/>
-      <path d="M2 -46C2 -54 -2 -60 0 -68M0 -68l-5 -4M0 -68l4 -5" stroke-width="2.4"/>
+  /** A gnarled dead tree: tapered trunk and forked limbs, base at (x, 206). */
+  function deadTree(x, s, flip) {
+    const k = flip ? -s : s;
+    return `<g transform="translate(${x} 206) scale(${k} ${s})" fill="#07050F">
+      <path d="M-7 0C-5 -22 -9 -44 -4 -70C-2 -80 2 -80 4 -70C8 -44 5 -22 7 0Z"/>
+      <path d="M-2 -40C-14 -52 -22 -58 -34 -72L-37 -67L-30 -78L-27 -71C-22 -68 -14 -62 -2 -48Z"/>
+      <path d="M2 -52C12 -62 20 -70 30 -88L27 -90L34 -96L35 -88C40 -84 46 -84 49 -80L40 -74C34 -68 20 -58 4 -46Z"/>
+      <path d="M-4 -70C-8 -80 -14 -88 -12 -102L-9 -101C-11 -92 -6 -84 -1 -74Z"/>
+      <path d="M2 -78C4 -88 8 -94 14 -104L17 -102C12 -94 9 -88 5 -76Z"/>
+      <path d="M-5 -30C-18 -28 -26 -20 -38 -22L-38 -19C-26 -17 -18 -14 -3 -22Z"/>
+      <path d="M6 -22C16 -26 24 -26 34 -34L34 -31C26 -23 18 -21 6 -18Z"/>
     </g>`;
   }
 
+  /** A stone with a rounded top, slightly tilted, base at (x, 206). */
+  function gravestone(x, s, tilt) {
+    return `<g transform="translate(${x} 206) rotate(${tilt}) scale(${s})" fill="#0A0716">
+      <path d="M-10 0V-22Q-10 -34 0 -34Q10 -34 10 -22V0Z"/>
+      <rect x="-13" y="-1" width="26" height="4" rx="1"/>
+    </g>`;
+  }
+
+  /** A moonlit haunted mansion with towers and lit windows, base at (760, 206). */
+  function mansion() {
+    const win = (x, y, w, h, o) => `<rect x="${x}" y="${y}" width="${w}" height="${h}" rx="${w / 2}" fill="#FFD36B" opacity="${o}" class="season-flicker"/>`;
+    return `<g transform="translate(760 206) scale(0.85)">
+      <circle cx="0" cy="-70" r="115" fill="url(#season-house-glow)" opacity="0.5"/>
+      <g fill="#07050F">
+        <rect x="-95" y="-72" width="190" height="72"/>
+        <path d="M-108 -72L-62 -110H62L108 -72Z"/>
+        <rect x="-22" y="-160" width="44" height="90"/>
+        <path d="M-30 -160L0 -196L30 -160Z"/>
+        <rect x="-118" y="-124" width="28" height="124"/>
+        <path d="M-124 -124L-104 -158L-84 -124Z"/>
+        <rect x="90" y="-112" width="28" height="112"/>
+        <path d="M84 -112L104 -144L124 -112Z"/>
+        <rect x="46" y="-136" width="9" height="30"/>
+        <rect x="-60" y="-146" width="8" height="24"/>
+        <path d="M-1 -196V-206M-1 -206L5 -209" stroke="#07050F" stroke-width="2" fill="none"/>
+      </g>
+      ${win(-10, -132, 20, 30, 0.95)}
+      ${win(-64, -54, 12, 18, 0.9)}
+      ${win(-40, -54, 12, 18, 0.55)}
+      ${win(28, -54, 12, 18, 0.9)}
+      ${win(52, -54, 12, 18, 0.6)}
+      ${win(-112, -96, 12, 20, 0.85)}
+      ${win(-112, -62, 12, 18, 0.5)}
+      ${win(98, -88, 12, 20, 0.9)}
+      ${win(98, -56, 12, 18, 0.55)}
+      <path d="M-9 0V-18Q-9 -28 0 -28Q9 -28 9 -18V0Z" fill="#FFD36B" opacity="0.8" class="season-flicker"/>
+    </g>`;
+  }
+
+  /** A jack-o'-lantern with a glow, a jagged face and a stem, base at (x, 206). */
   function jackOLantern(x, s, delay) {
     return `<g transform="translate(${x} 206) scale(${s})">
-      <circle cx="0" cy="-9" r="30" fill="url(#season-glow)"/>
-      <ellipse cx="0" cy="-9" rx="11" ry="9" fill="#D9772F"/>
-      <path d="M-5 -2V-16M5 -2V-16" stroke="#B85A22" stroke-width="1" opacity="0.8"/>
-      <path d="M0 -18C1 -21 3 -22 4 -22" stroke="#4E6A2E" stroke-width="2" stroke-linecap="round" fill="none"/>
-      <g class="season-flicker" style="animation-delay:${delay}" fill="#FFD36B">
-        <path d="M-6 -12l3 -3 3 3Z"/>
-        <path d="M1 -12l3 -3 3 3Z"/>
-        <path d="M-6 -6C-3 -3 3 -3 6 -6L3 -5L1 -7L-1 -5L-3 -7Z"/>
+      <circle cx="0" cy="-12" r="34" fill="url(#season-glow)"/>
+      <path d="M-14 -2C-18 -12 -17 -22 -12 -26C-6 -30 6 -30 12 -26C17 -22 18 -12 14 -2C8 2 -8 2 -14 -2Z" fill="url(#season-pumpkin)"/>
+      <path d="M-5 -2C-7 -10 -6 -22 0 -26M5 -2C7 -10 6 -22 0 -26M-10 -6C-11 -14 -9 -20 -4 -24M10 -6C11 -14 9 -20 4 -24" stroke="#B85A22" stroke-width="0.9" fill="none" opacity="0.7"/>
+      <path d="M-1 -27C0 -31 1 -33 4 -35" stroke="#4E6A2E" stroke-width="2.2" stroke-linecap="round" fill="none"/>
+      <path d="M-5 -2C-4 -4 -2 -6 0 -6C2 -6 4 -4 5 -2Z" fill="none"/>
+      <g class="season-flicker" style="animation-delay:${delay}" fill="#FFE08A">
+        <path d="M-9 -17L-4 -22L-2 -16Z"/>
+        <path d="M9 -17L4 -22L2 -16Z"/>
+        <path d="M-9 -7L-6 -10L-3 -6L0 -10L3 -6L6 -10L9 -7L5 -3L0 -5L-5 -3Z"/>
       </g>
     </g>`;
   }
 
-  function hauntedHouse() {
-    return `<g transform="translate(760 206) scale(1.5)" fill="#0B1120">
-      <path d="M-46 0V-34L-24 -52L-2 -34V0Z"/>
-      <path d="M-6 0V-46L10 -66L26 -46V0Z"/>
-      <path d="M26 0V-28L44 -40L58 -28V0Z"/>
-      <rect x="6" y="-82" width="8" height="18"/>
-      <path d="M-2 -66L10 -86L22 -66Z"/>
-      <g fill="#FFD36B" class="season-flicker">
-        <rect x="-34" y="-28" width="7" height="9"/>
-        <rect x="-20" y="-28" width="7" height="9" opacity="0.6"/>
-        <rect x="5" y="-40" width="8" height="11"/>
-        <rect x="36" y="-22" width="7" height="8" opacity="0.7"/>
-      </g>
-    </g>`;
+  /** Distant ridge line and a foreground ground band, with mist between them. */
+  function landscape() {
+    return `
+      <path d="M0 172C120 150 230 160 360 168S600 146 760 162 1010 150 1200 166V230H0Z" fill="#1C1836"/>
+      <rect x="0" y="176" width="1200" height="36" fill="url(#season-mist)"/>
+      <path d="M0 196C140 186 260 192 420 194S700 184 860 192 1080 196 1200 188V230H0Z" fill="#0F0C20"/>
+      <rect x="0" y="194" width="1200" height="20" fill="url(#season-mist)" opacity="0.7"/>
+      <path d="M0 214C200 206 380 212 600 214S960 206 1200 212V230H0Z" fill="#07050F"/>`;
   }
 
   function halloweenScene() {
     return `<svg class="season-scene" viewBox="0 0 1200 230" preserveAspectRatio="xMidYMax slice" aria-hidden="true" focusable="false">
       <defs>
         <radialGradient id="season-glow" cx="0.5" cy="0.5" r="0.5">
-          <stop offset="0" stop-color="#FFD36B" stop-opacity="0.55"/>
-          <stop offset="1" stop-color="#FFD36B" stop-opacity="0"/>
+          <stop offset="0" stop-color="#FFB347" stop-opacity="0.6"/>
+          <stop offset="1" stop-color="#FFB347" stop-opacity="0"/>
+        </radialGradient>
+        <radialGradient id="season-house-glow" cx="0.5" cy="0.5" r="0.5">
+          <stop offset="0" stop-color="#B9A6FF" stop-opacity="0.35"/>
+          <stop offset="1" stop-color="#B9A6FF" stop-opacity="0"/>
+        </radialGradient>
+        <radialGradient id="season-moon" cx="0.5" cy="0.5" r="0.5">
+          <stop offset="0" stop-color="#FFF3C4" stop-opacity="0.55"/>
+          <stop offset="1" stop-color="#FFF3C4" stop-opacity="0"/>
+        </radialGradient>
+        <linearGradient id="season-mist" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stop-color="#C9B8F0" stop-opacity="0"/>
+          <stop offset="0.5" stop-color="#C9B8F0" stop-opacity="0.16"/>
+          <stop offset="1" stop-color="#C9B8F0" stop-opacity="0"/>
+        </linearGradient>
+        <radialGradient id="season-pumpkin" cx="0.45" cy="0.4" r="0.6">
+          <stop offset="0" stop-color="#FFB15A"/>
+          <stop offset="1" stop-color="#C85A1E"/>
         </radialGradient>
       </defs>
-      <path d="M0 206C160 194 300 202 460 200S760 190 920 198 1120 200 1200 194V230H0Z" fill="#141A2E"/>
-      ${bareTree(120, 1.9, false)}
-      ${bareTree(250, 1.3, true)}
-      ${bareTree(1110, 1.8, true)}
-      ${hauntedHouse()}
-      ${jackOLantern(500, 1.6, '0s')}
-      ${jackOLantern(540, 1.15, '-0.7s')}
-      ${jackOLantern(930, 1.5, '-1.3s')}
+      <circle cx="930" cy="58" r="54" fill="url(#season-moon)"/>
+      <circle cx="930" cy="58" r="30" fill="#F4E3A8" opacity="0.92"/>
+      <circle cx="922" cy="52" r="5" fill="#E2CF8C" opacity="0.6"/>
+      <circle cx="938" cy="66" r="3.5" fill="#E2CF8C" opacity="0.5"/>
+      ${landscape()}
+      ${mansion()}
+      ${deadTree(110, 1.5, false)}
+      ${deadTree(1100, 1.6, true)}
+      ${deadTree(230, 1.0, true)}
+      ${gravestone(430, 1.0, -4)}
+      ${gravestone(452, 0.8, 3)}
+      ${gravestone(1010, 0.9, 5)}
+      ${gravestone(1034, 1.1, -3)}
+      ${jackOLantern(520, 1.4, '0s')}
+      ${jackOLantern(552, 1.0, '-0.7s')}
+      ${jackOLantern(905, 1.3, '-1.3s')}
     </svg>`;
   }
 
