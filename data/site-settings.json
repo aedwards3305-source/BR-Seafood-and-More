@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-10-21T22:16:27.580Z",
+  "lastUpdated": "2026-10-28T19:27:13.090Z",
   "contact": {
     "phone": "(701) 818-3664",
     "phoneRaw": "7018183664",
@@ -68,7 +68,7 @@
   },
   "announcement": {
     "enabled": true,
-    "message": "",
+    "message": "Hello,\nWe will be closed today Wednesday Oct 28th working on heat for the winter. We will re-open tomorrow Thursday  Oct 29th at 5pm.\nThank you for your continued support.",
     "type": "info",
     "dismissible": false
   }
