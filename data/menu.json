@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-10-21T22:08:28.062Z",
+  "lastUpdated": "2026-10-28T19:31:09.172Z",
   "settings": {
     "sidesIncluded": 2,
     "extraSidePrice": 3,
@@ -103,26 +103,6 @@
           "badgeText": ""
         },
         {
-          "id": "chili-cheese-hot-dog-with-fries-only",
-          "name": "(3) Bones BBQ Ribs",
-          "icon": "fas fa-plate-wheat",
-          "active": false,
-          "description": "Tender Pork Ribs with BBQ Sauce comes with 2 regular Sides",
-          "price": 12,
-          "featured": false,
-          "badgeText": ""
-        },
-        {
-          "id": "shrimp-gumbo-over-rice",
-          "name": "(2) Pork Chops  gravy upon request",
-          "icon": "fas fa-plate-wheat",
-          "active": false,
-          "description": "Grilled Pork Chops tender tasty",
-          "price": 12,
-          "featured": false,
-          "badgeText": ""
-        },
-        {
           "id": "35pcs-enough-4-two-10-shrimp-10-catfish-nuggets-6-gator-2-fillet-whittings-4-scallops-2-frog-legs",
           "name": "(30 pcs) Enough 4 Two Platter   10 Shrimp, 10 Catfish Nuggets, 6 Gator, 2 Fillet Whittings, 2 Oysters w/2 Large Sides",
           "icon": "fas fa-fish",
@@ -169,6 +149,26 @@
           "active": true,
           "description": "4 Shrimp, 4 Gator Bites, 4 Catfish Nuggets comes with 2 regular sides",
           "price": 32,
+          "featured": false,
+          "badgeText": ""
+        },
+        {
+          "id": "shrimp-gumbo-over-rice",
+          "name": "(2) Pork Chops  gravy upon request",
+          "icon": "fas fa-plate-wheat",
+          "active": true,
+          "description": "Grilled Pork Chops tender tasty comes with 2 side dishes",
+          "price": 12,
+          "featured": false,
+          "badgeText": ""
+        },
+        {
+          "id": "chili-cheese-hot-dog-with-fries-only",
+          "name": "(3) Bones BBQ Ribs",
+          "icon": "fas fa-plate-wheat",
+          "active": false,
+          "description": "Tender Pork Ribs with BBQ Sauce comes with 2 regular Sides",
+          "price": 12,
           "featured": false,
           "badgeText": ""
         },
@@ -257,6 +257,12 @@
           "active": true
         },
         {
+          "id": "coleslaw",
+          "name": "Green Beans",
+          "icon": "fas fa-seedling",
+          "active": true
+        },
+        {
           "id": "collard-greens",
           "name": "Collard Greens",
           "icon": "fas fa-pepper-hot",
@@ -267,12 +273,6 @@
           "name": "1/2  Cajun Corn on the Cob",
           "icon": "fas fa-wheat-awn",
           "active": true
-        },
-        {
-          "id": "rice",
-          "name": "Seasoned White Rice",
-          "icon": "fas fa-bowl-rice",
-          "active": false
         },
         {
           "id": "cornbread",
@@ -299,6 +299,12 @@
           "active": true
         },
         {
+          "id": "rice",
+          "name": "Seasoned White Rice",
+          "icon": "fas fa-bowl-rice",
+          "active": false
+        },
+        {
           "id": "mac-cheese-5-00",
           "name": "Mac/Cheese  $2.00 extra",
           "icon": "fas fa-bowl-food",
@@ -309,12 +315,6 @@
           "name": "Hush Puppies",
           "icon": "fas fa-bread-slice",
           "active": false
-        },
-        {
-          "id": "coleslaw",
-          "name": "Green Beans",
-          "icon": "fas fa-seedling",
-          "active": true
         }
       ]
     },
