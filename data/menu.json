@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-10-28T19:31:53.810Z",
+  "lastUpdated": "2026-10-28T20:05:25.422Z",
   "settings": {
     "sidesIncluded": 2,
     "extraSidePrice": 3,
@@ -166,9 +166,9 @@
           "id": "chili-cheese-hot-dog-with-fries-only",
           "name": "(3) Bones BBQ Ribs",
           "icon": "fas fa-plate-wheat",
-          "active": false,
+          "active": true,
           "description": "Tender Pork Ribs with BBQ Sauce comes with 2 regular Sides",
-          "price": 12,
+          "price": 15,
           "featured": false,
           "badgeText": ""
         },
@@ -300,9 +300,9 @@
         },
         {
           "id": "rice",
-          "name": "Seasoned White Rice",
-          "icon": "fas fa-bowl-rice",
-          "active": false
+          "name": "Sweet Potatoes",
+          "icon": "fas fa-bowl-food",
+          "active": true
         },
         {
           "id": "mac-cheese-5-00",
