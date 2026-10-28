@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-10-28T19:31:09.172Z",
+  "lastUpdated": "2026-10-28T19:31:53.810Z",
   "settings": {
     "sidesIncluded": 2,
     "extraSidePrice": 3,
@@ -158,7 +158,7 @@
           "icon": "fas fa-plate-wheat",
           "active": true,
           "description": "Grilled Pork Chops tender tasty comes with 2 side dishes",
-          "price": 12,
+          "price": 15,
           "featured": false,
           "badgeText": ""
         },
