@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-10-28T20:05:25.422Z",
+  "lastUpdated": "2026-10-29T16:58:48.290Z",
   "settings": {
     "sidesIncluded": 2,
     "extraSidePrice": 3,
@@ -148,7 +148,7 @@
           "icon": "fas fa-fish",
           "active": true,
           "description": "4 Shrimp, 4 Gator Bites, 4 Catfish Nuggets comes with 2 regular sides",
-          "price": 32,
+          "price": 30,
           "featured": false,
           "badgeText": ""
         },
