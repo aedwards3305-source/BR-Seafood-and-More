@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-10-29T16:58:48.290Z",
+  "lastUpdated": "2026-10-29T17:00:01.598Z",
   "settings": {
     "sidesIncluded": 2,
     "extraSidePrice": 3,
@@ -158,7 +158,7 @@
           "icon": "fas fa-plate-wheat",
           "active": true,
           "description": "Grilled Pork Chops tender tasty comes with 2 side dishes",
-          "price": 15,
+          "price": 14,
           "featured": false,
           "badgeText": ""
         },
@@ -168,7 +168,7 @@
           "icon": "fas fa-plate-wheat",
           "active": true,
           "description": "Tender Pork Ribs with BBQ Sauce comes with 2 regular Sides",
-          "price": 15,
+          "price": 14,
           "featured": false,
           "badgeText": ""
         },
