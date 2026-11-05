@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-04T18:32:57.629Z",
+  "lastUpdated": "2026-11-05T18:12:12.945Z",
   "contact": {
     "phone": "(701) 818-3664",
     "phoneRaw": "7018183664",
@@ -68,7 +68,7 @@
   },
   "announcement": {
     "enabled": true,
-    "message": "Hello \nWe will be closed today, finishing up with winterizing the trailer so that we can be open this winter.\nRe-opening tomorrow at 5pm, with Gumbo and Chili \nThank you for your support and understanding",
+    "message": "Hello \nWe will be open today, 5pm, with Gumbo and Chili \nThank you for your support and understanding",
     "type": "info",
     "dismissible": false
   }
