@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-05T18:14:31.317Z",
+  "lastUpdated": "2026-11-05T18:14:44.795Z",
   "contact": {
     "phone": "(701) 818-3664",
     "phoneRaw": "7018183664",
@@ -67,7 +67,7 @@
     "enabled": true
   },
   "announcement": {
-    "enabled": false,
+    "enabled": true,
     "message": "Hello \nWe will be open today at 5pm, with Gumbo and Chili \nThank you for your support and understanding",
     "type": "info",
     "dismissible": false
