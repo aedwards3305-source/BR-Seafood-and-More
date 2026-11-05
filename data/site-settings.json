@@ -1,75 +1,60 @@
 {
-  "lastUpdated": "2026-11-05T18:23:35.000Z",
+  "lastUpdated": "2026-11-05T20:16:05.771Z",
   "contact": {
-    "phone": "(701) 818-3664",
-    "phoneRaw": "7018183664",
-    "email": "captainb@brseafoodandmore.com",
+    "phone": "",
+    "phoneRaw": "",
+    "email": "",
     "emailSubject": "Catering Inquiry"
   },
   "location": {
-    "address": "6 2nd St NE, Minot, ND 58703",
-    "note": "Located at The Spot parking area",
+    "address": "",
+    "note": "",
     "googleMapsUrl": ""
   },
-  "hours": [
-    {
-      "days": "Wed & Thu",
-      "time": "5pm-9pm"
-    },
-    {
-      "days": "Fri & Sat",
-      "time": "5pm-11pm"
-    }
-  ],
+  "hours": [],
   "social": {
     "facebook": "",
     "instagram": "",
     "tiktok": ""
   },
   "hero": {
-    "tagline": "Fresh From the Fryer",
-    "titleLine1": "B&R Seafood",
-    "titleLine2": "and More",
-    "subtitle": "Golden fried shrimp, crispy catfish & Southern sides\nserved fresh from our kitchen to your table",
-    "badgeText": "Family Owned & Operated"
+    "tagline": "",
+    "titleLine1": "",
+    "titleLine2": "",
+    "subtitle": "",
+    "badgeText": ""
   },
   "about": {
-    "teaserParagraph": "Captain B started B&R Seafood and More with a simple mission: bring the best golden fried seafood and authentic Southern sides to the community. Every recipe is crafted with love and seasoned with tradition.",
-    "storyParagraphs": [
-      "Captain B started B&R Seafood and More with a simple mission: bring the best golden fried seafood and authentic Southern sides to the community. What began as a love of cooking for family and friends has grown into something the whole community can enjoy.",
-      "Every recipe at B&R Seafood is crafted with love and seasoned with tradition. We take pride in using quality ingredients and time-tested techniques to deliver flavors that remind you of home cooking at its finest."
-    ],
+    "teaserParagraph": "",
+    "storyParagraphs": [],
     "cards": [
       {
         "icon": "fas fa-heart",
-        "title": "Family Tradition",
+        "title": "",
         "teaserTitle": "",
-        "description": "Our recipes have been passed down through generations, blending Southern cooking traditions with our own family's unique flavors. Every dish we serve carries a piece of our heritage.",
-        "teaserDescription": "Recipes passed down through generations"
+        "description": "",
+        "teaserDescription": ""
       },
       {
         "icon": "fas fa-fire",
-        "title": "Cooked Fresh Daily",
-        "teaserTitle": "Cooked Fresh",
-        "description": "We believe great food starts with quality ingredients and careful preparation. Our shrimp and catfish are golden fried to perfection, and our sides are made from scratch every single day.",
-        "teaserDescription": "Made from scratch every single day"
+        "title": "",
+        "teaserTitle": "",
+        "description": "",
+        "teaserDescription": ""
       },
       {
         "icon": "fas fa-users",
-        "title": "Serving Our Community",
-        "teaserTitle": "Community First",
-        "description": "From local events to your front door, we're proud to serve our neighbors. Whether you're grabbing a quick bite or feeding the whole family, B&R Seafood and More has you covered.",
-        "teaserDescription": "Proudly serving our neighbors"
+        "title": "",
+        "teaserTitle": "",
+        "description": "",
+        "teaserDescription": ""
       }
     ]
   },
-  "seasonal": {
-    "enabled": true
-  },
   "announcement": {
-    "enabled": false,
-    "message": "",
+    "enabled": true,
+    "message": "Hello,\nWe will be open today. with two new menu items both hot and ready!\nGUMBO & CHILI\nThank you for your support",
     "type": "info",
-    "dismissible": false
+    "dismissible": true
   }
 }
