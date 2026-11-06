@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-05T20:16:05.771Z",
+  "lastUpdated": "2026-11-06T14:54:27.601Z",
   "contact": {
     "phone": "",
     "phoneRaw": "",
@@ -53,7 +53,7 @@
   },
   "announcement": {
     "enabled": true,
-    "message": "Hello,\nWe will be open today. with two new menu items both hot and ready!\nGUMBO & CHILI\nThank you for your support",
+    "message": "Hello,\nWe will be open today. \n\nCheck out our two new menu items, always hot and ready!\nGUMBO & CHILI\nThank you for your support!",
     "type": "info",
     "dismissible": true
   }
