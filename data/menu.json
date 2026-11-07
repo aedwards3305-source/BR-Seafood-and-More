@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-07T00:19:35.515Z",
+  "lastUpdated": "2026-11-07T22:36:56.275Z",
   "settings": {
     "sidesIncluded": 2,
     "extraSidePrice": 3,
@@ -21,16 +21,6 @@
           "price": 36,
           "featured": true,
           "badgeText": "Best Seller"
-        },
-        {
-          "id": "20pc-golden-fried-catfish-nuggets-w-2-sides",
-          "name": "(20 pcs)  Golden Fried Catfish Nuggets w/2  regular sides",
-          "icon": "fas fa-fish",
-          "active": true,
-          "description": "",
-          "price": 36,
-          "featured": false,
-          "badgeText": ""
         },
         {
           "id": "golden-fried-catfish",
@@ -63,31 +53,21 @@
           "badgeText": ""
         },
         {
+          "id": "catfish-2pc",
+          "name": "( 2 Pc ) Golden Fried Catfish Fillets w/2 regular sides",
+          "icon": "fas fa-fish",
+          "active": true,
+          "description": "2 pieces of golden fried catfish fillet comes with 2 regular sides",
+          "price": 18,
+          "featured": false,
+          "badgeText": ""
+        },
+        {
           "id": "6-pcs-golden-fried-oysters-with-2-regular-sides",
           "name": "(4 pcs) Golden Fried Oysters w/2  regular sides",
           "icon": "fas fa-fish",
           "active": true,
           "description": "Hand Breaded Golden Fried",
-          "price": 18,
-          "featured": false,
-          "badgeText": ""
-        },
-        {
-          "id": "2-pc-golden-fried-fillet-haddock",
-          "name": "(4 pc) Golden Fried Scallops w/2 regular sides",
-          "icon": "fas fa-fish",
-          "active": false,
-          "description": "Hand breaded",
-          "price": 18,
-          "featured": false,
-          "badgeText": ""
-        },
-        {
-          "id": "catfish-2pc",
-          "name": "( 2 Pc ) Golden Fried Catfish Fillets w/2 regular sides",
-          "icon": "fas fa-fish",
-          "active": false,
-          "description": "2 pieces of golden fried catfish fillet comes with 2 regular sides",
           "price": 18,
           "featured": false,
           "badgeText": ""
@@ -153,6 +133,26 @@
           "badgeText": ""
         },
         {
+          "id": "2-pc-golden-fried-fillet-haddock",
+          "name": "(4 pc) Golden Fried Scallops w/2 regular sides",
+          "icon": "fas fa-fish",
+          "active": false,
+          "description": "Hand breaded",
+          "price": 18,
+          "featured": false,
+          "badgeText": ""
+        },
+        {
+          "id": "20pc-golden-fried-catfish-nuggets-w-2-sides",
+          "name": "(20 pcs)  Golden Fried Catfish Nuggets w/2  regular sides",
+          "icon": "fas fa-fish",
+          "active": false,
+          "description": "",
+          "price": 36,
+          "featured": false,
+          "badgeText": ""
+        },
+        {
           "id": "shrimp-gumbo-over-rice",
           "name": "(2) Pork Chops  gravy upon request",
           "icon": "fas fa-plate-wheat",
@@ -166,7 +166,7 @@
           "id": "chili-cheese-hot-dog-with-fries-only",
           "name": "(3) Bones BBQ Ribs",
           "icon": "fas fa-plate-wheat",
-          "active": true,
+          "active": false,
           "description": "Tender Pork Ribs with BBQ Sauce comes with 2 regular Sides",
           "price": 14,
           "featured": false,
