@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-05T20:13:19.891Z",
+  "lastUpdated": "2026-11-07T00:19:35.515Z",
   "settings": {
     "sidesIncluded": 2,
     "extraSidePrice": 3,
@@ -68,7 +68,7 @@
           "icon": "fas fa-fish",
           "active": true,
           "description": "Hand Breaded Golden Fried",
-          "price": 22,
+          "price": 18,
           "featured": false,
           "badgeText": ""
         },
@@ -76,7 +76,7 @@
           "id": "2-pc-golden-fried-fillet-haddock",
           "name": "(4 pc) Golden Fried Scallops w/2 regular sides",
           "icon": "fas fa-fish",
-          "active": true,
+          "active": false,
           "description": "Hand breaded",
           "price": 18,
           "featured": false,
@@ -86,7 +86,7 @@
           "id": "catfish-2pc",
           "name": "( 2 Pc ) Golden Fried Catfish Fillets w/2 regular sides",
           "icon": "fas fa-fish",
-          "active": true,
+          "active": false,
           "description": "2 pieces of golden fried catfish fillet comes with 2 regular sides",
           "price": 18,
           "featured": false,
