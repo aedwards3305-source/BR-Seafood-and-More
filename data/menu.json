@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-08T04:32:17.553Z",
+  "lastUpdated": "2026-11-11T22:36:37.553Z",
   "settings": {
     "sidesIncluded": 2,
     "extraSidePrice": 3,
@@ -58,17 +58,7 @@
           "icon": "fas fa-fish",
           "active": true,
           "description": "2 pieces of golden fried catfish fillet comes with 2 regular sides",
-          "price": 18,
-          "featured": false,
-          "badgeText": ""
-        },
-        {
-          "id": "6-pcs-golden-fried-oysters-with-2-regular-sides",
-          "name": "(4 pcs) Golden Fried Oysters w/2  regular sides",
-          "icon": "fas fa-fish",
-          "active": false,
-          "description": "Hand Breaded Golden Fried",
-          "price": 18,
+          "price": 16,
           "featured": false,
           "badgeText": ""
         },
@@ -133,11 +123,31 @@
           "badgeText": ""
         },
         {
+          "id": "shrimp-gumbo-over-rice",
+          "name": "(2) Pork Chops  gravy upon request",
+          "icon": "fas fa-plate-wheat",
+          "active": true,
+          "description": "Grilled Pork Chops tender tasty comes with 2 side dishes",
+          "price": 14,
+          "featured": false,
+          "badgeText": ""
+        },
+        {
           "id": "2-pc-golden-fried-fillet-haddock",
           "name": "(4 pc) Golden Fried Scallops w/2 regular sides",
           "icon": "fas fa-fish",
           "active": false,
           "description": "Hand breaded",
+          "price": 18,
+          "featured": false,
+          "badgeText": ""
+        },
+        {
+          "id": "6-pcs-golden-fried-oysters-with-2-regular-sides",
+          "name": "(4 pcs) Golden Fried Oysters w/2  regular sides",
+          "icon": "fas fa-fish",
+          "active": false,
+          "description": "Hand Breaded Golden Fried",
           "price": 18,
           "featured": false,
           "badgeText": ""
@@ -149,16 +159,6 @@
           "active": false,
           "description": "",
           "price": 36,
-          "featured": false,
-          "badgeText": ""
-        },
-        {
-          "id": "shrimp-gumbo-over-rice",
-          "name": "(2) Pork Chops  gravy upon request",
-          "icon": "fas fa-plate-wheat",
-          "active": true,
-          "description": "Grilled Pork Chops tender tasty comes with 2 side dishes",
-          "price": 14,
           "featured": false,
           "badgeText": ""
         },
@@ -178,7 +178,7 @@
           "icon": "fas fa-bowl-food",
           "active": true,
           "description": "Home made Chili freshly made with just enough spice",
-          "price": 10,
+          "price": 12,
           "featured": false,
           "badgeText": ""
         },
@@ -188,7 +188,7 @@
           "icon": "fas fa-bowl-food",
           "active": true,
           "description": "Home made Gumbo Louisiana  style just enough kick",
-          "price": 14,
+          "price": 12,
           "featured": false,
           "badgeText": ""
         },
@@ -254,7 +254,7 @@
           "id": "baked-beans",
           "name": "Baked Beans",
           "icon": "fas fa-seedling",
-          "active": true
+          "active": false
         },
         {
           "id": "coleslaw",
@@ -302,7 +302,7 @@
           "id": "rice",
           "name": "Sweet Potatoes",
           "icon": "fas fa-bowl-food",
-          "active": true
+          "active": false
         },
         {
           "id": "mac-cheese-5-00",
@@ -324,6 +324,13 @@
       "icon": "fas fa-star",
       "badge": "Premium Add-Ons",
       "items": [
+        {
+          "id": "dirty-cabbage",
+          "name": "Dirty Cabbage/Sausage",
+          "icon": "fas fa-bowl-food",
+          "active": true,
+          "price": 5
+        },
         {
           "id": "macaroni-and-cheese",
           "name": "Macaroni and Cheese",
