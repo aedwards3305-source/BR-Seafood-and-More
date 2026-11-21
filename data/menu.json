@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-20T22:25:20.694Z",
+  "lastUpdated": "2026-11-21T22:09:44.130Z",
   "settings": {
     "sidesIncluded": 2,
     "extraSidePrice": 4,
@@ -178,7 +178,7 @@
           "icon": "fas fa-shrimp",
           "active": true,
           "description": "Shrimp, Sausage, Potatoes and More spiced just right",
-          "price": 30,
+          "price": 32,
           "featured": true,
           "badgeText": ""
         },
