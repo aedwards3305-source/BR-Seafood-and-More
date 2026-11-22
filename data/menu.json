@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-21T23:33:13.706Z",
+  "lastUpdated": "2026-11-22T01:36:07.836Z",
   "settings": {
     "sidesIncluded": 2,
     "extraSidePrice": 4,
@@ -166,7 +166,7 @@
           "id": "snacker-6-pcs-shrimp-with-fries-only",
           "name": "Shrimp Gumbo with Corn bread",
           "icon": "fas fa-bowl-food",
-          "active": true,
+          "active": false,
           "description": "Home made Gumbo Louisiana  style just enough kick",
           "price": 12,
           "featured": false,
