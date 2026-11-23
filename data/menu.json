@@ -1,9 +1,9 @@
 {
-  "lastUpdated": "2026-11-22T01:36:07.836Z",
+  "lastUpdated": "2026-11-23T15:50:24.570Z",
   "settings": {
     "sidesIncluded": 2,
     "extraSidePrice": 4,
-    "menuNote": "Extra sides available for $3 each. Prices subject to change. Ask about our daily specials!"
+    "menuNote": "Extra sides available for $4 each. Prices subject to change. Ask about our daily specials!"
   },
   "categories": [
     {
@@ -84,47 +84,17 @@
         },
         {
           "id": "18-pcs-taste-it-all-platter",
-          "name": "(18 pcs)  Taste It All Platter 6 Shrimp, 6 Catfish Nuggets, 2 Gators,  2 Whitting Fillet Fish, 2 Oysters w/2 regular sides",
+          "name": "(20 pcs)  Taste It All Platter 7 Shrimp, 7 Catfish Nuggets, 2 Gators,  2 Whitting Fillet Fish, 2 Oysters w/2 regular sides",
           "icon": "fas fa-fish",
           "active": true,
-          "description": "6 Shrimp, 6 Catfish Nuggs,  2 Gators, Bites, and   2 Whitting Fillet Fish 2 Oysters w/2 regular sides",
+          "description": "7 Shrimp, 7 Catfish Nuggs,  2 Gators, Bites, and   2 Whitting Fillet Fish 2 Oysters w/2 regular sides",
           "price": 46,
           "featured": false,
           "badgeText": ""
         },
         {
-          "id": "macaroni-and-cheese",
-          "name": "(22 pcs ) Captains B Platter 8 Shrimp, 8 Catfish  Nugs, 4 Gator Bites, 2 Fillet Whitting Fish, and 2 large Sides",
-          "icon": "fas fa-fish",
-          "active": true,
-          "description": "8 shrimp, 4 Gator Bites,  8 Catfish Nuggets, 2 pcs of Fillet Whitting,  comes with 2 large sides",
-          "price": 44,
-          "featured": false,
-          "badgeText": ""
-        },
-        {
-          "id": "20-pc-all-on-deck",
-          "name": "(20 pcs ) All On Deck Platter 8 Shrimp,  8 Catfish Nuggets,  4 Gator Bites,    w/2 regular sides",
-          "icon": "fas fa-fish",
-          "active": true,
-          "description": "8 Shrimp, 8 Catfish Nuggets, 4 Gator Bites, comes with 2 regular sides",
-          "price": 38,
-          "featured": false,
-          "badgeText": ""
-        },
-        {
-          "id": "12-pc-trio-platter",
-          "name": "(12 pcs ) Trio Platter 4 Shrimp, 4 Catfish Nuggets, 4 Gator Bites w/2 regular sides",
-          "icon": "fas fa-fish",
-          "active": true,
-          "description": "4 Shrimp, 4 Gator Bites, 4 Catfish Nuggets comes with 2 regular sides",
-          "price": 30,
-          "featured": false,
-          "badgeText": ""
-        },
-        {
           "id": "6-pcs-golden-fried-oysters-with-2-regular-sides",
-          "name": "(4 pcs) Golden Fried Oysters w/2  regular sides",
+          "name": "(6 pcs) Golden Fried Oysters w/2  regular sides",
           "icon": "fas fa-fish",
           "active": true,
           "description": "Hand Breaded Golden Fried",
@@ -134,19 +104,19 @@
         },
         {
           "id": "shrimp-gumbo-over-rice",
-          "name": "(2) Pork Chops  gravy upon request",
+          "name": "(2) Pork Chops",
           "icon": "fas fa-plate-wheat",
-          "active": false,
-          "description": "Grilled Pork Chops tender tasty comes with 2 side dishes",
-          "price": 14,
+          "active": true,
+          "description": "Fried Pork Chops tender tasty comes with 2 side dishes",
+          "price": 16,
           "featured": false,
           "badgeText": ""
         },
         {
           "id": "chili-cheese-hot-dog-with-fries-only",
-          "name": "(3) Bones BBQ Ribs",
+          "name": "BBQ Ribs",
           "icon": "fas fa-plate-wheat",
-          "active": false,
+          "active": true,
           "description": "Tender Pork Ribs with BBQ Sauce comes with 2 regular Sides",
           "price": 14,
           "featured": false,
@@ -159,17 +129,17 @@
           "active": true,
           "description": "Home made Chili freshly made with just enough spice",
           "price": 12,
-          "featured": false,
+          "featured": true,
           "badgeText": ""
         },
         {
           "id": "snacker-6-pcs-shrimp-with-fries-only",
           "name": "Shrimp Gumbo with Corn bread",
           "icon": "fas fa-bowl-food",
-          "active": false,
+          "active": true,
           "description": "Home made Gumbo Louisiana  style just enough kick",
-          "price": 12,
-          "featured": false,
+          "price": 16,
+          "featured": true,
           "badgeText": ""
         },
         {
@@ -180,6 +150,36 @@
           "description": "Shrimp, Sausage, Potatoes and More spiced just right",
           "price": 32,
           "featured": true,
+          "badgeText": ""
+        },
+        {
+          "id": "macaroni-and-cheese",
+          "name": "(22 pcs ) Captains B Platter 8 Shrimp, 8 Catfish  Nugs, 4 Gator Bites, 2 Fillet Whitting Fish, and 2 large Sides",
+          "icon": "fas fa-fish",
+          "active": false,
+          "description": "8 shrimp, 4 Gator Bites,  8 Catfish Nuggets, 2 pcs of Fillet Whitting,  comes with 2 large sides",
+          "price": 44,
+          "featured": false,
+          "badgeText": ""
+        },
+        {
+          "id": "20-pc-all-on-deck",
+          "name": "(20 pcs ) All On Deck Platter 8 Shrimp,  8 Catfish Nuggets,  4 Gator Bites,    w/2 regular sides",
+          "icon": "fas fa-fish",
+          "active": false,
+          "description": "8 Shrimp, 8 Catfish Nuggets, 4 Gator Bites, comes with 2 regular sides",
+          "price": 38,
+          "featured": false,
+          "badgeText": ""
+        },
+        {
+          "id": "12-pc-trio-platter",
+          "name": "(12 pcs ) Trio Platter 4 Shrimp, 4 Catfish Nuggets, 4 Gator Bites w/2 regular sides",
+          "icon": "fas fa-fish",
+          "active": false,
+          "description": "4 Shrimp, 4 Gator Bites, 4 Catfish Nuggets comes with 2 regular sides",
+          "price": 30,
+          "featured": false,
           "badgeText": ""
         },
         {
@@ -251,18 +251,6 @@
       "badge": "Choose 2 with any dinner",
       "items": [
         {
-          "id": "baked-beans",
-          "name": "Baked Beans",
-          "icon": "fas fa-seedling",
-          "active": true
-        },
-        {
-          "id": "coleslaw",
-          "name": "Green Beans",
-          "icon": "fas fa-seedling",
-          "active": false
-        },
-        {
           "id": "collard-greens",
           "name": "Collard Greens",
           "icon": "fas fa-pepper-hot",
@@ -277,6 +265,12 @@
         {
           "id": "cornbread",
           "name": "Cornbread",
+          "icon": "fas fa-seedling",
+          "active": true
+        },
+        {
+          "id": "baked-beans",
+          "name": "Baked Beans",
           "icon": "fas fa-seedling",
           "active": true
         },
@@ -299,6 +293,18 @@
           "active": true
         },
         {
+          "id": "grits-home-made-and-creamy",
+          "name": "Grits Home made and creamy",
+          "icon": "fas fa-bowl-food",
+          "active": true
+        },
+        {
+          "id": "coleslaw",
+          "name": "Green Beans",
+          "icon": "fas fa-seedling",
+          "active": false
+        },
+        {
           "id": "rice",
           "name": "Sweet Potatoes",
           "icon": "fas fa-bowl-food",
@@ -315,12 +321,6 @@
           "name": "Hush Puppies",
           "icon": "fas fa-bread-slice",
           "active": false
-        },
-        {
-          "id": "grits-home-made-and-creamy",
-          "name": "Grits Home made and creamy",
-          "icon": "fas fa-seedling",
-          "active": true
         }
       ]
     },
@@ -330,6 +330,13 @@
       "icon": "fas fa-star",
       "badge": "Premium Add-Ons",
       "items": [
+        {
+          "id": "cheeseburger-w-fries",
+          "name": "Cheeseburger w/Fries",
+          "icon": "fas fa-plate-wheat",
+          "active": true,
+          "price": 10
+        },
         {
           "id": "dirty-cabbage",
           "name": "Dirty Cabbage/Sausage",
