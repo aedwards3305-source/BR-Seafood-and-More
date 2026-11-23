@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-23T18:05:24.889Z",
+  "lastUpdated": "2026-11-23T18:43:47.786Z",
   "settings": {
     "sidesIncluded": 2,
     "extraSidePrice": 4,
@@ -68,7 +68,7 @@
           "icon": "fas fa-fish",
           "active": true,
           "description": "golden fried hand breaded with 2 regular sides",
-          "price": 14,
+          "price": 16,
           "featured": false,
           "badgeText": ""
         },
@@ -98,7 +98,7 @@
           "icon": "fas fa-fish",
           "active": true,
           "description": "Hand Breaded Golden Fried",
-          "price": 20,
+          "price": 18,
           "featured": false,
           "badgeText": ""
         },
@@ -117,7 +117,7 @@
           "name": "BBQ Ribs",
           "icon": "fas fa-plate-wheat",
           "active": true,
-          "description": "4 Bones Tender Pork Ribs with BBQ Sauce comes with 2 regular Sides",
+          "description": "Tender Pork Ribs with BBQ Sauce comes with 2 regular Sides",
           "price": 14,
           "featured": false,
           "badgeText": ""
@@ -299,15 +299,15 @@
           "active": true
         },
         {
-          "id": "cabbage",
-          "name": "Cabbage",
-          "icon": "fas fa-bowl-food",
+          "id": "white-rice",
+          "name": "White Rice",
+          "icon": "fas fa-bowl-rice",
           "active": true
         },
         {
-          "id": "rice",
-          "name": "Rice",
-          "icon": "fas fa-bowl-rice",
+          "id": "cabbage",
+          "name": "Cabbage",
+          "icon": "fas fa-bowl-food",
           "active": true
         },
         {
