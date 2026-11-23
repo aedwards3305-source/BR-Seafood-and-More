@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-23T18:43:47.786Z",
+  "lastUpdated": "2026-11-23T18:45:49.886Z",
   "settings": {
     "sidesIncluded": 2,
     "extraSidePrice": 4,
@@ -63,6 +63,16 @@
           "badgeText": ""
         },
         {
+          "id": "6-pcs-golden-fried-oysters-with-2-regular-sides",
+          "name": "(6 pcs) Golden Fried Oysters w/2  regular sides",
+          "icon": "fas fa-fish",
+          "active": true,
+          "description": "Hand Breaded Golden Fried",
+          "price": 20,
+          "featured": false,
+          "badgeText": ""
+        },
+        {
           "id": "catfish-nuggets",
           "name": "(2 pc ) Golden Fried Whittings  Fillets w/2 regular sides",
           "icon": "fas fa-fish",
@@ -93,16 +103,6 @@
           "badgeText": ""
         },
         {
-          "id": "6-pcs-golden-fried-oysters-with-2-regular-sides",
-          "name": "(6 pcs) Golden Fried Oysters w/2  regular sides",
-          "icon": "fas fa-fish",
-          "active": true,
-          "description": "Hand Breaded Golden Fried",
-          "price": 18,
-          "featured": false,
-          "badgeText": ""
-        },
-        {
           "id": "shrimp-gumbo-over-rice",
           "name": "(2) Pork Chops",
           "icon": "fas fa-plate-wheat",
@@ -117,7 +117,7 @@
           "name": "BBQ Ribs",
           "icon": "fas fa-plate-wheat",
           "active": true,
-          "description": "Tender Pork Ribs with BBQ Sauce comes with 2 regular Sides",
+          "description": "4 Bones Tender Pork Ribs with BBQ Sauce comes with 2 regular Sides",
           "price": 14,
           "featured": false,
           "badgeText": ""
