@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-23T15:50:24.570Z",
+  "lastUpdated": "2026-11-23T18:02:40.115Z",
   "settings": {
     "sidesIncluded": 2,
     "extraSidePrice": 4,
@@ -68,7 +68,7 @@
           "icon": "fas fa-fish",
           "active": true,
           "description": "golden fried hand breaded with 2 regular sides",
-          "price": 16,
+          "price": 14,
           "featured": false,
           "badgeText": ""
         },
@@ -117,7 +117,7 @@
           "name": "BBQ Ribs",
           "icon": "fas fa-plate-wheat",
           "active": true,
-          "description": "Tender Pork Ribs with BBQ Sauce comes with 2 regular Sides",
+          "description": "4 Bones Tender Pork Ribs with BBQ Sauce comes with 2 regular Sides",
           "price": 14,
           "featured": false,
           "badgeText": ""
@@ -296,6 +296,18 @@
           "id": "grits-home-made-and-creamy",
           "name": "Grits Home made and creamy",
           "icon": "fas fa-bowl-food",
+          "active": true
+        },
+        {
+          "id": "cabbage",
+          "name": "Cabbage",
+          "icon": "fas fa-bowl-food",
+          "active": true
+        },
+        {
+          "id": "rice",
+          "name": "Rice",
+          "icon": "fas fa-bowl-rice",
           "active": true
         },
         {
