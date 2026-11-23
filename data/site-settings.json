@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-11-23T16:02:25.064Z",
+  "lastUpdated": "2026-11-23T16:05:02.979Z",
   "contact": {
     "phone": "",
     "phoneRaw": "",
@@ -11,7 +11,12 @@
     "note": "",
     "googleMapsUrl": ""
   },
-  "hours": [],
+  "hours": [
+    {
+      "days": "Wed & Thu 5 PM - 9 PM",
+      "time": "Fri & Sat  5 PM - 11 PM"
+    }
+  ],
   "social": {
     "facebook": "",
     "instagram": "",
